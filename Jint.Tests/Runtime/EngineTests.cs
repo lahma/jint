@@ -2750,5 +2750,61 @@ function output(x) {
             result = function.Invoke(3, JsValue.Undefined).ToString();
             Assert.Equal("15", result);
         }
+
+        [Fact]
+        public void ToStringForObjectUsingArray()
+        {
+            var engine = new Engine();
+            engine.Execute("Array.prototype.toString.call({});");
+        }
+
+        [Fact]
+        public void SymbolAsPropertyKeyAndRelationalIn()
+        {
+            var engine = new Engine();
+            engine.Execute(@"
+                var $Symbol = typeof Symbol === ""function"" ? Symbol : {};
+                var iteratorSymbol = $Symbol.iterator || ""@@iterator"";
+                var asyncIteratorSymbol = $Symbol.asyncIterator || ""@@asyncIterator"";
+                var toStringTagSymbol = $Symbol.toStringTag || ""@@toStringTag"";
+                var genFun = { };
+                if (!(toStringTagSymbol in genFun)) {
+                  genFun[toStringTagSymbol] = ""GeneratorFunction"";
+                }"
+            );
+        }
+
+        [Fact]
+        public void RegExpToStringWithObject()
+        {
+            var engine = new Engine();
+            var actual = engine.Execute(@"(/./['toString']).call({ source: 'a', flags: 'b' })").GetCompletionValue().ToString();
+            Assert.Equal("/a/b", actual);
+        }
+
+        [Fact]
+        public void StringStartsWithAndEndsWithAgainstStringWithSymbolMatchSucceed()
+        {
+            var engine = new Engine();
+            engine.Execute(@"var re = /foo/; re[Symbol.match] = false;");
+            Assert.True(engine.Execute("'/foo/'.startsWith(re);").GetCompletionValue().AsBoolean());
+            Assert.False(engine.Execute("'/baz/'.endsWith(re);").GetCompletionValue().AsBoolean());
+        }
+
+        [Fact]
+        public void RegExpMatchWithSymbol()
+        {
+            var engine = new Engine();
+            var jsValue = engine.Execute(@"/a/[Symbol.match]('abc');").GetCompletionValue();
+            Assert.True(jsValue.IsObject());
+        }
+
+        [Fact]
+        public void TestFullScriptTemporary()
+        {
+            var script = File.ReadAllText(@"C:\temp\pdfmake.min.js");
+            var engine = new Engine();
+            engine.Execute(script);
+        }
     }
 }

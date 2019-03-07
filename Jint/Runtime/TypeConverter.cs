@@ -116,13 +116,7 @@ namespace Jint.Runtime
 
         internal static bool CanBeIndex(string input)
         {
-            if (string.IsNullOrEmpty(input))
-            {
-                return false;
-            }
-
-            char first = input[0];
-            if (first < 32 || (first > 57 && first != 73))
+            if (input[0] < 32 || (input[0] > 57 && input[0] != 73))
             {
                 // does not start with space, +, -, number or I
                 return false;
@@ -393,22 +387,32 @@ namespace Jint.Runtime
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ObjectInstance ToObject(Engine engine, JsValue value)
         {
-            switch (value._type)
+            if (value._type == Types.Object)
             {
-                case Types.Object:
-                    return (ObjectInstance) value;
-                case Types.Boolean:
-                    return engine.Boolean.Construct(((JsBoolean) value)._value);
-                case Types.Number:
-                    return engine.Number.Construct(((JsNumber) value)._value);
-                case Types.String:
-                    return engine.String.Construct(value.AsStringWithoutTypeCheck());
-                case Types.Symbol:
-                    return engine.Symbol.Construct(((JsSymbol) value)._value);
-                default:
-                    ExceptionHelper.ThrowTypeError(engine);
-                    return null;
+                return (ObjectInstance) value;
             }
+
+            if (value._type == Types.Boolean)
+            {
+                return engine.Boolean.Construct(((JsBoolean) value)._value);
+            }
+
+            if (value._type == Types.Number)
+            {
+                return engine.Number.Construct(((JsNumber) value)._value);
+            }
+
+            if (value._type == Types.String)
+            {
+                return engine.String.Construct(value.AsStringWithoutTypeCheck());
+            }
+
+            if (value._type == Types.Symbol)
+            {
+                return engine.Symbol.Construct(((JsSymbol) value)._value);
+            }
+
+            return ExceptionHelper.ThrowTypeError<ObjectInstance>(engine);
         }
 
         public static Types GetPrimitiveType(JsValue value)

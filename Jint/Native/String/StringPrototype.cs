@@ -654,30 +654,38 @@ namespace Jint.Native.String
 
         private JsValue Match(JsValue thisObj, JsValue[] arguments)
         {
-            TypeConverter.CheckObjectCoercible(Engine, thisObj);
+            return DoMatch(_engine, thisObj, arguments);
+        }
+
+        internal static JsValue DoMatch(Engine engine, JsValue thisObj, JsValue[] arguments)
+        {
+            TypeConverter.CheckObjectCoercible(engine, thisObj);
 
             var s = TypeConverter.ToString(thisObj);
 
             var regex = arguments.At(0);
             var rx = regex.TryCast<RegExpInstance>();
 
-            rx = rx ?? (RegExpInstance) Engine.RegExp.Construct(new[] {regex});
+            rx = rx ?? (RegExpInstance) engine.RegExp.Construct(new[]
+            {
+                regex
+            });
 
             var global = ((JsBoolean) rx.Get("global"))._value;
             if (!global)
             {
-                return Engine.RegExp.PrototypeObject.Exec(rx, Arguments.From(s));
+                return engine.RegExp.PrototypeObject.Exec(rx, Arguments.From(s));
             }
             else
             {
                 rx.Put("lastIndex", 0, false);
-                var a = (ArrayInstance) Engine.Array.Construct(Arguments.Empty);
+                var a = (ArrayInstance) engine.Array.Construct(Arguments.Empty);
                 double previousLastIndex = 0;
                 uint n = 0;
                 var lastMatch = true;
                 while (lastMatch)
                 {
-                    var result = Engine.RegExp.PrototypeObject.Exec(rx, Arguments.From(s)).TryCast<ObjectInstance>();
+                    var result = engine.RegExp.PrototypeObject.Exec(rx, Arguments.From(s)).TryCast<ObjectInstance>();
                     if (ReferenceEquals(result, null))
                     {
                         lastMatch = false;
@@ -696,14 +704,15 @@ namespace Jint.Native.String
                         n++;
                     }
                 }
+
                 if (n == 0)
                 {
                     return Null;
                 }
+
                 a.SetLength(n);
                 return a;
             }
-
         }
 
         private JsValue LocaleCompare(JsValue thisObj, JsValue[] arguments)
@@ -959,10 +968,7 @@ namespace Jint.Native.String
             }
             else
             {
-                if (searchString.IsRegExp())
-                {
-                    ExceptionHelper.ThrowTypeError(Engine);
-                }
+                ValidateRegExp(searchString, "First argument to String.prototype.startsWith must not be a regular expression");
             }
 
             var searchStr = TypeConverter.ToString(searchString);
@@ -1004,10 +1010,7 @@ namespace Jint.Native.String
             }
             else
             {
-                if (searchString.IsRegExp())
-                {
-                    ExceptionHelper.ThrowTypeError(Engine);
-                }
+                ValidateRegExp(searchString, "First argument to String.prototype.endsWith must not be a regular expression");
             }
 
             var searchStr = TypeConverter.ToString(searchString);
@@ -1041,10 +1044,7 @@ namespace Jint.Native.String
             var s1 = TypeConverter.ToString(thisObj);
             var searchString = arguments.At(0);
 
-            if (searchString.IsRegExp())
-            {
-                return ExceptionHelper.ThrowTypeError<JsValue>(_engine, "First argument to String.prototype.includes must not be a regular expression");
-            }
+            ValidateRegExp(searchString, "First argument to String.prototype.includes must not be a regular expression");
 
             var searchStr = TypeConverter.ToString(searchString);
             double pos = 0;
@@ -1139,6 +1139,23 @@ namespace Jint.Native.String
                 }
 
                 return sb.ToString();
+            }
+        }
+
+        private void ValidateRegExp(JsValue searchString, string error)
+        {
+            if (!searchString.IsRegExp())
+            {
+                if (searchString is ObjectInstance oi
+                    && oi.TryGetValue(GlobalSymbolRegistry.Match._value, out var match)
+                    && !TypeConverter.ToBoolean(match))
+                {
+                    // ok
+                }
+                else
+                {
+                    ExceptionHelper.ThrowTypeError(Engine, error);
+                }
             }
         }
     }

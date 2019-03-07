@@ -52,6 +52,14 @@ namespace Jint.Tests.Test262
             RunTestInternal(sourceFile);
         }
 
+        [Theory(DisplayName = "language\\expressions\\in")]
+        [MemberData(nameof(SourceFiles), "language\\expressions\\in", false)]
+        [MemberData(nameof(SourceFiles), "language\\expressions\\in", true, Skip = "Skipped")]
+        protected void ExpressionsIn(SourceFile sourceFile)
+        {
+            RunTestInternal(sourceFile);
+        }
+
         [Theory(DisplayName = "language\\expressions\\new")]
         [MemberData(nameof(SourceFiles), "language\\expressions\\new", false)]
         [MemberData(nameof(SourceFiles), "language\\expressions\\new", true, Skip = "Skipped")]

@@ -1,5 +1,8 @@
 ﻿using System.Text.RegularExpressions;
 using Jint.Native.Array;
+using Jint.Native.Object;
+using Jint.Native.String;
+using Jint.Native.Symbol;
 using Jint.Runtime;
 using Jint.Runtime.Descriptors;
 using Jint.Runtime.Interop;
@@ -34,19 +37,19 @@ namespace Jint.Native.RegExp
             FastAddProperty("multiline", false, false, false, false);
             FastAddProperty("source", "(?:)", false, false, false);
             FastAddProperty("lastIndex", 0, true, false, false);
+
+            FastAddProperty(GlobalSymbolRegistry.Match._value, new ClrFunctionInstance(Engine, "match", (value, values) => StringPrototype.DoMatch(_engine, value, values), 1), false, false, true);
         }
 
-        private static JsValue ToRegExpString(JsValue thisObj, JsValue[] arguments)
+        private JsValue ToRegExpString(JsValue thisObj, JsValue[] arguments)
         {
-            var regExp = thisObj.TryCast<RegExpInstance>();
+            var regExp = TypeConverter.ToObject(_engine, thisObj);
+            var source = TypeConverter.ToString(regExp.GetOwnProperty("source").Value);
 
-            string res = "/" + regExp.Source + "/";
-            if (regExp.Flags != null)
+            string res = "/" + source + "/";
+            if (regExp.TryGetValue("flags", out var jsValue))
             {
-                res += (regExp.Flags.Contains("g") ? "g" : "")
-                    + (regExp.Flags.Contains("i") ? "i" : "")
-                    + (regExp.Flags.Contains("m") ? "m" : "")
-                ;
+                res += TypeConverter.ToString(jsValue);
             }
 
             return res;
@@ -60,7 +63,8 @@ namespace Jint.Native.RegExp
                 ExceptionHelper.ThrowTypeError(Engine);
             }
 
-            var match = Exec(r, arguments);
+            var regExp = r;
+            var match = Exec(regExp, arguments);
             return !match.IsNull();
         }
 
