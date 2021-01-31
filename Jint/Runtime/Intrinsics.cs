@@ -17,6 +17,7 @@ using Jint.Native.RegExp;
 using Jint.Native.Set;
 using Jint.Native.String;
 using Jint.Native.Symbol;
+using Jint.Native.TypedArray;
 using Jint.Native.WeakMap;
 using Jint.Native.WeakSet;
 
@@ -61,6 +62,17 @@ namespace Jint.Runtime
         private SetConstructor _set;
         private ArrayConstructor _array;
         private BooleanConstructor _boolean;
+        private TypedArrayConstructor _int8Array;
+        private TypedArrayConstructor _uint8Array;
+        private TypedArrayConstructor _uint8ClampedArray;
+        private TypedArrayConstructor _int16Array;
+        private TypedArrayConstructor _uint16Array;
+        private TypedArrayConstructor _int32Array;
+        private TypedArrayConstructor _uint32Array;
+        private TypedArrayConstructor _bigInt64Array;
+        private TypedArrayConstructor _bigUint64Array;
+        private TypedArrayConstructor _float32Array;
+        private TypedArrayConstructor _float64Array;
 
         internal Intrinsics(Engine engine, Realm realm)
         {
@@ -83,6 +95,39 @@ namespace Jint.Runtime
 
         public ArrayConstructor Array =>
             _array ??= new ArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);
+
+        public TypedArrayConstructor Int8Array =>
+            _int8Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Int8Array"));
+
+        public TypedArrayConstructor Uint8Array =>
+            _uint8Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Uint8Array"));
+
+        public TypedArrayConstructor Uint8ClampedArray =>
+            _uint8ClampedArray ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Uint8ClampedArray"));
+
+        public TypedArrayConstructor Int16Array =>
+            _int16Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Int16Array"));
+
+        public TypedArrayConstructor Uint16Array =>
+            _uint16Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Uint16Array"));
+
+        public TypedArrayConstructor Int32Array =>
+            _int32Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Int32Array"));
+
+        public TypedArrayConstructor Uint32Array =>
+            _uint32Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Uint32Array"));
+
+        public TypedArrayConstructor BigInt64Array =>
+            _bigInt64Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("BigInt64Array"));
+
+        public TypedArrayConstructor BigUint64Array =>
+            _bigUint64Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("BigUint64Array"));
+
+        public TypedArrayConstructor Float32Array =>
+            _float32Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Float32Array"));
+
+        public TypedArrayConstructor Float64Array =>
+            _float64Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Float64Array"));
 
         public MapConstructor Map =>
             _map ??= new MapConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);
@@ -117,7 +162,7 @@ namespace Jint.Runtime
         public DateConstructor Date =>
             _date ??= new DateConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);
 
-        public MathInstance Math=>
+        public MathInstance Math =>
             _math ??= new MathInstance(_engine, Object.PrototypeObject);
 
         public JsonInstance Json =>

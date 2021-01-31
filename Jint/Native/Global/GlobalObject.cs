@@ -33,12 +33,23 @@ namespace Jint.Native.Global
             const PropertyFlag lengthFlags = PropertyFlag.Configurable;
             const PropertyFlag propertyFlags = PropertyFlag.Configurable | PropertyFlag.Writable;
 
-            var properties = new PropertyDictionary(40, checkExistingKeys: false)
+            var properties = new PropertyDictionary(52, checkExistingKeys: false)
             {
                 ["Object"] = new PropertyDescriptor(_realm.Intrinsics.Object, propertyFlags),
                 ["Function"] = new PropertyDescriptor(_realm.Intrinsics.Function, propertyFlags),
                 ["Symbol"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Symbol, propertyFlags),
                 ["Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Array, propertyFlags),
+                ["Int8Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Int8Array, propertyFlags),
+                ["Uint8Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Uint8Array, propertyFlags),
+                ["Uint8ClampedArray"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Uint8ClampedArray, propertyFlags),
+                ["Int16Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Int16Array, propertyFlags),
+                ["Uint16Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Uint16Array, propertyFlags),
+                ["Int32Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Int32Array, propertyFlags),
+                ["Uint32Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Uint32Array, propertyFlags),
+                ["BigInt64Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.BigInt64Array, propertyFlags),
+                ["BigUint64Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.BigUint64Array, propertyFlags),
+                ["Float32Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Float32Array, propertyFlags),
+                ["Float64Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Float64Array, propertyFlags),
                 ["Map"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Map, propertyFlags),
                 ["Set"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Set, propertyFlags),
                 ["WeakMap"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.WeakMap, propertyFlags),
