@@ -274,14 +274,6 @@ namespace Jint.Tests.Test262
                                 skip = true;
                                 reason = "regexp-lookbehind not implemented";
                                 break;
-                            case "TypedArray":
-                                skip = true;
-                                reason = "TypedArray not implemented";
-                                break;
-                            case "Int32Array":
-                                skip = true;
-                                reason = "Int32Array not implemented";
-                                break;
                         }
                     }
                 }
@@ -308,18 +300,6 @@ namespace Jint.Tests.Test262
                 {
                     skip = true;
                     reason = "Unicode support and its special cases need more work";
-                }
-
-                if (name.StartsWith("language/statements/class/subclass/builtin-objects/Promise"))
-                {
-                    skip = true;
-                    reason = "Promise not implemented";
-                }
-
-                if (name.StartsWith("language/statements/class/subclass/builtin-objects/TypedArray"))
-                {
-                    skip = true;
-                    reason = "TypedArray not implemented";
                 }
 
                 if (name.StartsWith("language/statements/class/subclass/builtin-objects/ArrayBuffer/"))
