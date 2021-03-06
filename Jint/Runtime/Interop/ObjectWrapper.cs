@@ -56,13 +56,13 @@ namespace Jint.Runtime.Interop
                 {
                     // can try utilize fast path
                     var accessor = GetAccessor(_engine, Target.GetType(), member);
-                    
+
                     // CanPut logic
                     if (!accessor.Writable || !_engine.Options._IsClrWriteAllowed)
                     {
                         return false;
                     }
-                    
+
                     accessor.SetValue(_engine, Target, value);
                     return true;
                 }
@@ -96,7 +96,7 @@ namespace Jint.Runtime.Interop
                 var index = (int) ((JsNumber) property)._value;
                 return (uint) index < list.Count ? FromObject(_engine, list[index]) : Undefined;
             }
-            
+
             if (property.IsSymbol() && property != GlobalSymbolRegistry.Iterator)
             {
                 // wrapped objects cannot have symbol properties
@@ -111,7 +111,7 @@ namespace Jint.Runtime.Interop
                 {
                     return result;
                 }
-                
+
                 if (_properties is null || !_properties.ContainsKey(member))
                 {
                     // can try utilize fast path
@@ -119,6 +119,12 @@ namespace Jint.Runtime.Interop
                     var value = accessor.GetValue(_engine, Target);
                     if (value is not null)
                     {
+                        if (value is Array a)
+                        {
+                            // special case, otherwise would convert to new array instance
+                            return new ObjectWrapper(_engine, a);
+                        }
+
                         return FromObject(_engine, value);
                     }
                 }
@@ -149,7 +155,7 @@ namespace Jint.Runtime.Interop
             var includeStrings = (types & Types.String) != 0;
             if (Target is IDictionary dictionary && includeStrings)
             {
-                // we take values exposed as dictionary keys only 
+                // we take values exposed as dictionary keys only
                 foreach (var key in dictionary.Keys)
                 {
                     if (_engine.ClrTypeConverter.TryConvert(key, typeof(string), CultureInfo.InvariantCulture, out var stringKey))
@@ -253,7 +259,7 @@ namespace Jint.Runtime.Interop
             }
 
             accessor = accessorFactory?.Invoke() ?? ResolvePropertyDescriptorFactory(engine, type, member);
-            
+
             // racy, we don't care, worst case we'll catch up later
             Interlocked.CompareExchange(ref Engine.ReflectionAccessors,
                 new Dictionary<ClrPropertyDescriptorFactoriesKey, ReflectionAccessor>(factories)
@@ -270,12 +276,12 @@ namespace Jint.Runtime.Interop
             {
                 return new DynamicObjectAccessor(typeof(void), memberName);
             }
-            
+
             var isNumber = uint.TryParse(memberName, out _);
 
             // we can always check indexer if there's one, and then fall back to properties if indexer returns null
             IndexerAccessor.TryFindIndexer(engine, type, memberName, out var indexerAccessor, out var indexer);
-            
+
             // properties and fields cannot be numbers
             if (!isNumber && TryFindStringPropertyAccessor(type, memberName, indexer, out var temp))
             {

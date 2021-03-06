@@ -32,6 +32,10 @@ namespace Jint.Native
 
         internal static readonly JsNumber PI = new JsNumber(System.Math.PI);
 
+        private static readonly object BoxedZero = 0;
+        private static readonly object BoxedOne = 1;
+        private static readonly object BoxedTwo = 2;
+
         static JsNumber()
         {
             var integers = new JsNumber[NumbersMax];
@@ -69,7 +73,18 @@ namespace Jint.Native
 
         public override object ToObject()
         {
-            return _value;
+            return IsInteger() ? BoxedInteger((int) _value) : _value;
+        }
+
+        internal static object BoxedInteger(int value)
+        {
+            return value switch
+            {
+                0 => BoxedZero,
+                1 => BoxedOne,
+                2 => BoxedTwo,
+                _ => value
+            };
         }
 
         internal static JsNumber Create(object value)
