@@ -18,8 +18,8 @@ namespace Jint.Runtime.Environments
 
         public ObjectEnvironmentRecord(
             Engine engine,
-            ObjectInstance bindingObject, 
-            bool provideThis, 
+            ObjectInstance bindingObject,
+            bool provideThis,
             bool withEnvironment) : base(engine)
         {
             _bindingObject = bindingObject;
@@ -41,7 +41,7 @@ namespace Jint.Runtime.Environments
             {
                 return true;
             }
-            
+
             return !IsBlocked(name);
         }
 
@@ -97,24 +97,24 @@ namespace Jint.Runtime.Environments
         public override void CreateMutableBinding(string name, bool canBeDeleted = false)
         {
             var propertyDescriptor = canBeDeleted
-                ? new PropertyDescriptor(Undefined, PropertyFlag.ConfigurableEnumerableWritable | PropertyFlag.MutableBinding)
-                : new PropertyDescriptor(Undefined, PropertyFlag.NonConfigurable | PropertyFlag.MutableBinding);
+                ? new PropertyDescriptor(Undefined, PropertyFlag.ConfigurableEnumerableWritable | PropertyFlag.MutableBinding | PropertyFlag.PreparedAndFree)
+                : new PropertyDescriptor(Undefined, PropertyFlag.NonConfigurable | PropertyFlag.MutableBinding | PropertyFlag.PreparedAndFree);
 
             _bindingObject.DefinePropertyOrThrow(name, propertyDescriptor);
-        }  
-        
+        }
+
         /// <summary>
         /// http://www.ecma-international.org/ecma-262/6.0/#sec-object-environment-records-createmutablebinding-n-d
         /// </summary>
         internal void CreateMutableBindingAndInitialize(string name, JsValue value, bool canBeDeleted = false)
         {
             var propertyDescriptor = canBeDeleted
-                ? new PropertyDescriptor(value, PropertyFlag.ConfigurableEnumerableWritable | PropertyFlag.MutableBinding)
-                : new PropertyDescriptor(value, PropertyFlag.NonConfigurable | PropertyFlag.MutableBinding);
+                ? new PropertyDescriptor(value, PropertyFlag.ConfigurableEnumerableWritable | PropertyFlag.MutableBinding | PropertyFlag.PreparedAndFree)
+                : new PropertyDescriptor(value, PropertyFlag.NonConfigurable | PropertyFlag.MutableBinding | PropertyFlag.PreparedAndFree);
 
             _bindingObject.DefinePropertyOrThrow(name, propertyDescriptor);
         }
-        
+
         /// <summary>
         ///  http://www.ecma-international.org/ecma-262/6.0/#sec-object-environment-records-createimmutablebinding-n-s
         /// </summary>

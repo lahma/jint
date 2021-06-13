@@ -65,7 +65,7 @@ namespace Jint.Native.Object
 
         internal PropertyDictionary Properties
         {
-            [DebuggerStepThrough]            
+            [DebuggerStepThrough]
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get => _properties;
         }
@@ -101,9 +101,10 @@ namespace Jint.Native.Object
                 return defaultConstructor;
             }
 
-            if (!(c is ObjectInstance oi))
+            var oi = c as ObjectInstance;
+            if (oi is null)
             {
-                return ExceptionHelper.ThrowTypeError<IConstructor>(o._engine);
+                ExceptionHelper.ThrowTypeError(o._engine);
             }
 
             var s = oi.Get(GlobalSymbolRegistry.Species);
@@ -116,10 +117,10 @@ namespace Jint.Native.Object
             {
                 return (IConstructor) s;
             }
-            
-            return ExceptionHelper.ThrowTypeError<IConstructor>(o._engine);
-        }
 
+            ExceptionHelper.ThrowTypeError(o._engine);
+            return null;
+        }
 
         internal void SetProperties(PropertyDictionary properties)
         {
@@ -159,6 +160,8 @@ namespace Jint.Native.Object
         internal void SetProperty(Key property, PropertyDescriptor value)
         {
             _properties ??= new PropertyDictionary();
+            // always clear free bit before assigning
+            value._flags &= ~PropertyFlag.PreparedAndFree;
             _properties[property] = value;
         }
 
@@ -454,11 +457,11 @@ namespace Jint.Native.Object
             if (ownDesc == PropertyDescriptor.Undefined)
             {
                 var parent = GetPrototypeOf();
-                if (!(parent is null))
+                if (parent is not null)
                 {
                     return parent.Set(property, value, receiver);
                 }
-                ownDesc = new PropertyDescriptor(Undefined, PropertyFlag.ConfigurableEnumerableWritable);
+                ownDesc = PropertyDescriptor.UndefinedConfigurableEnumerableWritable;
             }
 
             if (ownDesc.IsDataDescriptor())
@@ -468,7 +471,7 @@ namespace Jint.Native.Object
                     return false;
                 }
 
-                if (!(receiver is ObjectInstance oi))
+                if (receiver is not ObjectInstance oi)
                 {
                     return false;
                 }
@@ -486,7 +489,18 @@ namespace Jint.Native.Object
                         return false;
                     }
 
-                    var valueDesc = new PropertyDescriptor(value, PropertyFlag.None);
+                    PropertyDescriptor valueDesc;
+                    if ((existingDescriptor._flags & PropertyFlag.MutableBinding) != 0
+                        && !existingDescriptor.IsAccessorDescriptor())
+                    {
+                        // we can reuse old one
+                        valueDesc = existingDescriptor;
+                        valueDesc._value = value;
+                    }
+                    else
+                    {
+                        valueDesc = new PropertyDescriptor(value, PropertyFlag.None);
+                    }
                     return oi.DefineOwnProperty(property, valueDesc);
                 }
                 else
@@ -495,7 +509,7 @@ namespace Jint.Native.Object
                 }
             }
 
-            if (!(ownDesc.Set is ICallable setter))
+            if (ownDesc.Set is not ICallable setter)
             {
                 return false;
             }
@@ -505,7 +519,7 @@ namespace Jint.Native.Object
 
             return true;
         }
-        
+
         /// <summary>
         /// Returns a Boolean value indicating whether a
         /// [[Put]] operation with PropertyName can be
@@ -590,7 +604,7 @@ namespace Jint.Native.Object
         {
             if (!Delete(property))
             {
-                ExceptionHelper.ThrowTypeError(Engine);
+                ExceptionHelper.ThrowTypeError(_engine);
             }
             return true;
         }
@@ -659,28 +673,31 @@ namespace Jint.Native.Object
                     return false;
                 }
 
-                if (o is object)
+                if (o is not null)
                 {
                     if (desc.IsGenericDescriptor() || desc.IsDataDescriptor())
                     {
-                        PropertyDescriptor propertyDescriptor;
-                        if ((desc._flags & PropertyFlag.ConfigurableEnumerableWritable) == PropertyFlag.ConfigurableEnumerableWritable)
+                        PropertyDescriptor propertyDescriptor = null;
+                        PropertyFlag flags = desc._flags;
+                        if ((desc._flags & PropertyFlag.PreparedAndFree) == PropertyFlag.PreparedAndFree)
                         {
-                            propertyDescriptor = new PropertyDescriptor(descValue ?? Undefined, PropertyFlag.ConfigurableEnumerableWritable);
+                            // no need to create new instance
+                            propertyDescriptor = desc;
                         }
-                        else if ((desc._flags & PropertyFlag.ConfigurableEnumerableWritable) == 0)
+                        else if ((flags & PropertyFlag.ConfigurableEnumerableWritable) == PropertyFlag.ConfigurableEnumerableWritable)
                         {
-                            propertyDescriptor = new PropertyDescriptor(descValue ?? Undefined, PropertyFlag.AllForbidden);
+                            flags = PropertyFlag.ConfigurableEnumerableWritable | (desc._flags & PropertyFlag.MutableBinding);
                         }
-                        else
+                        else if ((flags & PropertyFlag.ConfigurableEnumerableWritable) == 0)
                         {
-                            propertyDescriptor = new PropertyDescriptor(desc)
-                            {
-                                Value = descValue ?? Undefined
-                            };
+                            flags = PropertyFlag.AllForbidden | (desc._flags & PropertyFlag.MutableBinding);
                         }
 
-                        propertyDescriptor._flags |= desc._flags & PropertyFlag.MutableBinding; 
+                        propertyDescriptor ??= new PropertyDescriptor(flags);
+                        propertyDescriptor._value = descValue ?? Undefined;
+                        // always clear free bit
+                        propertyDescriptor._flags &= ~PropertyFlag.PreparedAndFree;
+
                         o.SetOwnProperty(property, propertyDescriptor);
                     }
                     else
@@ -742,8 +759,7 @@ namespace Jint.Native.Object
                         return false;
                     }
 
-
-                    if (o is object)
+                    if (o is not null)
                     {
                         var flags = current.Flags & ~(PropertyFlag.Writable | PropertyFlag.WritableSet);
                         if (current.IsDataDescriptor())
@@ -795,7 +811,7 @@ namespace Jint.Native.Object
                 }
             }
 
-            if (o is object)
+            if (o is not null)
             {
                 if (!ReferenceEquals(descValue, null))
                 {
@@ -815,6 +831,11 @@ namespace Jint.Native.Object
                 if (desc.ConfigurableSet)
                 {
                     current.Configurable = desc.Configurable;
+                }
+
+                if ((desc._flags & PropertyFlag.MutableBinding) != 0)
+                {
+                    current._flags |= PropertyFlag.MutableBinding;
                 }
 
                 PropertyDescriptor mutable = null;
@@ -1017,7 +1038,7 @@ namespace Jint.Native.Object
                 }
 
                 return (long) System.Math.Max(
-                    0, 
+                    0,
                     System.Math.Min(len, ArrayOperations.MaxArrayLikeLength));
             }
 
@@ -1035,7 +1056,7 @@ namespace Jint.Native.Object
                 value = Undefined;
                 return false;
             }
-            
+
             var callbackfn = arguments.At(0);
             var thisArg = arguments.At(1);
             var callable = GetCallable(callbackfn);
@@ -1073,7 +1094,8 @@ namespace Jint.Native.Object
                 return callable;
             }
 
-            return ExceptionHelper.ThrowTypeError<ICallable>(_engine, "Argument must be callable");
+            ExceptionHelper.ThrowTypeError(_engine, "Argument must be callable");
+            return null;
         }
 
         internal bool IsConcatSpreadable
@@ -1169,13 +1191,13 @@ namespace Jint.Native.Object
             var newDesc = new PropertyDescriptor(v, PropertyFlag.NonEnumerable);
             return DefineOwnProperty(p, newDesc);
         }
-        
+
         /// <summary>
         /// https://tc39.es/ecma262/#sec-createdatapropertyorthrow
         /// </summary>
         internal bool CreateDataProperty(JsValue p, JsValue v)
         {
-            var newDesc = new PropertyDescriptor(v, PropertyFlag.ConfigurableEnumerableWritable);
+            var newDesc = new PropertyDescriptor(v, PropertyFlag.ConfigurableEnumerableWritable | PropertyFlag.PreparedAndFree);
             return DefineOwnProperty(p, newDesc);
         }
 
@@ -1206,7 +1228,12 @@ namespace Jint.Native.Object
                 return null;
             }
 
-            return jsValue as ICallable ?? ExceptionHelper.ThrowTypeError<ICallable>(engine, "Value returned for property '" + p + "' of object is not a function");
+            var callable = jsValue as ICallable;
+            if (callable is null)
+            {
+                ExceptionHelper.ThrowTypeError(engine, "Value returned for property '" + p + "' of object is not a function");
+            }
+            return callable;
         }
 
         internal void CopyDataProperties(
@@ -1243,7 +1270,7 @@ namespace Jint.Native.Object
                 {
                     continue;
                 }
-                
+
                 var desc = GetOwnProperty(property);
                 if (desc != PropertyDescriptor.Undefined && desc.Enumerable)
                 {
@@ -1284,13 +1311,18 @@ namespace Jint.Native.Object
 
         internal ObjectInstance AssertThisIsObjectInstance(JsValue value, string methodName)
         {
-            return value as ObjectInstance ?? ThrowIncompatibleReceiver<ObjectInstance>(value, methodName);
+            var instance = value as ObjectInstance;
+            if (instance is null)
+            {
+                ThrowIncompatibleReceiver(value, methodName);
+            }
+            return instance;
         }
 
         [MethodImpl(MethodImplOptions.NoInlining)]
-        private T ThrowIncompatibleReceiver<T>(JsValue value, string methodName)
+        private void ThrowIncompatibleReceiver(JsValue value, string methodName)
         {
-            return ExceptionHelper.ThrowTypeError<T>(_engine, $"Method {methodName} called on incompatible receiver {value}");
+            ExceptionHelper.ThrowTypeError(_engine, $"Method {methodName} called on incompatible receiver {value}");
         }
 
         public override bool Equals(JsValue obj)

@@ -58,7 +58,7 @@ namespace Jint.Runtime.Environments
 
             return TryGetBindingForGlobalParent(name, out value, property);
         }
-        
+
         [MethodImpl(MethodImplOptions.NoInlining)]
         private bool TryGetBindingForGlobalParent(
             in BindingName name,
@@ -113,7 +113,7 @@ namespace Jint.Runtime.Environments
             }
             else
             {
-                if (!_global.Set(name, value))
+                if (!_global.Set(name, value, mutable: false))
                 {
                     ExceptionHelper.ThrowTypeError(_engine);
                 }
@@ -129,8 +129,8 @@ namespace Jint.Runtime.Environments
             else
             {
                 // fast inlined path as we know we target global, otherwise would be
-                // _objectRecord.SetMutableBinding(name, value, strict); 
-                if (!_global.Set(name, value) && strict)
+                // _objectRecord.SetMutableBinding(name, value, strict);
+                if (!_global.Set(name, value, mutable: true) && strict)
                 {
                     ExceptionHelper.ThrowTypeError(_engine);
                 }
@@ -146,8 +146,8 @@ namespace Jint.Runtime.Environments
             else
             {
                 // fast inlined path as we know we target global, otherwise would be
-                // _objectRecord.SetMutableBinding(name, value, strict); 
-                if (!_global.Set(name.Key, value) && strict)
+                // _objectRecord.SetMutableBinding(name, value, strict);
+                if (!_global.Set(name.Key, value, mutable: true) && strict)
                 {
                     ExceptionHelper.ThrowTypeError(_engine);
                 }
@@ -235,7 +235,7 @@ namespace Jint.Runtime.Environments
 
         public bool CanDeclareGlobalFunction(string name)
         {
-            if (!_global._properties.TryGetValue(name, out var existingProp) 
+            if (!_global._properties.TryGetValue(name, out var existingProp)
                 || existingProp == PropertyDescriptor.Undefined)
             {
                 return _global.Extensible;
@@ -278,6 +278,7 @@ namespace Jint.Runtime.Environments
             {
                 desc = new PropertyDescriptor(value, PropertyFlag.None);
             }
+            desc._flags |=  PropertyFlag.PreparedAndFree;
 
             _global.DefinePropertyOrThrow(name, desc);
             _global.Set(name, value, false);

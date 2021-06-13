@@ -385,7 +385,7 @@ namespace Jint.Native.Global
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool IsValidHexaChar(char c) => Uri.IsHexDigit(c);
-        
+
         /// <summary>
         /// http://www.ecma-international.org/ecma-262/5.1/#sec-15.1.3.2
         /// </summary>
@@ -707,7 +707,7 @@ namespace Jint.Native.Global
 
             return _stringBuilder.ToString();
         }
-        
+
         // optimized versions with string parameter and without virtual dispatch for global environment usage
 
         internal bool HasProperty(Key property)
@@ -734,7 +734,7 @@ namespace Jint.Native.Global
             {
                 return true;
             }
-            
+
             // check fast path
             if ((current._flags & PropertyFlag.MutableBinding) != 0)
             {
@@ -751,15 +751,20 @@ namespace Jint.Native.Global
             Properties.TryGetValue(property, out var descriptor);
             return descriptor ?? PropertyDescriptor.Undefined;
         }
-        
-        internal bool Set(Key property, JsValue value)
+
+        internal bool Set(Key property, JsValue value, bool mutable)
         {
             // here we are called only from global environment record context
             // we can take some shortcuts to be faster
 
             if (!_properties.TryGetValue(property, out var existingDescriptor))
             {
-                _properties[property] = new PropertyDescriptor(value, PropertyFlag.ConfigurableEnumerableWritable);
+                var flag = PropertyFlag.ConfigurableEnumerableWritable;
+                if (mutable)
+                {
+                    flag |= PropertyFlag.MutableBinding;
+                }
+                _properties[property] = new PropertyDescriptor(value, flag);
                 return true;
             }
 
@@ -778,7 +783,12 @@ namespace Jint.Native.Global
                 }
 
                 // slow path
-                return DefineOwnProperty(property, new PropertyDescriptor(value, PropertyFlag.None));
+                var flag = PropertyFlag.PreparedAndFree;
+                if (mutable)
+                {
+                    flag |= PropertyFlag.MutableBinding;
+                }
+                return DefineOwnProperty(property, new PropertyDescriptor(value, flag));
             }
 
             if (!(existingDescriptor.Set is ICallable setter))
@@ -790,7 +800,7 @@ namespace Jint.Native.Global
 
             return true;
         }
-        
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal void SetOwnProperty(Key property, PropertyDescriptor desc)
         {

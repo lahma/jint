@@ -18,6 +18,9 @@ namespace Jint.Runtime.Descriptors
         // we can check for mutable binding and do some fast assignments
         MutableBinding = 512,
 
+        // allowed to be used as call site is not going to hold the reference
+        PreparedAndFree = 1024,
+
         // common helpers
         AllForbidden = ConfigurableSet | EnumerableSet | WritableSet,
         ConfigurableEnumerableWritable = Configurable | Enumerable | Writable,

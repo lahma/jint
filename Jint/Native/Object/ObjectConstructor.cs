@@ -157,7 +157,7 @@ namespace Jint.Native.Object
             {
                 return OrdinaryCreateFromConstructor(newTarget, _engine.Object.PrototypeObject, (engine, state) => new ObjectInstance(engine));
             }
-            
+
             if (arguments.Length > 0)
             {
                 var value = arguments[0];
@@ -394,7 +394,7 @@ namespace Jint.Native.Object
 
         private static JsValue PreventExtensions(JsValue thisObject, JsValue[] arguments)
         {
-            if (!(arguments.At(0) is ObjectInstance o))
+            if (arguments.At(0) is not ObjectInstance o)
             {
                 return arguments.At(0);
             }
@@ -459,7 +459,7 @@ namespace Jint.Native.Object
 
         private static JsValue IsExtensible(JsValue thisObject, JsValue[] arguments)
         {
-            if (!(arguments.At(0) is ObjectInstance o))
+            if (arguments.At(0) is not ObjectInstance o)
             {
                 return arguments.At(0);
             }

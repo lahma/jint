@@ -12,7 +12,9 @@ namespace Jint.Runtime.Interpreter.Expressions
         private readonly JintExpression _right;
         private readonly AssignmentOperator _operator;
 
-        private JintAssignmentExpression(Engine engine, AssignmentExpression expression) : base(engine, expression)
+        private JintAssignmentExpression(
+            Engine engine,
+            AssignmentExpression expression) : base(engine, expression)
         {
             _left = Build(engine, expression.Left);
             _right = Build(engine, expression.Right);
@@ -23,6 +25,19 @@ namespace Jint.Runtime.Interpreter.Expressions
         {
             if (expression.Operator == AssignmentOperator.Assign)
             {
+                // check if we can optimize
+                if (expression.Left is Identifier leftIdentifier
+                    && expression.Right is BinaryExpression rightBinaryExpression
+                    && rightBinaryExpression.Left is Identifier binaryLeft
+                    && binaryLeft.Name == leftIdentifier.Name)
+                {
+                    var transformed = BuildCompoundAssignment(engine, rightBinaryExpression);
+                    if (transformed is not null)
+                    {
+                        return transformed;
+                    }
+                }
+
                 if (expression.Left is BindingPattern)
                 {
                     return new BindingPatternAssignmentExpression(engine, expression);
@@ -32,6 +47,32 @@ namespace Jint.Runtime.Interpreter.Expressions
             }
 
             return new JintAssignmentExpression(engine, expression);
+        }
+
+        private static JintExpression BuildCompoundAssignment(
+            Engine engine,
+            BinaryExpression rightBinaryExpression)
+        {
+            var rewrittenOperator = rightBinaryExpression.Operator switch
+            {
+                BinaryOperator.Divide => "/=",
+                BinaryOperator.BitwiseAnd => "&=",
+                BinaryOperator.BitwiseOr => "|=",
+                BinaryOperator.BitwiseXOr => "^=",
+                BinaryOperator.Plus => "+=",
+                BinaryOperator.Minus => "-=",
+                BinaryOperator.Times => "*=",
+                BinaryOperator.Modulo => "%=",
+                _ => null
+            };
+
+            if (rewrittenOperator is not null)
+            {
+                var assignmentExpression = new AssignmentExpression(rewrittenOperator, rightBinaryExpression.Left, rightBinaryExpression.Right);
+                return new JintAssignmentExpression(engine, assignmentExpression);
+            }
+
+            return null;
         }
 
         protected override object EvaluateInternal()
@@ -157,7 +198,7 @@ namespace Jint.Runtime.Interpreter.Expressions
 
             protected override void Initialize()
             {
-                var assignmentExpression = ((AssignmentExpression) _expression);
+                var assignmentExpression = (AssignmentExpression) _expression;
                 _left = Build(_engine, assignmentExpression.Left);
                 _leftIdentifier = _left as JintIdentifierExpression;
                 _evalOrArguments = _leftIdentifier?.HasEvalOrArguments == true;

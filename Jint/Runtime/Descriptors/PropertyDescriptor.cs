@@ -9,12 +9,13 @@ namespace Jint.Runtime.Descriptors
     [DebuggerDisplay("Value: {Value}, Flags: {Flags}")]
     public class PropertyDescriptor
     {
-        public static readonly PropertyDescriptor Undefined = new UndefinedPropertyDescriptor();
+        public static readonly PropertyDescriptor Undefined = new UndefinedPropertyDescriptor(PropertyFlag.None);
+        internal static readonly PropertyDescriptor UndefinedConfigurableEnumerableWritable = new UndefinedPropertyDescriptor(PropertyFlag.ConfigurableEnumerableWritable);
 
         internal PropertyFlag _flags;
         internal JsValue _value;
 
-        protected PropertyDescriptor(PropertyFlag flags)
+        protected internal PropertyDescriptor(PropertyFlag flags)
         {
             _flags = flags;
         }
@@ -390,7 +391,7 @@ namespace Jint.Runtime.Descriptors
 
         private sealed class UndefinedPropertyDescriptor : PropertyDescriptor
         {
-            public UndefinedPropertyDescriptor() : base(PropertyFlag.None | PropertyFlag.CustomJsValue)
+            public UndefinedPropertyDescriptor(PropertyFlag propertyFlag) : base(propertyFlag | PropertyFlag.CustomJsValue)
             {
             }
 
