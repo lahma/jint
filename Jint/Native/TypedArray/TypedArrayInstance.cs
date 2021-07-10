@@ -7,6 +7,9 @@ namespace Jint.Native.TypedArray
         protected TypedArrayInstance(Engine engine, int bytesPerElement) : base(engine)
         {
         }
+
+
+        internal ObjectInstance ViewArrayBuffer { get; }
     }
 
     internal class Int8Array : TypedArrayInstance
@@ -25,63 +28,63 @@ namespace Jint.Native.TypedArray
 
     internal class Uint8ClampedArray : TypedArrayInstance
     {
-        public Uint8ClampedArray(Engine engine, int bytesPerElement) : base(engine, 1)
+        public Uint8ClampedArray(Engine engine) : base(engine, 1)
         {
         }
     }
 
     internal class Int16Array : TypedArrayInstance
     {
-        public Int16Array(Engine engine, int bytesPerElement) : base(engine, 2)
+        public Int16Array(Engine engine) : base(engine, 2)
         {
         }
     }
 
     internal class Uint16Array : TypedArrayInstance
     {
-        public Uint16Array(Engine engine, int bytesPerElement) : base(engine, 2)
+        public Uint16Array(Engine engine) : base(engine, 2)
         {
         }
     }
 
     internal class Int32Array : TypedArrayInstance
     {
-        public Int32Array(Engine engine, int bytesPerElement) : base(engine, 4)
+        public Int32Array(Engine engine) : base(engine, 4)
         {
         }
     }
 
     internal class Uint32Array : TypedArrayInstance
     {
-        public Uint32Array(Engine engine, int bytesPerElement) : base(engine, 4)
+        public Uint32Array(Engine engine) : base(engine, 4)
         {
         }
     }
 
     internal class BigInt64Array : TypedArrayInstance
     {
-        public BigInt64Array(Engine engine, int bytesPerElement) : base(engine, 8)
+        public BigInt64Array(Engine engine) : base(engine, 8)
         {
         }
     }
 
     internal class BigUint64Array : TypedArrayInstance
     {
-        public BigUint64Array(Engine engine, int bytesPerElement) : base(engine, 8)
+        public BigUint64Array(Engine engine) : base(engine, 8)
         {
         }
     }
 
     internal class Float32Array : TypedArrayInstance
     {
-        public Float32Array(Engine engine, int bytesPerElement) : base(engine, 4)
+        public Float32Array(Engine engine) : base(engine, 4)
         {
         }
     }
 
     internal class Float64Array : TypedArrayInstance
     {
-        public Float64Array(Engine engine, int bytesPerElement) : base(engine, 8)
+        public Float64Array(Engine engine) : base(engine, 8)
         {
         }
     }

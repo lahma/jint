@@ -29,6 +29,8 @@ namespace Jint.Native
         internal static readonly JsNumber NegativeZero = new JsNumber(-0d);
         internal static readonly JsNumber PositiveZero = new JsNumber(+0);
         internal static readonly JsNumber One = new JsNumber(1);
+        internal static readonly JsNumber Two = new JsNumber(2);
+        internal static readonly JsNumber Three = new JsNumber(3);
 
         internal static readonly JsNumber PI = new JsNumber(System.Math.PI);
 

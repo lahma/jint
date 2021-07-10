@@ -33,7 +33,7 @@ namespace Jint.Native.Global
             const PropertyFlag lengthFlags = PropertyFlag.Configurable;
             const PropertyFlag propertyFlags = PropertyFlag.Configurable | PropertyFlag.Writable;
 
-            var properties = new PropertyDictionary(52, checkExistingKeys: false)
+            var properties = new PropertyDictionary(53, checkExistingKeys: false)
             {
                 ["Object"] = new PropertyDescriptor(_realm.Intrinsics.Object, propertyFlags),
                 ["Function"] = new PropertyDescriptor(_realm.Intrinsics.Function, propertyFlags),
@@ -50,6 +50,7 @@ namespace Jint.Native.Global
                 ["BigUint64Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.BigUint64Array, propertyFlags),
                 ["Float32Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Float32Array, propertyFlags),
                 ["Float64Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Float64Array, propertyFlags),
+                ["TypedArray"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.TypedArray, propertyFlags),
                 ["Map"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Map, propertyFlags),
                 ["Set"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Set, propertyFlags),
                 ["WeakMap"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.WeakMap, propertyFlags),

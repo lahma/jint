@@ -73,6 +73,7 @@ namespace Jint.Runtime
         private TypedArrayConstructor _bigUint64Array;
         private TypedArrayConstructor _float32Array;
         private TypedArrayConstructor _float64Array;
+        private TypedArrayConstructor _typedArray;
 
         internal Intrinsics(Engine engine, Realm realm)
         {
@@ -96,38 +97,41 @@ namespace Jint.Runtime
         public ArrayConstructor Array =>
             _array ??= new ArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);
 
+        public TypedArrayConstructor TypedArray =>
+            _typedArray ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, "TypedArray", 0, null);
+
         public TypedArrayConstructor Int8Array =>
-            _int8Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Int8Array"));
+            _int8Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Int8Array", 1, static (engine, length) => new Int8Array(engine));
 
         public TypedArrayConstructor Uint8Array =>
-            _uint8Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Uint8Array"));
+            _uint8Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint8Array", 1, static (engine, length) => new Uint8Array(engine) );
 
         public TypedArrayConstructor Uint8ClampedArray =>
-            _uint8ClampedArray ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Uint8ClampedArray"));
+            _uint8ClampedArray ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint8ClampedArray", 1, static (engine, length) => new Uint8ClampedArray(engine));
 
         public TypedArrayConstructor Int16Array =>
-            _int16Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Int16Array"));
+            _int16Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Int16Array", 2, static (engine, length) => new Int16Array(engine));
 
         public TypedArrayConstructor Uint16Array =>
-            _uint16Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Uint16Array"));
+            _uint16Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint16Array", 2, static (engine, length) => new Uint16Array(engine));
 
         public TypedArrayConstructor Int32Array =>
-            _int32Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Int32Array"));
+            _int32Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Int32Array", 4, static (engine, length) => new Int32Array(engine));
 
         public TypedArrayConstructor Uint32Array =>
-            _uint32Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Uint32Array"));
+            _uint32Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint32Array", 4, static (engine, length) => new Uint32Array(engine));
 
         public TypedArrayConstructor BigInt64Array =>
-            _bigInt64Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("BigInt64Array"));
+            _bigInt64Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "BigInt64Array", 8, static (engine, length) => new BigInt64Array(engine));
 
         public TypedArrayConstructor BigUint64Array =>
-            _bigUint64Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("BigUint64Array"));
+            _bigUint64Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "BigUint64Array", 8, static (engine, length) => new BigUint64Array(engine));
 
         public TypedArrayConstructor Float32Array =>
-            _float32Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Float32Array"));
+            _float32Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, Object.PrototypeObject, "Float32Array", 4, static (engine, length) => new Float32Array(engine));
 
         public TypedArrayConstructor Float64Array =>
-            _float64Array ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, new JsString("Float64Array"));
+            _float64Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, Object.PrototypeObject, "Float64Array", 8, static (engine, length) => new Float64Array(engine));
 
         public MapConstructor Map =>
             _map ??= new MapConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);
