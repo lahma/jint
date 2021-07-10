@@ -1,15 +1,21 @@
+using Jint.Native.ArrayBuffer;
 using Jint.Native.Object;
 
 namespace Jint.Native.TypedArray
 {
     public abstract class TypedArrayInstance : ObjectInstance
     {
-        protected TypedArrayInstance(Engine engine, int bytesPerElement) : base(engine)
+        internal ArrayBufferInstance ViewArrayBuffer;
+        internal ArrayBufferInstance ViewedArrayBuffer;
+        internal uint byteLength;
+        internal int byteOffset;
+
+        protected TypedArrayInstance(Engine engine, uint byteLength) : base(engine)
         {
+            this.byteLength = byteLength;
+            ViewArrayBuffer = new ArrayBufferInstance(engine, byteLength);
+            ViewedArrayBuffer = new ArrayBufferInstance(engine, byteLength);
         }
-
-
-        internal ObjectInstance ViewArrayBuffer { get; }
     }
 
     internal class Int8Array : TypedArrayInstance

@@ -7,6 +7,8 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using Esprima;
 using Esprima.Ast;
+using Jint.Native;
+using Jint.Native.ArrayBuffer;
 using Jint.Runtime;
 using Jint.Runtime.Descriptors;
 using Jint.Runtime.Interop;
@@ -124,6 +126,14 @@ namespace Jint.Tests.Test262
                     var realm = engine._host.CreateRealm();
                     realm.GlobalObject.Set("global", realm.GlobalObject);
                     return realm.GlobalObject;
+                }), true, true, true));
+
+            o.FastSetProperty("detachArrayBuffer", new PropertyDescriptor(new ClrFunctionInstance(engine, "detachArrayBuffer",
+                (thisObj, args) =>
+                {
+                    var buffer = (ArrayBufferInstance) args.At(0);
+                    buffer.DetachArrayBuffer();
+                    return JsValue.Undefined;
                 }), true, true, true));
 
             engine.SetValue("$262", o);
@@ -300,12 +310,6 @@ namespace Jint.Tests.Test262
                 {
                     skip = true;
                     reason = "Unicode support and its special cases need more work";
-                }
-
-                if (name.StartsWith("language/statements/class/subclass/builtin-objects/ArrayBuffer/"))
-                {
-                    skip = true;
-                    reason = "ArrayBuffer not implemented";
                 }
 
                 if (name.StartsWith("language/statements/class/subclass/builtin-objects/DataView"))

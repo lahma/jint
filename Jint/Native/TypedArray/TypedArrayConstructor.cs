@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Jint.Collections;
 using Jint.Native.Function;
 using Jint.Native.Object;
@@ -173,18 +174,108 @@ namespace Jint.Native.TypedArray
 
         public override JsValue Call(JsValue thisObject, JsValue[] arguments)
         {
-            throw new System.NotImplementedException();
+            if (_arrayConstructor is null)
+            {
+                ExceptionHelper.ThrowTypeError(_realm, "Abstract class TypedArray not directly constructable");
+            }
+
+            return Undefined;
         }
 
-        public ObjectInstance Construct(JsValue[] arguments, JsValue newTarget)
+        public ObjectInstance Construct(JsValue[] args, JsValue newTarget)
         {
             if (_arrayConstructor is null)
+            {
+                ExceptionHelper.ThrowTypeError(_realm, "Abstract class TypedArray not directly constructable");
+            }
+
+            if (newTarget.IsUndefined())
             {
                 ExceptionHelper.ThrowTypeError(_realm);
             }
 
-            var array = _arrayConstructor(_engine, 0);
-            return array;
+            Func<Intrinsics, ObjectInstance> proto = static Intrinsics => Intrinsics.TypedArray.PrototypeObject;
+            var numberOfArgs = args.Length;
+            if (numberOfArgs == 0)
+            {
+                return AllocateTypedArray(newTarget, proto, 0);
+            }
+
+            var firstArgument = args[0];
+            if (firstArgument.IsObject())
+            {
+                var o = AllocateTypedArray(newTarget, proto);
+                if (firstArgument is TypedArrayInstance typedArrayInstance)
+                {
+                    InitializeTypedArrayFromTypedArray(o, typedArrayInstance);
+                }
+                else if (firstArgument is ArrayBuffer.ArrayBufferInstance arrayBuffer)
+                {
+                   var byteOffset = numberOfArgs > 1 ? args[1] : Undefined;
+                   var length = numberOfArgs > 2 ? args[2] : Undefined;
+                   InitializeTypedArrayFromArrayBuffer(o, arrayBuffer, byteOffset, length);
+                }
+                else
+                {
+                    var usingIterator = GetMethod(_realm, firstArgument, GlobalSymbolRegistry.Iterator);
+                    if (usingIterator is not null)
+                    {
+                        var values = IterableToList(firstArgument, usingIterator);
+                        InitializeTypedArrayFromList(o, values);
+                    }
+                    else
+                    {
+                        InitializeTypedArrayFromArrayLike(o, firstArgument);
+                    }
+                }
+                return o;
+            }
+            else
+            {
+                var elementLength = TypeConverter.ToIndex(_realm, firstArgument);
+                return AllocateTypedArray(newTarget, proto, elementLength);
+            }
         }
+
+        private List<JsValue> IterableToList(JsValue items, ICallable usingIterator)
+        {
+            var iteratorRecord = items.GetIterator(_realm);
+            var values = new List<JsValue>();
+            while (iteratorRecord.TryIteratorStep(out var nextItem))
+            {
+                values.Add(nextItem);
+            }
+            return values;
+        }
+
+        private void InitializeTypedArrayFromTypedArray(TypedArrayInstance o, TypedArrayInstance srcArray)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void InitializeTypedArrayFromArrayBuffer(TypedArrayInstance o, ArrayBuffer.ArrayBufferInstance buffer, JsValue byteOffset, JsValue length)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void InitializeTypedArrayFromList(TypedArrayInstance o, List<JsValue> values)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void InitializeTypedArrayFromArrayLike(TypedArrayInstance o, JsValue arrayLike)
+        {
+            throw new NotImplementedException();
+        }
+
+        private TypedArrayInstance AllocateTypedArray(JsValue newTarget, Func<Intrinsics, ObjectInstance> defaultProto, uint length = 0)
+        {
+            var proto = GetPrototypeFromConstructor(newTarget, defaultProto);
+            var obj = _arrayConstructor(_engine, 0);
+            obj._prototype = proto;
+            return obj;
+        }
+
+
     }
 }

@@ -1,5 +1,6 @@
 using Jint.Native;
 using Jint.Native.Array;
+using Jint.Native.ArrayBuffer;
 using Jint.Native.Boolean;
 using Jint.Native.Date;
 using Jint.Native.Error;
@@ -74,6 +75,7 @@ namespace Jint.Runtime
         private TypedArrayConstructor _float32Array;
         private TypedArrayConstructor _float64Array;
         private TypedArrayConstructor _typedArray;
+        private ArrayBufferConstructor _arrayBufferConstructor;
 
         internal Intrinsics(Engine engine, Realm realm)
         {
@@ -96,6 +98,9 @@ namespace Jint.Runtime
 
         public ArrayConstructor Array =>
             _array ??= new ArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);
+
+        public ArrayBufferConstructor ArrayBuffer =>
+            _arrayBufferConstructor ??= new ArrayBufferConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);
 
         public TypedArrayConstructor TypedArray =>
             _typedArray ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, "TypedArray", 0, null);

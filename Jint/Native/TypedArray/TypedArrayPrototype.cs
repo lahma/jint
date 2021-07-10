@@ -34,8 +34,11 @@ namespace Jint.Native.TypedArray
         protected override void Initialize()
         {
             const PropertyFlag propertyFlags = PropertyFlag.Writable | PropertyFlag.Configurable;
-            var properties = new PropertyDictionary(27, checkExistingKeys: false)
+            var properties = new PropertyDictionary(30, checkExistingKeys: false)
             {
+                ["buffer"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(_engine, "buffer", Buffer), Undefined, PropertyFlag.AllForbidden),
+                ["byteLength"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(_engine, "byteLength", ByteLength), Undefined, PropertyFlag.AllForbidden),
+                ["byteOffset"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(_engine, "byteOffset", ByteOffset), Undefined, PropertyFlag.AllForbidden),
                 ["BYTES_PER_ELEMENT"] = new PropertyDescriptor(new PropertyDescriptor(_constructor._bytesPerElement, PropertyFlag.AllForbidden)),
                 ["constructor"] = new PropertyDescriptor(_constructor, PropertyFlag.NonEnumerable),
                 ["copyWithin"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "copyWithin", CopyWithin, 2, PropertyFlag.Configurable), propertyFlags),
@@ -76,6 +79,49 @@ namespace Jint.Native.TypedArray
                     PropertyFlag.Configurable)
             };
             SetSymbols(symbols);
+        }
+
+        private JsValue Buffer(JsValue thisObj, JsValue[] arguments)
+        {
+            var o = thisObj as TypedArrayInstance;
+            if (o is null)
+            {
+                ExceptionHelper.ThrowTypeError(_realm);
+            }
+
+            return o.ViewedArrayBuffer;
+        }
+
+        private JsValue ByteLength(JsValue thisObj, JsValue[] arguments)
+        {
+            var o = thisObj as TypedArrayInstance;
+            if (o is null)
+            {
+                ExceptionHelper.ThrowTypeError(_realm);
+            }
+
+            if (o.ViewArrayBuffer.IsDetachedBuffer)
+            {
+                return JsNumber.PositiveZero;
+            }
+
+            return JsNumber.Create(o.byteLength);
+        }
+
+        private JsValue ByteOffset(JsValue thisObj, JsValue[] arguments)
+        {
+            var o = thisObj as TypedArrayInstance;
+            if (o is null)
+            {
+                ExceptionHelper.ThrowTypeError(_realm);
+            }
+
+            if (o.ViewArrayBuffer.IsDetachedBuffer)
+            {
+                return JsNumber.PositiveZero;
+            }
+
+            return JsNumber.Create(o.byteOffset);
         }
 
         private JsValue CopyWithin(JsValue thisObj, JsValue[] arguments)

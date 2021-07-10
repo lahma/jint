@@ -14,15 +14,10 @@ namespace Jint.Native.TypedArray
             }
 
             var buffer = typedArrayInstance.ViewArrayBuffer;
-            if (buffer.IsDetachedBuffer(realm))
+            if (buffer.IsDetachedBuffer)
             {
                 ExceptionHelper.ThrowTypeError(realm);
             }
-        }
-
-        internal static bool IsDetachedBuffer(this ObjectInstance o, Realm realm)
-        {
-            return false;
         }
     }
 }

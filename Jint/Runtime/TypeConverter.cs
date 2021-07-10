@@ -460,6 +460,31 @@ namespace Jint.Runtime
                 : (ushort) (uint) ToNumber(o);
         }
 
+        /// <summary>
+        /// https://tc39.es/ecma262/#sec-toindex
+        /// </summary>
+        public static uint ToIndex(Realm realm, JsValue value)
+        {
+            if (value.IsUndefined())
+            {
+                return 0;
+            }
+
+            var integerIndex = ToIntegerOrInfinity(value);
+            if (integerIndex < 0)
+            {
+                ExceptionHelper.ThrowRangeError(realm);
+            }
+
+            var index = ToLength(integerIndex);
+            if (integerIndex != index)
+            {
+                ExceptionHelper.ThrowRangeError(realm);
+            }
+
+            return (uint) index;
+        }
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         internal static string ToString(long i)
         {
