@@ -2,6 +2,7 @@ using Jint.Native;
 using Jint.Native.Array;
 using Jint.Native.ArrayBuffer;
 using Jint.Native.Boolean;
+using Jint.Native.DataView;
 using Jint.Native.Date;
 using Jint.Native.Error;
 using Jint.Native.Function;
@@ -76,6 +77,7 @@ namespace Jint.Runtime
         private TypedArrayConstructor _float64Array;
         private TypedArrayConstructor _typedArray;
         private ArrayBufferConstructor _arrayBufferConstructor;
+        private DataViewConstructor _dataView;
 
         internal Intrinsics(Engine engine, Realm realm)
         {
@@ -98,6 +100,9 @@ namespace Jint.Runtime
 
         public ArrayConstructor Array =>
             _array ??= new ArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);
+
+        public DataViewConstructor DataView =>
+            _dataView ??= new DataViewConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);
 
         public ArrayBufferConstructor ArrayBuffer =>
             _arrayBufferConstructor ??= new ArrayBufferConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);

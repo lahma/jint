@@ -33,13 +33,14 @@ namespace Jint.Native.Global
             const PropertyFlag lengthFlags = PropertyFlag.Configurable;
             const PropertyFlag propertyFlags = PropertyFlag.Configurable | PropertyFlag.Writable;
 
-            var properties = new PropertyDictionary(53, checkExistingKeys: false)
+            var properties = new PropertyDictionary(54, checkExistingKeys: false)
             {
                 ["Object"] = new PropertyDescriptor(_realm.Intrinsics.Object, propertyFlags),
                 ["Function"] = new PropertyDescriptor(_realm.Intrinsics.Function, propertyFlags),
                 ["Symbol"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Symbol, propertyFlags),
                 ["Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Array, propertyFlags),
                 ["ArrayBuffer"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.ArrayBuffer, propertyFlags),
+                ["DataView"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.DataView, propertyFlags),
                 ["Int8Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Int8Array, propertyFlags),
                 ["Uint8Array"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Uint8Array, propertyFlags),
                 ["Uint8ClampedArray"] = new LazyPropertyDescriptor(this, static state => ((GlobalObject) state)._realm.Intrinsics.Uint8ClampedArray, propertyFlags),

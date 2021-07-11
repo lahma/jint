@@ -788,5 +788,35 @@ namespace Jint.Runtime
         {
             return !type.IsValueType || Nullable.GetUnderlyingType(type) != null;
         }
+
+        internal static double ToInt8(JsValue value)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static double ToUint8(JsValue value)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static double ToUint8Clamp(JsValue value)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static double ToInt16(JsValue value)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static double ToBigInt64(JsValue value)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static double ToBigUint64(JsValue value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

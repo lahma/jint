@@ -75,6 +75,7 @@ namespace Jint.Native.TypedArray
             var usingIterator = GetMethod(_realm, source, GlobalSymbolRegistry.Iterator);
             if (usingIterator is not null)
             {
+            	/*
                 var values = IterableToList(source, usingIterator);
                 var iteratorLen = values.Count;
                 var iteratorTarget = TypedArrayCreate((IConstructor) c,  new JsValue[] { iteratorLen });
@@ -89,6 +90,7 @@ namespace Jint.Native.TypedArray
                 }
 
                 return iteratorTarget;
+*/
             }
 
             if (source.IsNullOrUndefined())

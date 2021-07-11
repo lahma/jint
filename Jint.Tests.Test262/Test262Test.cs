@@ -69,7 +69,8 @@ namespace Jint.Tests.Test262
                 "wellKnownIntrinsicObjects.js",
                 "fnGlobalObject.js",
                 "testTypedArray.js",
-                "detachArrayBuffer.js"
+                "detachArrayBuffer.js",
+                "byteConversionValues.js"
             };
 
             Sources = new Dictionary<string, Script>(files.Length);
@@ -284,6 +285,14 @@ namespace Jint.Tests.Test262
                                 skip = true;
                                 reason = "regexp-lookbehind not implemented";
                                 break;
+                            case "SharedArrayBuffer":
+                                skip = true;
+                                reason = "SharedArrayBuffer not implemented";
+                                break;
+                            case "resizable-arraybuffer":
+                                skip = true;
+                                reason = "resizable-arraybuffer not implemented";
+                                break;
                         }
                     }
                 }
@@ -310,18 +319,6 @@ namespace Jint.Tests.Test262
                 {
                     skip = true;
                     reason = "Unicode support and its special cases need more work";
-                }
-
-                if (name.StartsWith("language/statements/class/subclass/builtin-objects/DataView"))
-                {
-                    skip = true;
-                    reason = "DataView not implemented";
-                }
-
-                if (name.StartsWith("language/statements/class/subclass/builtins.js"))
-                {
-                    skip = true;
-                    reason = "Uint8Array not implemented";
                 }
 
                 if (name.StartsWith("built-ins/RegExp/CharacterClassEscapes/"))
