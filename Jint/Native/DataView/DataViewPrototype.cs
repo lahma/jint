@@ -30,29 +30,29 @@ namespace Jint.Native.DataView
         {
             var properties = new PropertyDictionary(23, checkExistingKeys: false)
             {
-                ["buffer"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(_engine, "buffer", Buffer), Undefined, PropertyFlag.AllForbidden),
-                ["byteLength"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(_engine, "byteLength", ByteLength), Undefined, PropertyFlag.AllForbidden),
-                ["byteOffset"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "byteOffset", ByteOffset), Undefined, PropertyFlag.AllForbidden),
-                ["getBigInt64"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getBigInt64", GetBigInt64), Undefined, PropertyFlag.AllForbidden),
-                ["getBigUint64"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getBigUint64", GetBigUint64), Undefined, PropertyFlag.AllForbidden),
-                ["getFloat32"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getFloat32", GetFloat32), Undefined, PropertyFlag.AllForbidden),
-                ["getFloat64"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getFloat64", GetFloat64), Undefined, PropertyFlag.AllForbidden),
-                ["getInt8"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getInt8", GetInt8), Undefined, PropertyFlag.AllForbidden),
-                ["getInt16"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getInt16", GetInt16), Undefined, PropertyFlag.AllForbidden),
-                ["getInt32"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getInt32", GetInt32), Undefined, PropertyFlag.AllForbidden),
-                ["getUint8"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getUint8", GetUint8), Undefined, PropertyFlag.AllForbidden),
-                ["getUint16"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getUint16", GetUint16), Undefined, PropertyFlag.AllForbidden),
-                ["getUint32"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "getUint32", GetUint32), Undefined, PropertyFlag.AllForbidden),
-                ["setBigInt64"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setBigInt64", SetBigInt64), Undefined, PropertyFlag.AllForbidden),
-                ["setBigUint64"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setBigUint64", SetBigUint64), Undefined, PropertyFlag.AllForbidden),
-                ["setFloat32"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setFloat32", SetFloat32), Undefined, PropertyFlag.AllForbidden),
-                ["setFloat64"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setFloat64", SetFloat64), Undefined, PropertyFlag.AllForbidden),
-                ["setInt8"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setInt8", SetInt8), Undefined, PropertyFlag.AllForbidden),
-                ["setInt16"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setInt16", SetInt16), Undefined, PropertyFlag.AllForbidden),
-                ["setInt32"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setInt32", SetInt32), Undefined, PropertyFlag.AllForbidden),
-                ["setUint8"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setUint8", SetUint8), Undefined, PropertyFlag.AllForbidden),
-                ["setUint16"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setUint16", SetUint16), Undefined, PropertyFlag.AllForbidden),
-                ["setUint32"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "setUint32", SetUint32), Undefined, PropertyFlag.AllForbidden)
+                ["buffer"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(_engine, "buffer", Buffer), Undefined, PropertyFlag.Configurable),
+                ["byteLength"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(_engine, "byteLength", ByteLength), Undefined, PropertyFlag.Configurable),
+                ["byteOffset"] = new GetSetPropertyDescriptor(new ClrFunctionInstance(Engine, "byteOffset", ByteOffset), Undefined, PropertyFlag.Configurable),
+                ["getBigInt64"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getBigInt64", GetBigInt64), PropertyFlag.AllForbidden),
+                ["getBigUint64"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getBigUint64", GetBigUint64), PropertyFlag.AllForbidden),
+                ["getFloat32"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getFloat32", GetFloat32), PropertyFlag.AllForbidden),
+                ["getFloat64"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getFloat64", GetFloat64), PropertyFlag.AllForbidden),
+                ["getInt8"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getInt8", GetInt8), PropertyFlag.AllForbidden),
+                ["getInt16"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getInt16", GetInt16), PropertyFlag.AllForbidden),
+                ["getInt32"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getInt32", GetInt32), PropertyFlag.AllForbidden),
+                ["getUint8"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getUint8", GetUint8), PropertyFlag.AllForbidden),
+                ["getUint16"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getUint16", GetUint16), PropertyFlag.AllForbidden),
+                ["getUint32"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "getUint32", GetUint32), PropertyFlag.AllForbidden),
+                ["setBigInt64"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setBigInt64", SetBigInt64), PropertyFlag.AllForbidden),
+                ["setBigUint64"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setBigUint64", SetBigUint64), PropertyFlag.AllForbidden),
+                ["setFloat32"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setFloat32", SetFloat32), PropertyFlag.AllForbidden),
+                ["setFloat64"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setFloat64", SetFloat64), PropertyFlag.AllForbidden),
+                ["setInt8"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setInt8", SetInt8), PropertyFlag.AllForbidden),
+                ["setInt16"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setInt16", SetInt16), PropertyFlag.AllForbidden),
+                ["setInt32"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setInt32", SetInt32), PropertyFlag.AllForbidden),
+                ["setUint8"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setUint8", SetUint8), PropertyFlag.AllForbidden),
+                ["setUint16"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setUint16", SetUint16), PropertyFlag.AllForbidden),
+                ["setUint32"] = new PropertyDescriptor(new ClrFunctionInstance(Engine, "setUint32", SetUint32), PropertyFlag.AllForbidden)
             };
             SetProperties(properties);
 
@@ -227,7 +227,7 @@ namespace Jint.Native.DataView
 
             var viewOffset = dataView._byteOffset;
             var viewSize = dataView._byteLength;
-            var elementSize = type.ToElementSize();
+            var elementSize = type.GetElementSize();
             if (getIndex + elementSize > viewSize)
             {
                 ExceptionHelper.ThrowRangeError(_realm);
@@ -268,7 +268,7 @@ namespace Jint.Native.DataView
 
             var viewOffset = dataView._byteOffset;
             var viewSize = dataView._byteLength;
-            var elementSize = type.ToElementSize();
+            var elementSize = type.GetElementSize();
             if (getIndex + elementSize > viewSize)
             {
                 ExceptionHelper.ThrowRangeError(_realm);

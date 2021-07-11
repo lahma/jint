@@ -13,7 +13,7 @@ namespace Jint.Native.TypedArray
                 ExceptionHelper.ThrowTypeError(realm);
             }
 
-            var buffer = typedArrayInstance.ViewArrayBuffer;
+            var buffer = typedArrayInstance._viewedArrayBuffer;
             if (buffer.IsDetachedBuffer)
             {
                 ExceptionHelper.ThrowTypeError(realm);

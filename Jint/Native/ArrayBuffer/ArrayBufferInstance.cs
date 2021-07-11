@@ -47,7 +47,7 @@ namespace Jint.Native.ArrayBuffer
         internal JsValue GetValueFromBuffer(uint byteIndex, TypedArrayElementType type, bool isTypedArray, BufferOrder order, bool? isLittleEndian = null)
         {
             var block = _arrayBufferData;
-            var elementSize = type.ToElementSize();
+            var elementSize = type.GetElementSize();
             List<byte> rawValue;
             if (IsSharedArrayBuffer)
             {
@@ -75,7 +75,7 @@ namespace Jint.Native.ArrayBuffer
 
         private JsValue RawBytesToNumeric(TypedArrayElementType type, List<byte> rawBytes, bool isLittleEndian)
         {
-            var elementSize = type.ToElementSize();
+            var elementSize = type.GetElementSize();
             if (!isLittleEndian)
             {
                 rawBytes.Reverse();
@@ -127,7 +127,7 @@ namespace Jint.Native.ArrayBuffer
         internal void SetValueInBuffer(uint byteIndex, TypedArrayElementType type, double value, bool isTypedArray, BufferOrder order, bool isLittleEndian)
         {
             var block = _arrayBufferData;
-            var elementSize = type.ToElementSize();
+            var elementSize = type.GetElementSize();
             // If isLittleEndian is not present, set isLittleEndian to the value of the [[LittleEndian]] field of the surrounding agent's Agent Record.
 
             var rawBytes = NumericToRawBytes(type, value, isLittleEndian);
@@ -162,7 +162,7 @@ namespace Jint.Native.ArrayBuffer
             }
             else
             {
-                var n = type.ToElementSize();
+                var n = type.GetElementSize();
                 var convOp = type.GetConversionOperator();
                 var intValue = (int) convOp(value);
                 if (intValue >= 0)

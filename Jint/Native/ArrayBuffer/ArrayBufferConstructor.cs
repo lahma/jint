@@ -1,4 +1,3 @@
-using System.Threading;
 using Jint.Collections;
 using Jint.Native.Function;
 using Jint.Native.Object;
@@ -72,12 +71,13 @@ namespace Jint.Native.ArrayBuffer
             return AllocateArrayBuffer(newTarget, byteLength);
         }
 
-        private ObjectInstance AllocateArrayBuffer(JsValue constructor, uint byteLength)
+        internal ArrayBufferInstance AllocateArrayBuffer(JsValue constructor, uint byteLength)
         {
             var obj = OrdinaryCreateFromConstructor(
                 constructor,
                 static intrinsics => intrinsics.ArrayBuffer.PrototypeObject,
                 (engine, realm, state) => new ArrayBufferInstance(engine, byteLength));
+
             return obj;
         }
     }

@@ -796,7 +796,15 @@ namespace Jint.Runtime
 
         internal static double ToUint8(JsValue value)
         {
-            throw new NotImplementedException();
+            var number = ToNumber(value);
+            if (number == Double.NaN || number == 0 || double.IsInfinity(number))
+            {
+                return 0;
+            }
+
+            var intValue = Math.Floor(Math.Abs(number));
+            var int8bit = intValue % 28;
+            return int8bit;
         }
 
         internal static double ToUint8Clamp(JsValue value)

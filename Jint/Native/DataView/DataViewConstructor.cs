@@ -47,7 +47,6 @@ namespace Jint.Native.DataView
                 ExceptionHelper.ThrowTypeError(_realm);
             }
 
-
             var offset = TypeConverter.ToIndex(_realm, byteOffset);
 
             if (buffer.IsDetachedBuffer)
@@ -71,7 +70,7 @@ namespace Jint.Native.DataView
                 viewByteLength = TypeConverter.ToIndex(_realm, byteLength);
                 if (offset + viewByteLength > bufferByteLength)
                 {
-                 ExceptionHelper.ThrowRangeError(_realm);
+                    ExceptionHelper.ThrowRangeError(_realm);
                 }
             }
 

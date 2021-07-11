@@ -23,7 +23,7 @@ namespace Jint.Native.TypedArray
             Engine engine,
             Realm realm,
             ObjectInstance objectPrototype,
-            TypedArrayConstructor constructor) : base(engine, 123)
+            TypedArrayConstructor constructor) : base(engine, realm.Intrinsics)
         {
             _prototype = objectPrototype;
             _length = new PropertyDescriptor(JsNumber.PositiveZero, PropertyFlag.Writable);
@@ -89,7 +89,7 @@ namespace Jint.Native.TypedArray
                 ExceptionHelper.ThrowTypeError(_realm);
             }
 
-            return o.ViewedArrayBuffer;
+            return o._viewedArrayBuffer;
         }
 
         private JsValue ByteLength(JsValue thisObj, JsValue[] arguments)
@@ -100,12 +100,12 @@ namespace Jint.Native.TypedArray
                 ExceptionHelper.ThrowTypeError(_realm);
             }
 
-            if (o.ViewArrayBuffer.IsDetachedBuffer)
+            if (o._viewedArrayBuffer.IsDetachedBuffer)
             {
                 return JsNumber.PositiveZero;
             }
 
-            return JsNumber.Create(o.byteLength);
+            return JsNumber.Create(o._byteLength);
         }
 
         private JsValue ByteOffset(JsValue thisObj, JsValue[] arguments)
@@ -116,12 +116,12 @@ namespace Jint.Native.TypedArray
                 ExceptionHelper.ThrowTypeError(_realm);
             }
 
-            if (o.ViewArrayBuffer.IsDetachedBuffer)
+            if (o._viewedArrayBuffer.IsDetachedBuffer)
             {
                 return JsNumber.PositiveZero;
             }
 
-            return JsNumber.Create(o.byteOffset);
+            return JsNumber.Create(o._byteOffset);
         }
 
         private JsValue CopyWithin(JsValue thisObj, JsValue[] arguments)

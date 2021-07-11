@@ -20,7 +20,7 @@ namespace Jint.Native.TypedArray
 
     internal static class TypedArrayExtensions
     {
-        internal static int ToElementSize(this TypedArrayElementType type)
+        internal static int GetElementSize(this TypedArrayElementType type)
         {
             return type switch
             {

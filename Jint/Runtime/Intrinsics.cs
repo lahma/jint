@@ -111,37 +111,37 @@ namespace Jint.Runtime
             _typedArray ??= new TypedArrayConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject, "TypedArray", 0, null);
 
         public TypedArrayConstructor Int8Array =>
-            _int8Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Int8Array", 1, static (engine, length) => new Int8Array(engine));
+            _int8Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Int8Array", 1, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.Int8, length));
 
         public TypedArrayConstructor Uint8Array =>
-            _uint8Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint8Array", 1, static (engine, length) => new Uint8Array(engine) );
+            _uint8Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint8Array", 1, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.Uint8, length));
 
         public TypedArrayConstructor Uint8ClampedArray =>
-            _uint8ClampedArray ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint8ClampedArray", 1, static (engine, length) => new Uint8ClampedArray(engine));
+            _uint8ClampedArray ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint8ClampedArray", 1, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.Uint8C, length));
 
         public TypedArrayConstructor Int16Array =>
-            _int16Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Int16Array", 2, static (engine, length) => new Int16Array(engine));
+            _int16Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Int16Array", 2, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.Int16, length));
 
         public TypedArrayConstructor Uint16Array =>
-            _uint16Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint16Array", 2, static (engine, length) => new Uint16Array(engine));
+            _uint16Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint16Array", 2, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.Uint16, length));
 
         public TypedArrayConstructor Int32Array =>
-            _int32Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Int32Array", 4, static (engine, length) => new Int32Array(engine));
+            _int32Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Int32Array", 4, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.Int32, length));
 
         public TypedArrayConstructor Uint32Array =>
-            _uint32Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint32Array", 4, static (engine, length) => new Uint32Array(engine));
+            _uint32Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "Uint32Array", 4, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.Uint32, length));
 
         public TypedArrayConstructor BigInt64Array =>
-            _bigInt64Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "BigInt64Array", 8, static (engine, length) => new BigInt64Array(engine));
+            _bigInt64Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "BigInt64Array", 8, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.BigInt64, length));
 
         public TypedArrayConstructor BigUint64Array =>
-            _bigUint64Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "BigUint64Array", 8, static (engine, length) => new BigUint64Array(engine));
+            _bigUint64Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, TypedArray.PrototypeObject, "BigUint64Array", 8, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.BigUint64, length));
 
         public TypedArrayConstructor Float32Array =>
-            _float32Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, Object.PrototypeObject, "Float32Array", 4, static (engine, length) => new Float32Array(engine));
+            _float32Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, Object.PrototypeObject, "Float32Array", 4, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.Float32, length));
 
         public TypedArrayConstructor Float64Array =>
-            _float64Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, Object.PrototypeObject, "Float64Array", 8, static (engine, length) => new Float64Array(engine));
+            _float64Array ??= new TypedArrayConstructor(_engine, _realm, TypedArray, Object.PrototypeObject, "Float64Array", 8, static (engine, intrinsics, length) => new TypedArrayInstance(engine, intrinsics, TypedArrayElementType.Float64, length));
 
         public MapConstructor Map =>
             _map ??= new MapConstructor(_engine, _realm, Function.PrototypeObject, Object.PrototypeObject);

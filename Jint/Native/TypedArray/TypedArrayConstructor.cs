@@ -13,7 +13,7 @@ namespace Jint.Native.TypedArray
     public sealed class TypedArrayConstructor : FunctionInstance, IConstructor
     {
         internal readonly int _bytesPerElement;
-        private readonly Func<Engine, int, TypedArrayInstance> _arrayConstructor;
+        private readonly Func<Engine, Intrinsics, int, TypedArrayInstance> _arrayConstructor;
 
         internal TypedArrayConstructor(
             Engine engine,
@@ -22,7 +22,7 @@ namespace Jint.Native.TypedArray
             ObjectInstance objectPrototype,
             string functionName,
             int bytesPerElement,
-            Func<Engine, int, TypedArrayInstance> arrayConstructor) : base(engine, realm, new JsString(functionName))
+            Func<Engine, Intrinsics, int, TypedArrayInstance> arrayConstructor) : base(engine, realm, new JsString(functionName))
         {
             _bytesPerElement = bytesPerElement;
             _arrayConstructor = arrayConstructor;
@@ -259,7 +259,12 @@ namespace Jint.Native.TypedArray
 
         private void InitializeTypedArrayFromList(TypedArrayInstance o, List<JsValue> values)
         {
-            throw new NotImplementedException();
+            var len = values.Count;
+            o.AllocateTypedArrayBuffer(len);
+            for (var k = 0; k < len; ++k)
+            {
+                o.Set(k, values[k], true);
+            }
         }
 
         private void InitializeTypedArrayFromArrayLike(TypedArrayInstance o, JsValue arrayLike)
@@ -270,11 +275,9 @@ namespace Jint.Native.TypedArray
         private TypedArrayInstance AllocateTypedArray(JsValue newTarget, Func<Intrinsics, ObjectInstance> defaultProto, uint length = 0)
         {
             var proto = GetPrototypeFromConstructor(newTarget, defaultProto);
-            var obj = _arrayConstructor(_engine, 0);
+            var obj = _arrayConstructor(_engine, _realm.Intrinsics, (int) length);
             obj._prototype = proto;
             return obj;
         }
-
-
     }
 }
