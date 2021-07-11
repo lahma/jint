@@ -63,8 +63,8 @@ namespace Jint.Native.TypedArray
             var mapFunction = arguments.At(1);
             var thisArg = arguments.At(2);
 
-            var mapfn = !mapFunction.IsUndefined();
-            if (mapfn)
+            var mapping = !mapFunction.IsUndefined();
+            if (mapping)
             {
                 if (!mapFunction.IsCallable)
                 {
@@ -75,23 +75,20 @@ namespace Jint.Native.TypedArray
             var usingIterator = GetMethod(_realm, source, GlobalSymbolRegistry.Iterator);
             if (usingIterator is not null)
             {
-                /*
-                a. Let values be ? IterableToList(source, usingIterator).
-                    b. Let len be the number of elements in values.
-                    c. Let targetObj be ? TypedArrayCreate(C, « 𝔽(len) »).
-                d. Let k be 0.
-                    e. Repeat, while k < len,
-                i. Let Pk be ! ToString(𝔽(k)).
-                ii. Let kValue be the first element of values and remove that element from values.
-                    iii. If mapping is true, then
-                1. Let mappedValue be ? Call(mapfn, thisArg, « kValue, 𝔽(k) »).
-                iv. Else, let mappedValue be kValue.
-                    v. Perform ? Set(targetObj, Pk, mappedValue, true).
-                    vi. Set k to k + 1.
-                    f. Assert: values is now an empty List.
-                    g. Return targetObj.
-                    */
-                throw new NotImplementedException();
+                var values = IterableToList(source, usingIterator);
+                var iteratorLen = values.Count;
+                var iteratorTarget = TypedArrayCreate((IConstructor) c,  new JsValue[] { iteratorLen });
+                for (var k = 0; k < iteratorLen; ++k)
+                {
+                    var Pk = TypeConverter.ToJsString(k);
+                    var kValue = values[k];
+                    var mappedValue = mapping
+                        ? ((ICallable) mapFunction).Call(thisArg, new[] { kValue, Pk })
+                        : kValue;
+                    iteratorTarget.Set(Pk, mappedValue, true);
+                }
+
+                return iteratorTarget;
             }
 
             if (source.IsNullOrUndefined())
@@ -105,13 +102,13 @@ namespace Jint.Native.TypedArray
             var argumentList = new JsValue[] { JsNumber.Create(len) };
             var targetObj = TypedArrayCreate((IConstructor) c, argumentList);
 
-            var mappingArgs = mapfn ? new JsValue[2] : null;
+            var mappingArgs = mapping ? new JsValue[2] : null;
             for (uint k = 0; k < len; ++k)
             {
                 var Pk = JsNumber.Create(k);
                 var kValue = arrayLike.Get(Pk);
                 JsValue mappedValue;
-                if (mapfn)
+                if (mapping)
                 {
                     mappingArgs[0] = kValue;
                     mappingArgs[1] = Pk;
