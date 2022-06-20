@@ -257,7 +257,7 @@ namespace Jint
         }
 
         internal static void BindingInitialization(
-            this Expression? expression,
+            this Node? expression,
             EvaluationContext context,
             JsValue value,
             EnvironmentRecord env)

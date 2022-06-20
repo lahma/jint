@@ -14,8 +14,8 @@ namespace Jint.Runtime.Interpreter.Expressions
     /// </summary>
     internal sealed class JintObjectExpression : JintExpression
     {
-        private JintExpression[] _valueExpressions = System.Array.Empty<JintExpression>();
-        private ObjectProperty?[] _properties = System.Array.Empty<ObjectProperty>();
+        private JintExpression[] _valueExpressions = Array.Empty<JintExpression>();
+        private ObjectProperty?[] _properties = Array.Empty<ObjectProperty>();
 
         // check if we can do a shortcut when all are object properties
         // and don't require duplicate checking
@@ -92,10 +92,10 @@ namespace Jint.Runtime.Interpreter.Expressions
 
                     _properties[i] = new ObjectProperty(propName, p);
 
-                    if (p.Kind == PropertyKind.Init || p.Kind == PropertyKind.Data)
+                    if (p.Kind is PropertyKind.Init or PropertyKind.Data)
                     {
                         var propertyValue = p.Value;
-                        _valueExpressions[i] = Build(engine, propertyValue);
+                        _valueExpressions[i] = Build(engine, (Expression) propertyValue);
                         _canBuildFast &= !propertyValue.IsFunctionDefinition();
                     }
                     else
@@ -219,7 +219,7 @@ namespace Jint.Runtime.Interpreter.Expressions
                             continue;
                         }
                     }
-                    
+
                     var propDesc = new PropertyDescriptor(propValue, PropertyFlag.ConfigurableEnumerableWritable);
                     obj.DefinePropertyOrThrow(propName, propDesc);
                 }

@@ -253,7 +253,7 @@ namespace Jint.Runtime.Interpreter
         }
 
         private static void GetBoundNames(
-            Expression parameter,
+            Node parameter,
             List<Key> target,
             bool checkDuplicates,
             ref bool _hasRestParameter,
