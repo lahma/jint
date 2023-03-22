@@ -1,12 +1,15 @@
 using System.Buffers;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Esprima;
+using Jint.Collections;
 using Jint.Native.Object;
 using Jint.Pooling;
 using Jint.Runtime;
+using Jint.Runtime.Descriptors;
 
 namespace Jint.Native.Json
 {
@@ -117,14 +120,11 @@ namespace Jint.Native.Json
 
         private char ReadToNextSignificantCharacter()
         {
-            char result = _index < _length ? _source[_index] : char.MinValue;
-            while (IsWhiteSpace(result))
+            var result = _source.CharCodeAt(_index);
+            while (result != char.MinValue && IsWhiteSpace(result))
             {
-                if ((++_index) >= _length)
-                {
-                    return char.MinValue;
-                }
-                result = _source[_index];
+                _index++;
+                result = _source.CharCodeAt(_index);
             }
             return result;
         }
@@ -293,9 +293,45 @@ namespace Jint.Native.Json
 
         private Token ScanStringLiteral(ref State state)
         {
-            char quote = _source[_index];
-            int start = _index;
+            var quote = _source[_index];
+            var start = _index;
             ++_index;
+
+            // quick check for short and clean strings
+            const int MaxCachedStringLength = 8;
+
+            var quoteIndex = _source.IndexOf('"', _index, System.Math.Min(MaxCachedStringLength, _source.Length - _index));
+            if (quoteIndex != -1)
+            {
+                var candidateSpan = _source.AsSpan(_index, quoteIndex - _index);
+                var hashCode = candidateSpan.Length;
+
+                foreach (var c in candidateSpan)
+                {
+                    if (!char.IsLetter(c) && c != '_' && c != '-')
+                    {
+                        goto slow_path;
+                    }
+                    hashCode = unchecked(hashCode * 314159 + c);
+                }
+
+                // we're golden
+                var textSpan = new TextSpan(_source, _index, candidateSpan.Length, hashCode);
+                _index += candidateSpan.Length + 1;
+                var canCache = state.StringCache.Count < 1000;
+
+                JsString? s = null;
+                if (canCache && !state.StringCache.TryGetValue(textSpan, out s))
+                {
+                    state.StringCache[textSpan] = s = new JsString(candidateSpan.ToString());
+                }
+
+                s ??= new JsString(candidateSpan.ToString());
+
+                return CreateToken(Tokens.String, s._value, '\"', s, new TextRange(start, _index));
+            }
+
+            slow_path:
 
             var sb = state.TokenBuffer;
             while (_index < _length)
@@ -597,8 +633,7 @@ namespace Jint.Native.Json
 
             Expect(ref state, '{');
 
-            var obj = new JsObject(_engine);
-
+            var properties = new PropertyDictionary();
             while (!Match('}'))
             {
                 Tokens type = _lookahead.Type;
@@ -616,7 +651,8 @@ namespace Jint.Native.Json
 
                 Expect(ref state, ':');
                 var value = ParseJsonValue(ref state);
-                obj.FastSetDataProperty(name, value);
+
+                properties[name]= new PropertyDescriptor(value, PropertyFlag.ConfigurableEnumerableWritable);
 
                 if (!Match('}'))
                 {
@@ -626,6 +662,11 @@ namespace Jint.Native.Json
 
             Expect(ref state, '}');
             state.CurrentDepth--;
+
+            var obj = new JsObject(_engine)
+            {
+                _properties = properties
+            };
 
             return obj;
         }
@@ -710,6 +751,7 @@ namespace Jint.Native.Json
             {
                 TokenBuffer = tokenBuffer;
                 CurrentDepth = 0;
+                StringCache = new Dictionary<TextSpan, JsString>();
             }
 
             /// <summary>
@@ -724,6 +766,8 @@ namespace Jint.Native.Json
             /// The current recursion depth
             /// </summary>
             public int CurrentDepth { get; set; }
+
+            public Dictionary<TextSpan, JsString> StringCache { get; }
         }
 
         private enum Tokens
@@ -745,19 +789,9 @@ namespace Jint.Native.Json
             public TextRange Range = default;
         }
 
-        private readonly struct TextRange
-        {
-            public TextRange(int start, int end)
-            {
-                Start = start;
-                End = end;
-            }
+        private readonly record struct TextRange(int Start, int End);
 
-            public int Start { get; }
-            public int End { get; }
-        }
-
-        static class Messages
+        private static class Messages
         {
             public const string InvalidCharacter = "Invalid character in JSON";
             public const string ExpectedHexadecimalDigit = "Expected hexadecimal digit in JSON";
@@ -772,15 +806,44 @@ namespace Jint.Native.Json
 
     internal static class StringExtensions
     {
-        public static char CharCodeAt(this string source, int index)
+        // char.MinValue is used as the null value
+        public static char CharCodeAt(this string source, int index) => index < source.Length ? source[index] : char.MinValue;
+    }
+
+    [DebuggerDisplay("{Span}")]
+    internal readonly struct TextSpan : IEquatable<string>, IEquatable<TextSpan>
+    {
+        public TextSpan(string buffer, int offset, int length, int hashCode)
         {
-            if (index > source.Length - 1)
+            Buffer = buffer;
+            Offset = offset;
+            Length = length;
+            HashCode = hashCode;
+        }
+
+        public readonly int Length;
+        public readonly int Offset;
+        public readonly int HashCode;
+        public readonly string Buffer;
+
+        public ReadOnlySpan<char> Span => Buffer == null ? ReadOnlySpan<char>.Empty : Buffer.AsSpan(Offset, Length);
+
+        public override int GetHashCode() => HashCode;
+
+        public bool Equals(string? other)
+        {
+            if (other == null)
             {
-                // char.MinValue is used as the null value
-                return char.MinValue;
+                return Buffer == null;
             }
 
-            return source[index];
+            return Span.SequenceEqual(other.AsSpan());
+        }
+
+        public bool Equals(TextSpan other)
+        {
+            return Span.SequenceEqual(other.Span);
         }
     }
 }
+

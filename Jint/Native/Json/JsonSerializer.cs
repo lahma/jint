@@ -297,17 +297,24 @@ namespace Jint.Native.Json
         /// </summary>
         private static void QuoteJSONString(string value, ref SerializeTarget target)
         {
-            int len = value.Length;
-            if (len == 0)
+            if (value.Length == 0)
             {
                 target.Json.Append("\"\"");
                 return;
             }
 
             target.Json.Append('"');
-            for (var i = 0; i < len; i++)
+            for (var i = 0; i < value.Length; i++)
             {
                 var c = value[i];
+
+                // fast check
+                if (IsInRange(c, ']', 'z') || IsInRange(c, '#', '[') || c == ' ')
+                {
+                    target.Json.Append(c);
+                    continue;
+                }
+
                 switch (c)
                 {
                     case '\"':
@@ -354,6 +361,9 @@ namespace Jint.Native.Json
 
             target.Json.Append('"');
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static bool IsInRange(char c, char min, char max) => c - (uint) min <= max - (uint) min;
 
         /// <summary>
         /// https://tc39.es/ecma262/#sec-serializejsonarray
@@ -534,7 +544,7 @@ namespace Jint.Native.Json
 
         private readonly struct PropertyEnumeration
         {
-            private PropertyEnumeration(IEnumerable<JsValue> keys, bool isEmpty)
+            private PropertyEnumeration(List<JsValue> keys, bool isEmpty)
             {
                 Keys = keys;
                 IsEmpty = isEmpty;
@@ -545,7 +555,7 @@ namespace Jint.Native.Json
 
             public static PropertyEnumeration FromObjectInstance(ObjectInstance instance)
             {
-                List<JsValue> allKeys = instance.GetOwnPropertyKeys(Types.String);
+                var allKeys = instance.GetOwnPropertyKeys(Types.String);
                 RemoveUnserializableProperties(instance, allKeys);
                 return new PropertyEnumeration(allKeys, allKeys.Count == 0);
             }
@@ -564,7 +574,7 @@ namespace Jint.Native.Json
                 });
             }
 
-            public IEnumerable<JsValue> Keys { get; }
+            public List<JsValue> Keys { get; }
 
             public bool IsEmpty { get; }
         }
