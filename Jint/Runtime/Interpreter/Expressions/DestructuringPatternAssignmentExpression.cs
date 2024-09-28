@@ -2,6 +2,7 @@ using Jint.Native;
 using Jint.Native.Array;
 using Jint.Native.Function;
 using Jint.Native.Iterator;
+using Jint.Native.Object;
 using Environment = Jint.Runtime.Environments.Environment;
 
 namespace Jint.Runtime.Interpreter.Expressions;
@@ -47,18 +48,16 @@ internal sealed class DestructuringPatternAssignmentExpression : JintExpression
         Environment? environment,
         bool checkPatternPropertyReference = true)
     {
-        if (pattern is ArrayPattern ap)
+        switch (pattern)
         {
-            return HandleArrayPattern(context, ap, argument, environment, checkPatternPropertyReference);
+            case ArrayPattern ap:
+                return HandleArrayPattern(context, ap, argument, environment, checkPatternPropertyReference);
+            case ObjectPattern op:
+                return PropertyBindingInitialization(context, op, argument, environment, checkPatternPropertyReference);
+            default:
+                ExceptionHelper.ThrowArgumentException("Not a pattern");
+                return default;
         }
-
-        if (pattern is ObjectPattern op)
-        {
-            return HandleObjectPattern(context, op, argument, environment, checkPatternPropertyReference);
-        }
-
-        ExceptionHelper.ThrowArgumentException("Not a pattern");
-        return default;
     }
 
     private static bool ConsumeFromIterator(IteratorInstance it, out JsValue value, out bool done)
@@ -90,7 +89,7 @@ internal sealed class DestructuringPatternAssignmentExpression : JintExpression
         IteratorInstance? iterator = null;
 
         // optimize for array unless someone has touched the iterator
-        if (obj.IsArrayLike && obj.HasOriginalIterator)
+        if (obj is { IsArrayLike: true, HasOriginalIterator: true })
         {
             arrayOperations = ArrayOperations.For(obj, forWrite: false);
         }
@@ -139,7 +138,7 @@ internal sealed class DestructuringPatternAssignmentExpression : JintExpression
                         ConsumeFromIterator(iterator!, out value, out done);
                     }
 
-                    AssignToIdentifier(engine, identifier.Name, value, environment, checkReference);
+                    InitializeBoundName(engine, identifier.Name, value, environment);
                 }
                 else if (left is MemberExpression me)
                 {
@@ -212,17 +211,17 @@ internal sealed class DestructuringPatternAssignmentExpression : JintExpression
                         array.SetLength(index);
                     }
 
-                    if (restElement.Argument is Identifier leftIdentifier)
+                    switch (restElement.Argument)
                     {
-                        AssignToIdentifier(engine, leftIdentifier.Name, array, environment, checkReference);
-                    }
-                    else if (restElement.Argument is DestructuringPattern bp)
-                    {
-                        ProcessPatterns(context, bp, array, environment);
-                    }
-                    else
-                    {
-                        AssignToReference(engine, reference!,  array, environment);
+                        case Identifier leftIdentifier:
+                            InitializeBoundName(engine, leftIdentifier.Name, array, environment);
+                            break;
+                        case DestructuringPattern bp:
+                            ProcessPatterns(context, bp, array, environment);
+                            break;
+                        default:
+                            AssignToReference(engine, reference!,  array, environment);
+                            break;
                     }
                 }
                 else if (left is AssignmentPattern assignmentPattern)
@@ -255,7 +254,7 @@ internal sealed class DestructuringPatternAssignmentExpression : JintExpression
                             ((Function) value).SetFunctionName(new JsString(leftIdentifier.Name));
                         }
 
-                        AssignToIdentifier(engine, leftIdentifier.Name, value, environment, checkReference);
+                        InitializeBoundName(engine, leftIdentifier.Name, value, environment);
                     }
                     else if (assignmentPattern.Left is DestructuringPattern bp)
                     {
@@ -287,97 +286,122 @@ internal sealed class DestructuringPatternAssignmentExpression : JintExpression
         return JsValue.Undefined;
     }
 
-    private static JsValue HandleObjectPattern(
+    /// <summary>
+    /// https://tc39.es/ecma262/#sec-destructuring-binding-patterns-runtime-semantics-propertybindinginitialization
+    /// </summary>
+    private static JsValue PropertyBindingInitialization(
         EvaluationContext context,
         ObjectPattern pattern,
         JsValue argument,
         Environment? environment,
         bool checkReference)
     {
-        var processedProperties = pattern.Properties.Count > 0 && pattern.Properties[pattern.Properties.Count - 1] is RestElement
+        var processedProperties = pattern.Properties.Count > 0 && pattern.Properties[^1] is RestElement
             ? new HashSet<JsValue>()
             : null;
 
-        var source = TypeConverter.ToObject(context.Engine.Realm, argument);
-        for (var i = 0; i < pattern.Properties.Count; i++)
+        var engine = context.Engine;
+        var value = TypeConverter.ToObject(engine.Realm, argument);
+        foreach (var property in pattern.Properties.AsSpan())
         {
-            if (pattern.Properties[i] is AssignmentProperty p)
+            if (property is AssignmentProperty p)
             {
-                JsValue sourceKey;
+                JsValue propertyName;
                 var identifier = p.Key as Identifier;
                 if (identifier == null || p.Computed)
                 {
                     var keyExpression = Build(p.Key);
-                    var value = keyExpression.GetValue(context);
+                    var v = keyExpression.GetValue(context);
                     if (context.IsAbrupt())
                     {
-                        return value;
+                        return v;
                     }
-                    sourceKey = TypeConverter.ToPropertyKey(value);
+                    propertyName = TypeConverter.ToPropertyKey(v);
                 }
                 else
                 {
-                    sourceKey = identifier.Name;
+                    propertyName = identifier.Name;
                 }
 
-                processedProperties?.Add(sourceKey);
+                processedProperties?.Add(propertyName);
                 if (p.Value is AssignmentPattern assignmentPattern)
                 {
-                    var value = source.Get(sourceKey);
-                    if (value.IsUndefined())
-                    {
-                        var jintExpression = Build(assignmentPattern.Right);
-                        var completion = jintExpression.GetValue(context);
-                        if (context.IsAbrupt())
-                        {
-                            return completion;
-                        }
-                        value = completion;
-                    }
-
                     if (assignmentPattern.Left is DestructuringPattern bp)
                     {
-                        ProcessPatterns(context, bp, value, environment);
-                        continue;
+                        var v = value.Get(propertyName);
+                        if (v.IsUndefined())
+                        {
+                            var defaultValue = Build(assignmentPattern.Right);
+                            v = defaultValue.GetValue(context);
+                            if (context.IsAbrupt())
+                            {
+                                return v;
+                            }
+                        }
+
+                        if (assignmentPattern.Right.IsAnonymousFunctionDefinition())
+                        {
+                            ((Function) v).SetFunctionName(propertyName);
+                        }
+
+                        ProcessPatterns(context, bp, v, environment);
                     }
-
-                    var target = assignmentPattern.Left as Identifier ?? identifier;
-
-                    if (assignmentPattern.Right.IsFunctionDefinition())
+                    else
                     {
-                        ((Function) value).SetFunctionName(target!.Name);
-                    }
+                        var target = assignmentPattern.Left as Identifier ?? identifier;
+                        var bindingId = target!.Name;
+                        var lhs = engine.ResolveBinding(bindingId, environment);
+                        var v = value.Get(propertyName);
+                        if (v.IsUndefined())
+                        {
+                            var defaultValue = Build(assignmentPattern.Right);
+                            v = defaultValue.GetValue(context);
+                            if (context.IsAbrupt())
+                            {
+                                return v;
+                            }
+                        }
 
-                    AssignToIdentifier(context.Engine, target!.Name, value, environment, checkReference);
+                        if (assignmentPattern.Right.IsAnonymousFunctionDefinition())
+                        {
+                            ((Function) v).SetFunctionName(target.Name);
+                        }
+
+                        if (environment is null)
+                        {
+                            engine.PutValue(lhs, v);
+                        }
+                        else
+                        {
+                            lhs.InitializeReferencedBinding(v);
+                        }
+                    }
                 }
                 else if (p.Value is DestructuringPattern dp)
                 {
-                    var value = source.Get(sourceKey);
-                    ProcessPatterns(context, dp, value, environment);
+                    var v = value.Get(propertyName);
+                    ProcessPatterns(context, dp, v, environment);
                 }
                 else if (p.Value is MemberExpression memberExpression)
                 {
                     var reference = GetReferenceFromMember(context, memberExpression);
-                    var value = source.Get(sourceKey);
-                    AssignToReference(context.Engine, reference, value, environment);
+                    var v = value.Get(propertyName);
+                    AssignToReference(engine, reference, v, environment);
                 }
                 else
                 {
                     var identifierReference = p.Value as Identifier;
                     var target = identifierReference ?? identifier;
-                    var value = source.Get(sourceKey);
-                    AssignToIdentifier(context.Engine, target!.Name, value, environment, checkReference);
+                    var v = value.Get(propertyName);
+                    InitializeBoundName(engine, target!.Name, v, environment);
                 }
             }
             else
             {
-                var restElement = (RestElement) pattern.Properties[i];
+                var restElement = (RestElement) property;
                 if (restElement.Argument is Identifier leftIdentifier)
                 {
-                    var count = Math.Max(0, source.Properties?.Count ?? 0) - processedProperties!.Count;
-                    var rest = context.Engine.Realm.Intrinsics.Object.Construct(count);
-                    source.CopyDataProperties(rest, processedProperties);
-                    AssignToIdentifier(context.Engine, leftIdentifier.Name, rest, environment, checkReference);
+                    RestBindingInitialization(engine, environment, leftIdentifier, value, processedProperties);
                 }
                 else if (restElement.Argument is DestructuringPattern bp)
                 {
@@ -385,10 +409,18 @@ internal sealed class DestructuringPatternAssignmentExpression : JintExpression
                 }
                 else if (restElement.Argument is MemberExpression memberExpression)
                 {
-                    var left = GetReferenceFromMember(context, memberExpression);
-                    var rest = context.Engine.Realm.Intrinsics.Object.Construct(0);
-                    source.CopyDataProperties(rest, processedProperties);
-                    AssignToReference(context.Engine, left, rest, environment);
+                    var lhs = GetReferenceFromMember(context, memberExpression);
+                    var restObj = engine.Realm.Intrinsics.Object.Construct(0);
+                    value.CopyDataProperties(restObj, processedProperties);
+                    if (environment is null)
+                    {
+                        engine.PutValue(lhs, restObj);
+                    }
+                    else
+                    {
+                        lhs.InitializeReferencedBinding(restObj);
+                    }
+                    engine._referencePool.Return(lhs);
                 }
                 else
                 {
@@ -398,6 +430,27 @@ internal sealed class DestructuringPatternAssignmentExpression : JintExpression
         }
 
         return JsValue.Undefined;
+    }
+
+    private static void RestBindingInitialization(
+        Engine engine,
+        Environment? environment,
+        Identifier bindingIdentifier,
+        ObjectInstance value, HashSet<JsValue>? excludedNames)
+    {
+        var lhs = engine.ResolveBinding(bindingIdentifier.Name);
+        var count = Math.Max(0, value.Properties?.Count ?? 0) - excludedNames!.Count;
+        var restObj = engine.Realm.Intrinsics.Object.Construct(count);
+        value.CopyDataProperties(restObj, excludedNames);
+        if (environment is null)
+        {
+            engine.PutValue(lhs, restObj);
+        }
+        else
+        {
+            lhs.InitializeReferencedBinding(restObj);
+        }
+        engine._referencePool.Return(lhs);
     }
 
     private static void AssignToReference(
@@ -429,25 +482,19 @@ internal sealed class DestructuringPatternAssignmentExpression : JintExpression
         return reference;
     }
 
-    private static void AssignToIdentifier(
-        Engine engine,
-        string name,
-        JsValue rval,
-        Environment? environment,
-        bool checkReference = true)
+    /// <summary>
+    /// https://tc39.es/ecma262/#sec-initializeboundname
+    /// </summary>
+    private static void InitializeBoundName(Engine engine, string name, JsValue value, Environment? environment)
     {
-        var lhs = engine.ResolveBinding(name, environment);
         if (environment is not null)
         {
-            lhs.InitializeReferencedBinding(rval);
+            environment.InitializeBinding(name, value);
         }
         else
         {
-            if (checkReference && lhs.IsUnresolvableReference && StrictModeScope.IsStrictModeCode)
-            {
-                ExceptionHelper.ThrowReferenceError(engine.Realm, lhs);
-            }
-            engine.PutValue(lhs, rval);
+            var lhs = engine.ResolveBinding(name, environment);
+            engine.PutValue(lhs, value);
         }
     }
 }

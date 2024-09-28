@@ -290,6 +290,9 @@ public static class AstExtensions
         }
     }
 
+    /// <summary>
+    /// https://tc39.es/ecma262/#sec-runtime-semantics-bindinginitialization
+    /// </summary>
     internal static void BindingInitialization(
         this Node? expression,
         EvaluationContext context,
@@ -298,8 +301,8 @@ public static class AstExtensions
     {
         if (expression is Identifier identifier)
         {
-            var catchEnvRecord = (DeclarativeEnvironment) env;
-            catchEnvRecord.CreateMutableBindingAndInitialize(identifier.Name, canBeDeleted: false, value);
+            var environment = (DeclarativeEnvironment) env;
+            environment.CreateMutableBindingAndInitialize(identifier.Name, canBeDeleted: false, value);
         }
         else if (expression is DestructuringPattern pattern)
         {
