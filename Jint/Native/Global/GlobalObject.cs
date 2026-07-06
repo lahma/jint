@@ -10,10 +10,7 @@ using Jint.Runtime.Descriptors;
 
 namespace Jint.Native.Global;
 
-// ExtraCapacity = 3 presizes the generator-emitted HybridDictionary for the 3 entries that
-// can't be expressed declaratively (parseInt, parseFloat, globalThis — see Initialize). Without
-// this hint the dictionary is sized for 68 and resizes when those 3 are added post-init.
-[JsObject(ExtraCapacity = 3)]
+[JsObject(UseShape = true)]
 public sealed partial class GlobalObject : ObjectInstance
 {
     private readonly Realm _realm;
@@ -731,14 +728,42 @@ uriError:
             return true;
         }
 
+        // the validate/apply protocol stores through the property dictionary
+        EnsureDictionaryProperties();
         return ValidateAndApplyPropertyDescriptor(this, new JsString(property), true, desc, current);
     }
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     internal PropertyDescriptor GetOwnProperty(Key property)
     {
-        Properties!.TryGetValue(property, out var descriptor);
-        return descriptor ?? PropertyDescriptor.Undefined;
+        if (_properties is not null)
+        {
+            _properties.TryGetValue(property, out var descriptor);
+            return descriptor ?? PropertyDescriptor.Undefined;
+        }
+
+        return GetOwnPropertyFromShape(property);
+    }
+
+    [MethodImpl(MethodImplOptions.NoInlining)]
+    private PropertyDescriptor GetOwnPropertyFromShape(Key property)
+    {
+        // builtin-shape mode (no dictionary until something deopts the global): misses cost an
+        // index probe, hits materialize the slot's descriptor once with stable identity.
+        EnsureInitialized();
+        var shaped = (IBuiltinShaped) this;
+        if (shaped.BuiltinDescriptors is not null && shaped.BuiltinShape.Index.TryGetValue(property.Name, out var slot))
+        {
+            return MaterializeBuiltinSlot(shaped, slot);
+        }
+
+        // EnsureInitialized may have deopted or filled the dictionary meanwhile
+        if (_properties is not null && _properties.TryGetValue(property, out var descriptor))
+        {
+            return descriptor ?? PropertyDescriptor.Undefined;
+        }
+
+        return PropertyDescriptor.Undefined;
     }
 
     internal bool SetFromMutableBinding(Key property, JsValue value, bool strict)
@@ -746,13 +771,29 @@ uriError:
         // here we are called only from global environment record context
         // we can take some shortcuts to be faster
 
-        if (!_properties!.TryGetValue(property, out var existingDescriptor))
+        PropertyDescriptor? existingDescriptor;
+        if (_properties is not null)
+        {
+            _properties.TryGetValue(property, out existingDescriptor);
+        }
+        else
+        {
+            existingDescriptor = GetOwnPropertyFromShape(property);
+            if (existingDescriptor == PropertyDescriptor.Undefined)
+            {
+                existingDescriptor = null;
+            }
+        }
+
+        if (existingDescriptor is null)
         {
             if (strict)
             {
                 Throw.ReferenceNameError(_realm, property.Name);
             }
-            _properties[property] = new PropertyDescriptor(value, PropertyFlag.ConfigurableEnumerableWritable | PropertyFlag.MutableBinding);
+            // adding a new own property can't be expressed in the fixed shape layout
+            EnsureDictionaryProperties();
+            _properties![property] = new PropertyDescriptor(value, PropertyFlag.ConfigurableEnumerableWritable | PropertyFlag.MutableBinding);
             unchecked { _propertiesVersion++; }
             return true;
         }

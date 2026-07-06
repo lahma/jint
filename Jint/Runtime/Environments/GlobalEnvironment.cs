@@ -84,11 +84,26 @@ internal sealed class GlobalEnvironment : Environment
         value = default;
 
         // normal case is to find
-        if (_global._properties!._dictionary.TryGetValue(name.Key, out var property)
-            && property != PropertyDescriptor.Undefined)
+        if (_global._properties is not null)
         {
-            value = ObjectInstance.UnwrapJsValue(property, _global);
-            return true;
+            if (_global._properties._dictionary.TryGetValue(name.Key, out var property)
+                && property != PropertyDescriptor.Undefined)
+            {
+                value = ObjectInstance.UnwrapJsValue(property, _global);
+                return true;
+            }
+        }
+        else
+        {
+            // builtin-shape mode (no dictionary until something deopts the global): the virtual
+            // GetOwnProperty answers from the shape — misses cost an index probe, hits
+            // materialize the slot's descriptor once.
+            var shaped = _global.GetOwnProperty(name.Value);
+            if (shaped != PropertyDescriptor.Undefined)
+            {
+                value = ObjectInstance.UnwrapJsValue(shaped, _global);
+                return true;
+            }
         }
 
         if (_global._prototype is not null)
@@ -158,9 +173,14 @@ internal sealed class GlobalEnvironment : Environment
         {
             _declarativeRecord.InitializeBinding(name, value, hint);
         }
+        else if (_global._properties is not null)
+        {
+            _global._properties[name].Value = value;
+        }
         else
         {
-            _global._properties![name].Value = value;
+            // builtin-shape mode; the binding's property exists as a shape slot
+            _global.GetOwnProperty(name.Name).Value = value;
         }
     }
 
@@ -231,15 +251,16 @@ internal sealed class GlobalEnvironment : Environment
 
         // see ObjectEnvironmentRecord.GetBindingValue
         var desc = PropertyDescriptor.Undefined;
-        if (_globalObject is not null)
+        if (_globalObject is not null && _globalObject._properties is not null)
         {
-            if (_globalObject._properties?.TryGetValue(name, out desc) == false)
+            if (!_globalObject._properties.TryGetValue(name, out desc))
             {
                 desc = PropertyDescriptor.Undefined;
             }
         }
         else
         {
+            // interop hosts and builtin-shape mode: the virtual lookup handles both
             desc = _global.GetOwnProperty(name.Name);
         }
 
@@ -280,9 +301,9 @@ internal sealed class GlobalEnvironment : Environment
 
     internal bool HasRestrictedGlobalProperty(Key name)
     {
-        if (_globalObject is not null)
+        if (_globalObject is not null && _globalObject._properties is not null)
         {
-            return _globalObject._properties?.TryGetValue(name, out var desc) == true
+            return _globalObject._properties.TryGetValue(name, out var desc)
                    && !desc.Configurable;
         }
 
@@ -297,7 +318,9 @@ internal sealed class GlobalEnvironment : Environment
 
     public bool CanDeclareGlobalVar(Key name)
     {
-        if (_global._properties!.ContainsKey(name))
+        if (_global._properties is not null
+                ? _global._properties.ContainsKey(name)
+                : _global.HasOwnProperty(name.Name))
         {
             return true;
         }
@@ -307,8 +330,17 @@ internal sealed class GlobalEnvironment : Environment
 
     public bool CanDeclareGlobalFunction(Key name)
     {
-        if (!_global._properties!.TryGetValue(name, out var existingProp)
-            || existingProp == PropertyDescriptor.Undefined)
+        PropertyDescriptor? existingProp;
+        if (_global._properties is not null)
+        {
+            _global._properties.TryGetValue(name, out existingProp);
+        }
+        else
+        {
+            existingProp = _global.GetOwnProperty(name.Name);
+        }
+
+        if (existingProp is null || existingProp == PropertyDescriptor.Undefined)
         {
             return _global.Extensible;
         }
@@ -333,6 +365,8 @@ internal sealed class GlobalEnvironment : Environment
             return;
         }
 
+        _global.EnsureDictionaryProperties();
+
         _global._properties!.TryAdd(name, new PropertyDescriptor(Undefined, canBeDeleted
             ? PropertyFlag.ConfigurableEnumerableWritable | PropertyFlag.MutableBinding
             : PropertyFlag.NonConfigurable | PropertyFlag.MutableBinding));
@@ -344,6 +378,8 @@ internal sealed class GlobalEnvironment : Environment
         {
             return;
         }
+
+        _global.EnsureDictionaryProperties();
 
         for (var i = 0; i < names.Count; i++)
         {
@@ -379,7 +415,10 @@ internal sealed class GlobalEnvironment : Environment
 
     internal override bool HasBindings()
     {
-        return _declarativeRecord.HasBindings() || _globalObject?._properties?.Count > 0 || _global._properties?.Count > 0;
+        return _declarativeRecord.HasBindings()
+               || _globalObject?._properties?.Count > 0
+               || _global._properties?.Count > 0
+               || (_global._type & InternalTypes.BuiltinShapeMode) != InternalTypes.Empty;
     }
 
     internal override string[] GetAllBindingNames()

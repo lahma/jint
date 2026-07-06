@@ -249,6 +249,10 @@ public partial class ObjectInstance : JsValue, IEquatable<ObjectInstance>
         {
             ConvertToDictionaryMode();
         }
+        else
+        {
+            EnsureDictionaryProperties();
+        }
         _properties ??= new PropertyDictionary();
         _properties[property] = value;
         unchecked { _propertiesVersion++; }
@@ -700,7 +704,7 @@ public partial class ObjectInstance : JsValue, IEquatable<ObjectInstance>
     // Materialize a shaped slot's descriptor. Constants point at the shared static descriptor; functions are
     // created on first access and stored so their identity is stable (the inline caches rely on this — a
     // materialize must never bump _propertiesVersion).
-    private static PropertyDescriptor MaterializeBuiltinSlot(IBuiltinShaped shaped, int slot)
+    private protected static PropertyDescriptor MaterializeBuiltinSlot(IBuiltinShaped shaped, int slot)
     {
         var descriptors = shaped.BuiltinDescriptors!;
         var descriptor = descriptors[slot];
@@ -732,6 +736,19 @@ public partial class ObjectInstance : JsValue, IEquatable<ObjectInstance>
             descriptors[slot] = descriptor;
         }
         return descriptor;
+    }
+
+    /// <summary>
+    /// Guarantees the ordinary dictionary representation for callers that add own properties
+    /// through the raw property bag (e.g. the global var-binding protocol); no-op unless the
+    /// host is currently in builtin-shape mode.
+    /// </summary>
+    internal void EnsureDictionaryProperties()
+    {
+        if ((_type & InternalTypes.BuiltinShapeMode) != InternalTypes.Empty)
+        {
+            DeoptBuiltinShape();
+        }
     }
 
     // Fall back to the ordinary dictionary representation. Already-materialized slots keep their

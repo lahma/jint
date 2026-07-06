@@ -101,13 +101,22 @@ public class PropertyDescriptorTests
     [Fact]
     public void LazyPropertyDescriptor()
     {
+        // the shaped global's untouched function slots survive a deopt as lazy slot wrappers;
+        // parseInt stays a LazyPropertyDescriptor because it is a host-filled instance slot
         var pd = _engine.Evaluate("globalThis").AsObject().GetOwnProperty("decodeURI");
         if (checkType)
         {
-            Assert.IsType<LazyPropertyDescriptor<GlobalObject>>(pd);
+            Assert.IsType<LazyBuiltinSlotDescriptor>(pd);
         }
         Assert.Equal(false, pd.IsAccessorDescriptor());
         Assert.Equal(true, pd.IsDataDescriptor());
+
+        var lazy = _engine.Evaluate("globalThis").AsObject().GetOwnProperty("parseInt");
+        if (checkType)
+        {
+            Assert.IsType<LazyPropertyDescriptor<GlobalObject>>(lazy);
+        }
+        Assert.Equal(true, lazy.IsDataDescriptor());
     }
 
     [Fact]
