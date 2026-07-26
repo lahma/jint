@@ -39,12 +39,16 @@ namespace Jint.Benchmark;
 /// <c>Allocated</c> column next to <c>Mean</c> here.
 /// </description></item>
 /// <item><description>
-/// <see cref="ResolverKind"/> — installing any <see cref="IReferenceResolver"/> sets
-/// <c>Engine._customResolver</c>, which turns off the member-expression inline caches and the
-/// call fast path engine-wide (see <c>JintMemberExpression</c> / <c>JintCallExpression</c>).
-/// The <see cref="HostResolverKind.Unfiltered"/> row sizes that global de-optimization; it is
-/// paid on every member read in the script, not only on the null-propagating ones the resolver
-/// exists for.
+/// <see cref="ResolverKind"/> — a reference resolver that subscribes to property references with
+/// an object or primitive base turns off the member-expression inline caches and the call fast
+/// path engine-wide (see <c>JintMemberExpression</c> / <c>JintCallExpression</c>), because every
+/// read has to be offered to it. The <see cref="HostResolverKind.Unfiltered"/> row sizes that
+/// global de-optimization; it is paid on every member read in the script, not only on the
+/// null-propagating ones the resolver exists for.
+/// <see cref="HostResolverKind.NullishOnly"/> is the same resolver declaring only the situations
+/// it actually uses, which keeps those lanes armed — the two rows behave identically, so their
+/// delta is the whole cost of the de-optimization and NullishOnly should land on
+/// <see cref="HostResolverKind.None"/>.
 /// </description></item>
 /// <item><description>
 /// <see cref="StatementLimit"/> — a statement limit is an <i>exact</i> constraint, so unlike a
@@ -91,7 +95,7 @@ public class HostObjectAccessBenchmark
     [Params(HostReceiverKind.PlainObject, HostReceiverKind.LazyHost)]
     public HostReceiverKind ReceiverKind { get; set; }
 
-    [Params(HostResolverKind.None, HostResolverKind.Unfiltered)]
+    [Params(HostResolverKind.None, HostResolverKind.Unfiltered, HostResolverKind.NullishOnly)]
     public HostResolverKind ResolverKind { get; set; }
 
     [Params(false, true)]
@@ -124,18 +128,23 @@ public class HostObjectAccessBenchmark
                 throw new NotSupportedException(ReceiverKind.ToString());
         }
 
-        if (ResolverKind == HostResolverKind.NullishOnly)
-        {
-            // TODO: enable once the resolver interest filter lands — a resolver that declares it only
-            // cares about null/undefined bases, so the engine can keep its member inline caches armed
-            // instead of de-optimizing every member read engine-wide.
-            throw new NotSupportedException($"{ResolverKind} awaits a Jint feature that does not exist yet; see the TODO in {nameof(GlobalSetup)}.");
-        }
-
         var options = new Options();
         if (ResolverKind == HostResolverKind.Unfiltered)
         {
-            options.SetReferencesResolver(new UnfilteredNullPropagationResolver());
+            options.SetReferencesResolver(new NullPropagationResolver());
+        }
+        else if (ResolverKind == HostResolverKind.NullishOnly)
+        {
+            // The very same resolver, registered with the situations it actually uses.
+            // TryPropertyReference only ever claims a null/undefined base, so narrowing here cannot
+            // change an outcome — it only stops the engine from routing every object-based read
+            // through a Reference to ask. The two resolver rows are therefore behaviour-identical
+            // and their delta is pure overhead.
+            options.SetReferencesResolver(
+                new NullPropagationResolver(),
+                ReferenceResolverInterests.NullishPropertyBase
+                | ReferenceResolverInterests.UnresolvableReference
+                | ReferenceResolverInterests.NonCallableCallee);
         }
 
         if (StatementLimit)
@@ -228,21 +237,27 @@ public enum HostResolverKind
 
     /// <summary>
     /// A null-propagating resolver of the kind embedders install so that <c>a.b.c</c> over missing
-    /// data yields undefined instead of throwing. It carries no interest filter, so the engine
-    /// de-optimizes every member read.
+    /// data yields undefined instead of throwing, registered without an interest filter so it is
+    /// consulted for every property reference and the engine de-optimizes every member read.
     /// </summary>
     Unfiltered,
 
-    /// <summary>Awaits the resolver interest filter. Not runnable yet.</summary>
+    /// <summary>
+    /// The identical resolver registered with
+    /// <see cref="ReferenceResolverInterests.NullishPropertyBase"/> (plus the unresolvable-name and
+    /// non-callable-callee situations, neither of which costs a read lane), so the member-read
+    /// caches, the indexed-read lane and the member-call callee lane stay armed.
+    /// </summary>
     NullishOnly,
 }
 
 /// <summary>
 /// The null-propagating resolver shape embedders install verbatim: any nullish property base
 /// resolves to undefined rather than throwing, and calling through a nullish base yields a no-op
-/// function. Deliberately unfiltered — that is the point of the lane.
+/// function. Both resolver rows share this one class — only the declared interests differ, so the
+/// rows cannot diverge in behaviour.
 /// </summary>
-internal sealed class UnfilteredNullPropagationResolver : IReferenceResolver
+internal sealed class NullPropagationResolver : IReferenceResolver
 {
     public bool TryUnresolvableReference(Engine engine, Reference reference, out JsValue value)
     {
