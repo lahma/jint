@@ -63,4 +63,43 @@ internal static class HostContractVerification
     [DoesNotReturn]
     [MethodImpl(MethodImplOptions.NoInlining)]
     internal static void Fail(string message) => throw new InvalidOperationException(message);
+
+    /// <summary>
+    /// Verifies that an engine-affine value is being built by a thread that is allowed to build it — which
+    /// means any thread, unless another one is inside the engine right now.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Jint guards <em>operations</em> against concurrent use and does not guard <em>construction</em>:
+    /// <c>JsObject.Create</c>, <c>JsObject.CreateFromEntries</c> and the <c>JsArray</c> constructors are what
+    /// the README recommends for projecting host data, so they are per-object APIs on a bulk path and cannot
+    /// afford a reservation each. That line is defensible; being unable to find out you crossed it is not. An
+    /// object built into a realm another thread is mutating does not fail where it was built — it fails later
+    /// and elsewhere, as a torn shape table or a property that went missing, which is the failure mode the
+    /// concurrency guard exists to end for operations.
+    /// </para>
+    /// <para>
+    /// So the check lives here instead, where <see cref="Enabled"/> folds it out of a Release process
+    /// entirely and a host's own test suite pays for it once. It fires only when another thread <em>holds</em>
+    /// the engine: building on a background thread while the engine is idle is legitimate — it is how a host
+    /// prepares a value between turns — and is left alone.
+    /// </para>
+    /// </remarks>
+    /// <param name="engine">The engine the value is being built into.</param>
+    /// <param name="type">The runtime type being constructed, named in the failure.</param>
+    internal static void VerifyConstructionThread(Engine engine, Type type)
+    {
+        var owner = engine.OwnerThreadId;
+        var current = System.Environment.CurrentManagedThreadId;
+        if (owner == 0 || owner == current)
+        {
+            return;
+        }
+
+        Fail($"{type} is being constructed on thread {current} while thread {owner} is inside this engine. "
+            + "A JsValue belongs to the engine that built it, so building one from a second thread races that "
+            + "engine's realm and shape tables and corrupts them silently. Build the value on the engine's "
+            + "thread — Engine.Advanced.RegisterPromise's settle functions take a CLR value and convert it "
+            + "there for exactly this reason — or hold the engine first.");
+    }
 }

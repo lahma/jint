@@ -80,6 +80,13 @@ public partial class ObjectInstance : JsValue, IEquatable<ObjectInstance>
         InternalTypes type = InternalTypes.Object)
         : base(type)
     {
+        // Before the first read of engine state below. Every engine-affine object in the process reaches this
+        // constructor — JsObject, JsArray, every host subclass — so it is the one place the check has to be.
+        if (HostContractVerification.Enabled)
+        {
+            HostContractVerification.VerifyConstructionThread(engine, GetType());
+        }
+
         _engine = engine;
         _class = objectClass;
         // if engine is ready, we can take default prototype for object

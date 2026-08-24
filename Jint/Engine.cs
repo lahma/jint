@@ -121,6 +121,15 @@ public sealed partial class Engine : IDisposable
     private ManualResetEventSlim? _ownershipReleased;
     private ConditionalWeakTable<ObjectInstance, HostCallbackAuthorization>? _hostCallbackAuthorizations;
 
+    /// <summary>
+    /// The managed id of the thread currently holding this engine, or <c>0</c> when nobody holds it. Read by
+    /// <see cref="Runtime.HostContractVerification"/> only, which is why it can be a plain volatile read: it
+    /// answers "is somebody else in here right now", and a racing answer is one the verifier is allowed to
+    /// miss. Anything that must be *correct* about ownership goes through <see cref="EnterHostCall"/>, which
+    /// claims with an interlocked compare-exchange.
+    /// </summary>
+    internal int OwnerThreadId => Volatile.Read(ref _ownerThreadId);
+
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     internal HostCallScope EnterHostCall(object? asyncOwner = null, object? callbackOwner = null)
     {
