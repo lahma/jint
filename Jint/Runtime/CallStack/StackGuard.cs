@@ -124,16 +124,38 @@ internal sealed class StackGuard
         return false;
     }
 
-    public static TR RunOnEmptyStack<T1, TR>(Func<T1, TR> action, T1 arg1)
+    /// <summary>
+    /// Continues <paramref name="action"/> on a fresh thread with a whole stack to spend, while the calling
+    /// thread blocks until it returns.
+    /// </summary>
+    /// <remarks>
+    /// <paramref name="engine"/> is here so the hop can carry engine ownership with it. It is the same
+    /// evaluation either side of the boundary — the calling thread parks for the whole of it and touches
+    /// nothing — so the thread that is actually running the script has to be the one the engine records as
+    /// its owner. Without that, a host callback reached past the hop calls back into an engine that answers
+    /// "already in use by another thread", naming a thread parked in <c>WaitOne()</c>.
+    /// </remarks>
+    public static TR RunOnEmptyStack<T1, TR>(Engine engine, Func<T1, TR> action, T1 arg1)
     {
         // ValueTuple rather than Tuple, so the state box is one allocation of a struct rather than a
         // reference type. Every target framework carries it: net472 has it in mscorlib (it arrived in
         // .NET Framework 4.7), and the netstandard targets get it from the reference assemblies.
         return RunOnEmptyStackCore(static s =>
         {
-            var t = ((Func<T1, TR>, T1)) s;
-            return t.Item1(t.Item2);
-        }, (action, arg1));
+            var t = ((Engine, Func<T1, TR>, T1)) s;
+
+            // Taken on this side of the hop, by the thread that will do the work: the calling thread is
+            // already blocked (or about to be) and does not touch the engine again until this returns.
+            var previousOwner = t.Item1.TransferOwnershipForStackGuardHop();
+            try
+            {
+                return t.Item2(t.Item3);
+            }
+            finally
+            {
+                t.Item1.RestoreOwnershipAfterStackGuardHop(previousOwner);
+            }
+        }, (engine, action, arg1));
     }
 
     private static R RunOnEmptyStackCore<R>(Func<object, R> action, object state)

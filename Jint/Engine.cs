@@ -121,6 +121,40 @@ public sealed partial class Engine : IDisposable
     private ManualResetEventSlim? _ownershipReleased;
     private ConditionalWeakTable<ObjectInstance, HostCallbackAuthorization>? _hostCallbackAuthorizations;
 
+    /// <summary>
+    /// Hands this engine's ownership to the thread <see cref="Runtime.CallStack.StackGuard"/> is about to
+    /// continue the evaluation on, and gives it back when that thread is done. Returns the id of the thread
+    /// that was the owner, which the resuming side restores.
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// The guard's hop is not a second user of the engine, it is the <em>same</em> evaluation on a different
+    /// thread: the original thread blocks in <c>AsyncWaitHandle.WaitOne()</c> for the whole of it and touches
+    /// nothing. Without this, <see cref="_ownerThreadId"/> goes on naming that parked thread, so the thread
+    /// actually running the script takes the wrong-owner path of <see cref="EnterHostCall"/> — and a host
+    /// callback calling back in past the hop is refused by the engine with the concurrent-use message.
+    /// </para>
+    /// <para>
+    /// Only <see cref="_ownerThreadId"/> moves, because it is the only piece of ownership state that names a
+    /// thread; <see cref="_ownerDepth"/>, <see cref="_ownerToken"/> and the admission fields describe the
+    /// operation rather than the thread and are unchanged by the hop. Nothing is released either: the engine
+    /// stays owned throughout, which is what keeps an unrelated third thread out for the duration.
+    /// </para>
+    /// </remarks>
+    internal int TransferOwnershipForStackGuardHop()
+    {
+        var previous = Volatile.Read(ref _ownerThreadId);
+        Volatile.Write(ref _ownerThreadId, System.Environment.CurrentManagedThreadId);
+        return previous;
+    }
+
+    /// <summary>
+    /// Restores the owner recorded before a <see cref="TransferOwnershipForStackGuardHop"/>, on the way out
+    /// of the hop and before the parked thread is released.
+    /// </summary>
+    internal void RestoreOwnershipAfterStackGuardHop(int previousOwnerThreadId)
+        => Volatile.Write(ref _ownerThreadId, previousOwnerThreadId);
+
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     internal HostCallScope EnterHostCall(object? asyncOwner = null, object? callbackOwner = null)
     {
