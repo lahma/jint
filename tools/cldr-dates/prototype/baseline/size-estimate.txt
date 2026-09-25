@@ -1,0 +1,16 @@
+group                                                     all (766)           modern (430)               top (47)
+availableFormats                                240.9 KB /   15.8 KB      84.7 KB /    9.3 KB      33.0 KB /    4.2 KB
+dateTimeFormats(+atTime)+appendItems             75.0 KB /    4.3 KB      25.8 KB /    2.5 KB       9.2 KB /    0.7 KB
+format-context weekday names only                82.3 KB /   22.2 KB      28.9 KB /    9.4 KB       8.6 KB /    3.3 KB
+all names (M/L, E/c, eras, am/pm)               408.0 KB /   74.2 KB     145.8 KB /   29.5 KB      43.8 KB /   10.2 KB
+flexible day periods (dayPeriod option)          55.7 KB /    9.4 KB      42.2 KB /    7.3 KB      16.0 KB /    2.9 KB
+intervalFormats (formatRange)                   755.3 KB /   39.3 KB     257.7 KB /   24.1 KB     100.7 KB /   10.4 KB
+date/time style patterns                         43.3 KB /    5.3 KB      18.7 KB /    3.0 KB       4.5 KB /    0.9 KB
+PR-1 set: af + dt + all names                   712.7 KB /   95.7 KB     249.9 KB /   41.8 KB      85.5 KB /   15.7 KB
+lean: af + dt + fmt weekdays + eras/am-pm       440.7 KB /   54.8 KB     153.5 KB /   25.7 KB      56.8 KB /   10.2 KB
+everything above                               1550.2 KB /  158.0 KB     559.0 KB /   80.5 KB     205.9 KB /   32.0 KB
+(raw UTF-8 / deflate -9; each locale stores only what differs from its CLDR parent)
+per-locale deflate, all locales, PR-1 set: af + dt + all names    raw    706.6 KB ->   225.1 KB
+per-locale deflate, all locales, everything                       raw   1544.1 KB ->   399.0 KB
+per-language deflate (323 blocks), PR-1 set: af + dt + all names  raw    712.7 KB ->   212.2 KB; largest block kxv 10.4 KB raw
+per-language deflate (323 blocks), everything                     raw   1550.1 KB ->   377.8 KB; largest block en 24.3 KB raw

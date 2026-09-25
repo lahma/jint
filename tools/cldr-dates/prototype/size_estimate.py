@@ -158,3 +158,31 @@ def per_block(locales, groups):
 for label, groups in [('PR-1 set: af + dt + all names', {'af', 'dt', 'names'}), ('everything', {'af', 'dt', 'names', 'flex', 'iv', 'styles'})]:
     raw, z = per_block(all_locales, groups)
     print('per-locale deflate, all locales, %-32s raw %8.1f KB -> %7.1f KB' % (label, raw / 1024, z / 1024))
+
+
+def per_language(locales, groups):
+    """One deflated block per language (all its regional variants together): what a lookup inflates."""
+    by_lang = {}
+    cache = {}
+    for loc in locales:
+        cache[loc] = lines_for(loc, groups)
+    for loc in locales:
+        par = parent_of(loc)
+        pdata = cache.get(par) or {}
+        block = '[' + loc + ']\n' + '\n'.join(k + '=' + v for k, v in sorted(cache[loc].items()) if pdata.get(k) != v)
+        by_lang.setdefault(loc.split('-')[0], []).append(block)
+    raw = z = 0
+    biggest = (0, '')
+    for lang, blocks in by_lang.items():
+        b = '\n'.join(blocks).encode('utf-8')
+        raw += len(b)
+        c = len(zlib.compress(b, 9)) + 8
+        z += c
+        if len(b) > biggest[0]:
+            biggest = (len(b), lang)
+    return raw, z, len(by_lang), biggest
+
+
+for label, groups in [('PR-1 set: af + dt + all names', {'af', 'dt', 'names'}), ('everything', {'af', 'dt', 'names', 'flex', 'iv', 'styles'})]:
+    raw, z, n, big = per_language(all_locales, groups)
+    print('per-language deflate (%d blocks), %-30s raw %8.1f KB -> %7.1f KB; largest block %s %.1f KB raw' % (n, label, raw / 1024, z / 1024, big[1], big[0] / 1024))

@@ -41,3 +41,8 @@ python size_estimate.py <cldr-json-root>
   explained.
 - `--basic` over the raw `availableFormats` list: 142 of 275, which is why the design uses the best-fit model
   for both `formatMatcher` values.
+- Size (`baseline/size-estimate.txt`): the data the format/formatToParts PR needs (availableFormats,
+  dateTimeFormats with the atTime variants, appendItems, month/weekday names in both contexts, eras, am/pm) is
+  713 KB of UTF-8 for all 766 cldr-json locales when each locale stores only what differs from its CLDR parent;
+  96 KB deflated as one blob, 212 KB as one deflated block per language. Adding interval formats, style patterns
+  and flexible day periods takes it to 1.55 MB / 158 KB / 378 KB.
