@@ -1,0 +1,109 @@
+en\u0009gregory:default\u000912/24/2022\u0009month "/" day "/" year\u0009
+en\u0009gregory:y_MMMM_d\u0009December 24, 2022\u0009month " " day ", " year\u0009
+en\u0009gregory:E_y_MMM_d\u0009Sat Dec 24, 2022\u0009weekday " " month " " day ", " year\u0009
+en\u0009gregory:y_MMM\u0009Dec, 2022\u0009month ", " year\u0009
+en\u0009buddhist:default\u000912/24/2565\u0009month "/" day "/" year\u0009
+en\u0009buddhist:y_MMMM_d\u0009December 24, 2565\u0009month " " day ", " year\u0009
+en\u0009buddhist:E_y_MMM_d\u0009Sat Dec 24, 2565\u0009weekday " " month " " day ", " year\u0009
+en\u0009buddhist:y_MMM\u0009Dec, 2565\u0009month ", " year\u0009
+en\u0009japanese:default\u000912/24/4\u0009month "/" day "/" year\u0009
+en\u0009japanese:y_MMMM_d\u0009December 24, 4\u0009month " " day ", " year\u0009
+en\u0009japanese:E_y_MMM_d\u0009Sat Dec 24, 4\u0009weekday " " month " " day ", " year\u0009
+en\u0009japanese:y_MMM\u0009Dec, 4\u0009month ", " year\u0009
+en\u0009roc:default\u000912/24/111\u0009month "/" day "/" year\u0009
+en\u0009roc:y_MMMM_d\u0009December 24, 111\u0009month " " day ", " year\u0009
+en\u0009roc:E_y_MMM_d\u0009Sat Dec 24, 111\u0009weekday " " month " " day ", " year\u0009
+en\u0009roc:y_MMM\u0009Dec, 111\u0009month ", " year\u0009
+en\u0009hebrew:default\u00093/30/5783\u0009month "/" day "/" year\u0009
+en\u0009hebrew:y_MMMM_d\u00093 30, 5783\u0009month " " day ", " year\u0009
+en\u0009hebrew:E_y_MMM_d\u0009Sat 3 30, 5783\u0009weekday " " month " " day ", " year\u0009
+en\u0009hebrew:y_MMM\u00093, 5783\u0009month ", " year\u0009
+en\u0009islamic-civil:default\u00095/30/1444\u0009month "/" day "/" year\u0009
+en\u0009islamic-civil:y_MMMM_d\u00095 30, 1444\u0009month " " day ", " year\u0009
+en\u0009islamic-civil:E_y_MMM_d\u0009Sat 5 30, 1444\u0009weekday " " month " " day ", " year\u0009
+en\u0009islamic-civil:y_MMM\u00095, 1444\u0009month ", " year\u0009
+en\u0009persian:default\u000910/3/1401\u0009month "/" day "/" year\u0009
+en\u0009persian:y_MMMM_d\u000910 3, 1401\u0009month " " day ", " year\u0009
+en\u0009persian:E_y_MMM_d\u0009Sat 10 3, 1401\u0009weekday " " month " " day ", " year\u0009
+en\u0009persian:y_MMM\u000910, 1401\u0009month ", " year\u0009
+en\u0009chinese:default\u000912/2/2022\u58ec\u5bc5\u0009month "/" day "/" relatedYear yearName\u0009
+en\u0009chinese:y_MMMM_d\u000912 2, 2022\u58ec\u5bc5\u0009month " " day ", " relatedYear yearName\u0009
+en\u0009chinese:E_y_MMM_d\u0009Sat 12 2, 2022\u58ec\u5bc5\u0009weekday " " month " " day ", " relatedYear yearName\u0009
+en\u0009chinese:y_MMM\u000912, 2022\u58ec\u5bc5\u0009month ", " relatedYear yearName\u0009
+en\u0009coptic:default\u00094/15/1739\u0009month "/" day "/" year\u0009
+en\u0009coptic:y_MMMM_d\u00094 15, 1739\u0009month " " day ", " year\u0009
+en\u0009coptic:E_y_MMM_d\u0009Sat 4 15, 1739\u0009weekday " " month " " day ", " year\u0009
+en\u0009coptic:y_MMM\u00094, 1739\u0009month ", " year\u0009
+de\u0009gregory:default\u000924.12.2022\u0009day "." month "." year\u0009
+de\u0009gregory:y_MMMM_d\u000924 Dezember, 2022\u0009day " " month ", " year\u0009
+de\u0009gregory:E_y_MMM_d\u0009Sa 24 Dez., 2022\u0009weekday " " day " " month ", " year\u0009
+de\u0009gregory:y_MMM\u0009Dez, 2022\u0009month ", " year\u0009
+de\u0009buddhist:default\u000924.12.2565\u0009day "." month "." year\u0009
+de\u0009buddhist:y_MMMM_d\u000924 Dezember, 2565\u0009day " " month ", " year\u0009
+de\u0009buddhist:E_y_MMM_d\u0009Sa 24 Dez, 2565\u0009weekday " " day " " month ", " year\u0009
+de\u0009buddhist:y_MMM\u0009Dez, 2565\u0009month ", " year\u0009
+de\u0009japanese:default\u000924.12.4\u0009day "." month "." year\u0009
+de\u0009japanese:y_MMMM_d\u000924 Dezember, 4\u0009day " " month ", " year\u0009
+de\u0009japanese:E_y_MMM_d\u0009Sa 24 Dez, 4\u0009weekday " " day " " month ", " year\u0009
+de\u0009japanese:y_MMM\u0009Dez, 4\u0009month ", " year\u0009
+de\u0009roc:default\u000924.12.111\u0009day "." month "." year\u0009
+de\u0009roc:y_MMMM_d\u000924 Dezember, 111\u0009day " " month ", " year\u0009
+de\u0009roc:E_y_MMM_d\u0009Sa 24 Dez, 111\u0009weekday " " day " " month ", " year\u0009
+de\u0009roc:y_MMM\u0009Dez, 111\u0009month ", " year\u0009
+de\u0009hebrew:default\u000930.3.5783\u0009day "." month "." year\u0009
+de\u0009hebrew:y_MMMM_d\u000930 3, 5783\u0009day " " month ", " year\u0009
+de\u0009hebrew:E_y_MMM_d\u0009Sa 30 3, 5783\u0009weekday " " day " " month ", " year\u0009
+de\u0009hebrew:y_MMM\u00093, 5783\u0009month ", " year\u0009
+de\u0009islamic-civil:default\u000930.5.1444\u0009day "." month "." year\u0009
+de\u0009islamic-civil:y_MMMM_d\u000930 5, 1444\u0009day " " month ", " year\u0009
+de\u0009islamic-civil:E_y_MMM_d\u0009Sa 30 5, 1444\u0009weekday " " day " " month ", " year\u0009
+de\u0009islamic-civil:y_MMM\u00095, 1444\u0009month ", " year\u0009
+de\u0009persian:default\u00093.10.1401\u0009day "." month "." year\u0009
+de\u0009persian:y_MMMM_d\u00093 10, 1401\u0009day " " month ", " year\u0009
+de\u0009persian:E_y_MMM_d\u0009Sa 3 10, 1401\u0009weekday " " day " " month ", " year\u0009
+de\u0009persian:y_MMM\u000910, 1401\u0009month ", " year\u0009
+de\u0009chinese:default\u00092.12.2022\u58ec\u5bc5\u0009day "." month "." relatedYear yearName\u0009
+de\u0009chinese:y_MMMM_d\u00092 12, 2022\u58ec\u5bc5\u0009day " " month ", " relatedYear yearName\u0009
+de\u0009chinese:E_y_MMM_d\u0009Sa 2 12, 2022\u58ec\u5bc5\u0009weekday " " day " " month ", " relatedYear yearName\u0009
+de\u0009chinese:y_MMM\u000912, 2022\u58ec\u5bc5\u0009month ", " relatedYear yearName\u0009
+de\u0009coptic:default\u000915.4.1739\u0009day "." month "." year\u0009
+de\u0009coptic:y_MMMM_d\u000915 4, 1739\u0009day " " month ", " year\u0009
+de\u0009coptic:E_y_MMM_d\u0009Sa 15 4, 1739\u0009weekday " " day " " month ", " year\u0009
+de\u0009coptic:y_MMM\u00094, 1739\u0009month ", " year\u0009
+ja\u0009gregory:default\u00092022/12/24\u0009year "/" month "/" day\u0009
+ja\u0009gregory:y_MMMM_d\u00092022 12\u6708 24\u0009year " " month " " day\u0009
+ja\u0009gregory:E_y_MMM_d\u0009\u571f, 2022 12\u6708 24\u0009weekday ", " year " " month " " day\u0009
+ja\u0009gregory:y_MMM\u00092022 12\u6708\u0009year " " month\u0009
+ja\u0009buddhist:default\u00092565/12/24\u0009year "/" month "/" day\u0009
+ja\u0009buddhist:y_MMMM_d\u00092565 12\u6708 24\u0009year " " month " " day\u0009
+ja\u0009buddhist:E_y_MMM_d\u0009\u571f, 2565 12\u6708 24\u0009weekday ", " year " " month " " day\u0009
+ja\u0009buddhist:y_MMM\u00092565 12\u6708\u0009year " " month\u0009
+ja\u0009japanese:default\u00094/12/24\u0009year "/" month "/" day\u0009
+ja\u0009japanese:y_MMMM_d\u00094 12\u6708 24\u0009year " " month " " day\u0009
+ja\u0009japanese:E_y_MMM_d\u0009\u571f, 4 12\u6708 24\u0009weekday ", " year " " month " " day\u0009
+ja\u0009japanese:y_MMM\u00094 12\u6708\u0009year " " month\u0009
+ja\u0009roc:default\u0009111/12/24\u0009year "/" month "/" day\u0009
+ja\u0009roc:y_MMMM_d\u0009111 12\u6708 24\u0009year " " month " " day\u0009
+ja\u0009roc:E_y_MMM_d\u0009\u571f, 111 12\u6708 24\u0009weekday ", " year " " month " " day\u0009
+ja\u0009roc:y_MMM\u0009111 12\u6708\u0009year " " month\u0009
+ja\u0009hebrew:default\u00095783/3/30\u0009year "/" month "/" day\u0009
+ja\u0009hebrew:y_MMMM_d\u00095783 3 30\u0009year " " month " " day\u0009
+ja\u0009hebrew:E_y_MMM_d\u0009\u571f, 5783 3 30\u0009weekday ", " year " " month " " day\u0009
+ja\u0009hebrew:y_MMM\u00095783 3\u0009year " " month\u0009
+ja\u0009islamic-civil:default\u00091444/5/30\u0009year "/" month "/" day\u0009
+ja\u0009islamic-civil:y_MMMM_d\u00091444 5 30\u0009year " " month " " day\u0009
+ja\u0009islamic-civil:E_y_MMM_d\u0009\u571f, 1444 5 30\u0009weekday ", " year " " month " " day\u0009
+ja\u0009islamic-civil:y_MMM\u00091444 5\u0009year " " month\u0009
+ja\u0009persian:default\u00091401/10/3\u0009year "/" month "/" day\u0009
+ja\u0009persian:y_MMMM_d\u00091401 10 3\u0009year " " month " " day\u0009
+ja\u0009persian:E_y_MMM_d\u0009\u571f, 1401 10 3\u0009weekday ", " year " " month " " day\u0009
+ja\u0009persian:y_MMM\u00091401 10\u0009year " " month\u0009
+ja\u0009chinese:default\u00092022\u58ec\u5bc5/12/2\u0009relatedYear yearName "/" month "/" day\u0009
+ja\u0009chinese:y_MMMM_d\u00092022\u58ec\u5bc5 12 2\u0009relatedYear yearName " " month " " day\u0009
+ja\u0009chinese:E_y_MMM_d\u0009\u571f, 2022\u58ec\u5bc5 12 2\u0009weekday ", " relatedYear yearName " " month " " day\u0009
+ja\u0009chinese:y_MMM\u00092022\u58ec\u5bc5 12\u0009relatedYear yearName " " month\u0009
+ja\u0009coptic:default\u00091739/4/15\u0009year "/" month "/" day\u0009
+ja\u0009coptic:y_MMMM_d\u00091739 4 15\u0009year " " month " " day\u0009
+ja\u0009coptic:E_y_MMM_d\u0009\u571f, 1739 4 15\u0009weekday ", " year " " month " " day\u0009
+ja\u0009coptic:y_MMM\u00091739 4\u0009year " " month\u0009
+null

@@ -1,0 +1,1508 @@
+ar\u0009E_d_MMMM\u0009\u0627\u0644\u0633\u0628\u062a\u060c 24 \u062f\u064a\u0633\u0645\u0628\u0631\u0009weekday "\u060c " day " " month\u0009weekday=short,month=long,day=numeric
+ar\u0009EEEE_d_MMMM\u0009\u0627\u0644\u0633\u0628\u062a\u060c 24 \u062f\u064a\u0633\u0645\u0628\u0631\u0009weekday "\u060c " day " " month\u0009weekday=long,month=long,day=numeric
+ar\u0009E_y_MMM_d\u0009\u0627\u0644\u0633\u0628\u062a\u060c 24 \u062f\u064a\u0633\u0645\u0628\u0631 2022\u0009weekday "\u060c " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+ar\u0009EEEE_y_MMMM_d\u0009\u0627\u0644\u0633\u0628\u062a\u060c 24 \u062f\u064a\u0633\u0645\u0628\u0631 2022\u0009weekday "\u060c " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+ar\u0009y_MMMM\u0009\u062f\u064a\u0633\u0645\u0628\u0631 2022\u0009month " " year\u0009year=numeric,month=long
+ar\u0009y_MMM\u0009\u062f\u064a\u0633\u0645\u0628\u0631 2022\u0009month " " year\u0009year=numeric,month=short
+ar\u0009y_MM\u000912\u200f/2022\u0009month "\u200f/" year\u0009year=numeric,month=2-digit
+ar\u0009MMMM_d\u000924 \u062f\u064a\u0633\u0645\u0628\u0631\u0009day " " month\u0009month=long,day=numeric
+ar\u0009MMM_d\u000924 \u062f\u064a\u0633\u0645\u0628\u0631\u0009day " " month\u0009month=short,day=numeric
+ar\u0009M_d\u000924\u200f/12\u0009day "\u200f/" month\u0009month=numeric,day=numeric
+ar\u0009y_M_d\u000924\u200f/12\u200f/2022\u0009day "\u200f/" month "\u200f/" year\u0009year=numeric,month=numeric,day=numeric
+ar\u0009yy_MM_dd\u000924\u200f/12\u200f/22\u0009day "\u200f/" month "\u200f/" year\u0009year=2-digit,month=2-digit,day=2-digit
+ar\u0009MMMM\u0009\u062f\u064a\u0633\u0645\u0628\u0631\u0009month\u0009month=long
+ar\u0009EEEE\u0009\u0627\u0644\u0633\u0628\u062a\u0009weekday\u0009weekday=long
+ar\u0009d\u000924\u0009day\u0009day=numeric
+ar\u0009G_y\u00092022 \u0645\u0009year " " era\u0009era=short,year=numeric
+ar\u0009GGGG_y_MMMM_d\u000924 \u062f\u064a\u0633\u0645\u0628\u0631 2022 \u0645\u064a\u0644\u0627\u062f\u064a\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+ar\u0009j_mm\u00093:07 \u0645\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ar\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+ar\u0009h_mm_h12\u00093:07 \u0645\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ar\u0009j_mm_ss\u00093:07:09 \u0645\u0009hour ":" minute ":" second " " dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+ar\u0009E_j_mm\u0009\u0627\u0644\u0633\u0628\u062a 3:07 \u0645\u0009weekday " " hour ":" minute " " dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+ar\u0009y_MMMM_d_j_mm\u000924 \u062f\u064a\u0633\u0645\u0628\u0631 2022 \u0641\u064a 3:07 \u0645\u0009day " " month " " year " \u0641\u064a " hour ":" minute " " dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ar\u0009MMM_d_j_mm\u000924 \u062f\u064a\u0633\u0645\u0628\u0631\u060c 3:07 \u0645\u0009day " " month "\u060c " hour ":" minute " " dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ar\u0009y_M_d_j_mm_ss\u000924\u200f/12\u200f/2022\u060c 3:07:09 \u0645\u0009day "\u200f/" month "\u200f/" year "\u060c " hour ":" minute ":" second " " dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+bg\u0009E_d_MMMM\u0009\u0441\u0431, 24 \u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+bg\u0009EEEE_d_MMMM\u0009\u0441\u044a\u0431\u043e\u0442\u0430, 24 \u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+bg\u0009E_y_MMM_d\u0009\u0441\u0431, 24.12.2022 \u0433.\u0009weekday ", " day "." month "." year "\u202f\u0433."\u0009weekday=short,year=numeric,month=2-digit,day=numeric
+bg\u0009EEEE_y_MMMM_d\u0009\u0441\u044a\u0431\u043e\u0442\u0430, 24 \u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438 2022 \u0433.\u0009weekday ", " day " " month " " year "\u202f\u0433."\u0009weekday=long,year=numeric,month=long,day=numeric
+bg\u0009y_MMMM\u0009\u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438 2022 \u0433.\u0009month " " year "\u202f\u0433."\u0009year=numeric,month=long
+bg\u0009y_MMM\u000912.2022 \u0433.\u0009month "." year "\u202f\u0433."\u0009year=numeric,month=2-digit
+bg\u0009y_MM\u000912.2022 \u0433.\u0009month "." year "\u202f\u0433."\u0009year=numeric,month=2-digit
+bg\u0009MMMM_d\u000924 \u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438\u0009day " " month\u0009month=long,day=numeric
+bg\u0009MMM_d\u000924.12\u0009day "." month\u0009month=2-digit,day=numeric
+bg\u0009M_d\u000924.12\u0009day "." month\u0009month=2-digit,day=numeric
+bg\u0009y_M_d\u000924.12.2022 \u0433.\u0009day "." month "." year "\u202f\u0433."\u0009year=numeric,month=2-digit,day=numeric
+bg\u0009yy_MM_dd\u000924.12.22 \u0433.\u0009day "." month "." year "\u202f\u0433."\u0009year=2-digit,month=2-digit,day=2-digit
+bg\u0009MMMM\u0009\u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438\u0009month\u0009month=long
+bg\u0009EEEE\u0009\u0441\u044a\u0431\u043e\u0442\u0430\u0009weekday\u0009weekday=long
+bg\u0009d\u000924\u0009day\u0009day=numeric
+bg\u0009G_y\u00092022 \u0433. \u0441\u043b.\u0425\u0440.\u0009year "\u202f\u0433. " era\u0009era=short,year=numeric
+bg\u0009GGGG_y_MMMM_d\u000924 \u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438 2022 \u0433. \u0441\u043b\u0435\u0434 \u0425\u0440\u0438\u0441\u0442\u0430\u0009day " " month " " year "\u202f\u0433. " era\u0009era=long,year=numeric,month=long,day=numeric
+bg\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+bg\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+bg\u0009h_mm_h12\u00093:07 \u0447. pm\u0009hour ":" minute " \u0447. " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+bg\u0009j_mm_ss\u000915:07:09 \u0447.\u0009hour ":" minute ":" second " \u0447."\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+bg\u0009E_j_mm\u0009\u0441\u0431, 15:07 \u0447.\u0009weekday ", " hour ":" minute " \u0447."\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+bg\u0009y_MMMM_d_j_mm\u000924 \u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438 2022 \u0433. \u0432 15:07\u0009day " " month " " year "\u202f\u0433. \u0432 " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+bg\u0009MMM_d_j_mm\u000924.12, 15:07\u0009day "." month ", " hour ":" minute\u0009month=2-digit,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+bg\u0009y_M_d_j_mm_ss\u000924.12.2022 \u0433., 15:07:09 \u0447.\u0009day "." month "." year "\u202f\u0433., " hour ":" minute ":" second " \u0447."\u0009year=numeric,month=2-digit,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+bn\u0009E_d_MMMM\u0009\u09b6\u09a8\u09bf \u09e8\u09ea \u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+bn\u0009EEEE_d_MMMM\u0009\u09b6\u09a8\u09bf\u09ac\u09be\u09b0 \u09e8\u09ea \u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+bn\u0009E_y_MMM_d\u0009\u09b6\u09a8\u09bf, \u09e8\u09ea \u09a1\u09bf\u09b8\u09c7, \u09e8\u09e6\u09e8\u09e8\u0009weekday ", " day " " month ", " year\u0009weekday=short,year=numeric,month=short,day=numeric
+bn\u0009EEEE_y_MMMM_d\u0009\u09b6\u09a8\u09bf\u09ac\u09be\u09b0, \u09e8\u09ea \u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0, \u09e8\u09e6\u09e8\u09e8\u0009weekday ", " day " " month ", " year\u0009weekday=long,year=numeric,month=long,day=numeric
+bn\u0009y_MMMM\u0009\u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0 \u09e8\u09e6\u09e8\u09e8\u0009month " " year\u0009year=numeric,month=long
+bn\u0009y_MMM\u0009\u09a1\u09bf\u09b8\u09c7 \u09e8\u09e6\u09e8\u09e8\u0009month " " year\u0009year=numeric,month=short
+bn\u0009y_MM\u0009\u09e7\u09e8-\u09e8\u09e6\u09e8\u09e8\u0009month "-" year\u0009year=numeric,month=2-digit
+bn\u0009MMMM_d\u0009\u09e8\u09ea \u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0\u0009day " " month\u0009month=long,day=numeric
+bn\u0009MMM_d\u0009\u09e8\u09ea \u09a1\u09bf\u09b8\u09c7\u0009day " " month\u0009month=short,day=numeric
+bn\u0009M_d\u0009\u09e8\u09ea/\u09e7\u09e8\u0009day "/" month\u0009month=numeric,day=numeric
+bn\u0009y_M_d\u0009\u09e8\u09ea/\u09e7\u09e8/\u09e8\u09e6\u09e8\u09e8\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+bn\u0009yy_MM_dd\u0009\u09e8\u09ea/\u09e7\u09e8/\u09e8\u09e8\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+bn\u0009MMMM\u0009\u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0\u0009month\u0009month=long
+bn\u0009EEEE\u0009\u09b6\u09a8\u09bf\u09ac\u09be\u09b0\u0009weekday\u0009weekday=long
+bn\u0009d\u0009\u09e8\u09ea\u0009day\u0009day=numeric
+bn\u0009G_y\u0009\u09e8\u09e6\u09e8\u09e8 \u0996\u09c3\u09b7\u09cd\u099f\u09be\u09ac\u09cd\u09a6\u0009year " " era\u0009era=short,year=numeric
+bn\u0009GGGG_y_MMMM_d\u0009\u09e8\u09ea \u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0, \u09e8\u09e6\u09e8\u09e8 \u0996\u09cd\u09b0\u09bf\u09b8\u09cd\u099f\u09be\u09ac\u09cd\u09a6\u0009day " " month ", " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+bn\u0009j_mm\u0009\u09e9:\u09e6\u09ed PM\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+bn\u0009H_mm_h23\u0009\u09e7\u09eb:\u09e6\u09ed\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+bn\u0009h_mm_h12\u0009\u09e9:\u09e6\u09ed PM\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+bn\u0009j_mm_ss\u0009\u09e9:\u09e6\u09ed:\u09e6\u09ef PM\u0009hour ":" minute ":" second " " dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+bn\u0009E_j_mm\u0009\u09b6\u09a8\u09bf \u09e9:\u09e6\u09ed PM\u0009weekday " " hour ":" minute " " dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+bn\u0009y_MMMM_d_j_mm\u0009\u09e8\u09ea \u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0, \u09e8\u09e6\u09e8\u09e8 \u098f \u09e9:\u09e6\u09ed PM\u0009day " " month ", " year " \u098f " hour ":" minute " " dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+bn\u0009MMM_d_j_mm\u0009\u09e8\u09ea \u09a1\u09bf\u09b8\u09c7, \u09e9:\u09e6\u09ed PM\u0009day " " month ", " hour ":" minute " " dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+bn\u0009y_M_d_j_mm_ss\u0009\u09e8\u09ea/\u09e7\u09e8/\u09e8\u09e6\u09e8\u09e8, \u09e9:\u09e6\u09ed:\u09e6\u09ef PM\u0009day "/" month "/" year ", " hour ":" minute ":" second " " dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+ca\u0009E_d_MMMM\u0009ds., 24 de desembre\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+ca\u0009EEEE_d_MMMM\u0009dissabte, 24 de desembre\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+ca\u0009E_y_MMM_d\u0009ds., 24 de des. 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+ca\u0009EEEE_y_MMMM_d\u0009dissabte, 24 de desembre del 2022\u0009weekday ", " day " " month " del " year\u0009weekday=long,year=numeric,month=long,day=numeric
+ca\u0009y_MMMM\u0009desembre del 2022\u0009month " del " year\u0009year=numeric,month=long,day=numeric
+ca\u0009y_MMM\u0009des. del 2022\u0009month " del " year\u0009year=numeric,month=short,day=numeric
+ca\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+ca\u0009MMMM_d\u000924 de desembre\u0009day " " month\u0009month=long,day=numeric
+ca\u0009MMM_d\u000924 de des.\u0009day " " month\u0009month=short,day=numeric
+ca\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+ca\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+ca\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+ca\u0009MMMM\u0009desembre\u0009month\u0009month=long
+ca\u0009EEEE\u0009dissabte\u0009weekday\u0009weekday=long
+ca\u0009d\u000924\u0009day\u0009day=numeric
+ca\u0009G_y\u00092022 dC\u0009year " " era\u0009era=short,year=numeric
+ca\u0009GGGG_y_MMMM_d\u000924 de desembre del 2022 despr\u00e9s de Crist\u0009day " " month " del " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+ca\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+ca\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+ca\u0009h_mm_h12\u00093:07 p. m.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ca\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+ca\u0009E_j_mm\u0009ds. 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h23
+ca\u0009y_MMMM_d_j_mm\u000924 de desembre del 2022, a les 15:07\u0009day " " month " del " year ", a les " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,second=numeric,hourCycle=h23
+ca\u0009MMM_d_j_mm\u000924 de des., 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+ca\u0009y_M_d_j_mm_ss\u000924/12/2022 15:07:09\u0009day "/" month "/" year " " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+cs\u0009E_d_MMMM\u0009so 24. prosince\u0009weekday " " day ". " month\u0009weekday=short,month=long,day=numeric
+cs\u0009EEEE_d_MMMM\u0009sobota 24. prosince\u0009weekday " " day ". " month\u0009weekday=long,month=long,day=numeric
+cs\u0009E_y_MMM_d\u0009so 24. 12. 2022\u0009weekday " " day ". " month ". " year\u0009weekday=short,year=numeric,month=numeric,day=numeric
+cs\u0009EEEE_y_MMMM_d\u0009sobota 24. prosince 2022\u0009weekday " " day ". " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+cs\u0009y_MMMM\u0009prosinec 2022\u0009month " " year\u0009year=numeric,month=long
+cs\u0009y_MMM\u0009prosinec 2022\u0009month " " year\u0009year=numeric,month=long
+cs\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+cs\u0009MMMM_d\u000924. prosince\u0009day ". " month\u0009month=long,day=numeric
+cs\u0009MMM_d\u000924. 12.\u0009day ". " month "."\u0009month=numeric,day=numeric
+cs\u0009M_d\u000924. 12.\u0009day ". " month "."\u0009month=numeric,day=numeric
+cs\u0009y_M_d\u000924. 12. 2022\u0009day ". " month ". " year\u0009year=numeric,month=numeric,day=numeric
+cs\u0009yy_MM_dd\u000924. 12. 22\u0009day ". " month ". " year\u0009year=2-digit,month=2-digit,day=2-digit
+cs\u0009MMMM\u0009prosinec\u0009month\u0009month=long
+cs\u0009EEEE\u0009sobota\u0009weekday\u0009weekday=long
+cs\u0009d\u000924.\u0009day "."\u0009day=numeric
+cs\u0009G_y\u00092022 n. l.\u0009year " " era\u0009era=short,year=numeric
+cs\u0009GGGG_y_MMMM_d\u000924. prosince 2022 na\u0161eho letopo\u010dtu\u0009day ". " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+cs\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+cs\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+cs\u0009h_mm_h12\u00093:07 odp.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+cs\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+cs\u0009E_j_mm\u0009so 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h23
+cs\u0009y_MMMM_d_j_mm\u000924. prosince 2022 v 15:07\u0009day ". " month " " year " v " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+cs\u0009MMM_d_j_mm\u000924. 12. 15:07\u0009day ". " month ". " hour ":" minute\u0009month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+cs\u0009y_M_d_j_mm_ss\u000924. 12. 2022 15:07:09\u0009day ". " month ". " year " " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+da\u0009E_d_MMMM\u0009l\u00f8r. 24. december\u0009weekday " " day ". " month\u0009weekday=short,month=long,day=numeric
+da\u0009EEEE_d_MMMM\u0009l\u00f8rdag 24. december\u0009weekday " " day ". " month\u0009weekday=long,month=long,day=numeric
+da\u0009E_y_MMM_d\u0009l\u00f8r. 24. dec. 2022\u0009weekday " " day ". " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+da\u0009EEEE_y_MMMM_d\u0009l\u00f8rdag den 24. december 2022\u0009weekday " den " day ". " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+da\u0009y_MMMM\u0009december 2022\u0009month " " year\u0009year=numeric,month=long
+da\u0009y_MMM\u0009dec. 2022\u0009month " " year\u0009year=numeric,month=short
+da\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=2-digit
+da\u0009MMMM_d\u000924. december\u0009day ". " month\u0009month=long,day=numeric
+da\u0009MMM_d\u000924. dec.\u0009day ". " month\u0009month=short,day=numeric
+da\u0009M_d\u000924.12\u0009day "." month\u0009month=numeric,day=numeric
+da\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=numeric,day=numeric
+da\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+da\u0009MMMM\u0009december\u0009month\u0009month=long
+da\u0009EEEE\u0009l\u00f8rdag\u0009weekday\u0009weekday=long
+da\u0009d\u000924.\u0009day "."\u0009day=numeric
+da\u0009G_y\u00092022 e.Kr.\u0009year " " era\u0009era=short,year=numeric
+da\u0009GGGG_y_MMMM_d\u000924. december 2022 efter Kristus\u0009day ". " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+da\u0009j_mm\u000915.07\u0009hour "." minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+da\u0009H_mm_h23\u000915.07\u0009hour "." minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+da\u0009h_mm_h12\u00093.07 PM\u0009hour "." minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+da\u0009j_mm_ss\u000915.07.09\u0009hour "." minute "." second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+da\u0009E_j_mm\u0009l\u00f8r. 15.07\u0009weekday " " hour "." minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+da\u0009y_MMMM_d_j_mm\u000924. december 2022 kl. 15.07\u0009day ". " month " " year " kl. " hour "." minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+da\u0009MMM_d_j_mm\u000924. dec., 15.07\u0009day ". " month ", " hour "." minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+da\u0009y_M_d_j_mm_ss\u000924.12.2022, 15.07.09\u0009day "." month "." year ", " hour "." minute "." second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+de\u0009E_d_MMMM\u0009Sa., 24. Dezember\u0009weekday ", " day ". " month\u0009weekday=short,month=long,day=numeric
+de\u0009EEEE_d_MMMM\u0009Samstag, 24. Dezember\u0009weekday ", " day ". " month\u0009weekday=long,month=long,day=numeric
+de\u0009E_y_MMM_d\u0009Sa., 24. Dez. 2022\u0009weekday ", " day ". " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+de\u0009EEEE_y_MMMM_d\u0009Samstag, 24. Dezember 2022\u0009weekday ", " day ". " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+de\u0009y_MMMM\u0009Dezember 2022\u0009month " " year\u0009year=numeric,month=long
+de\u0009y_MMM\u0009Dez. 2022\u0009month " " year\u0009year=numeric,month=short
+de\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+de\u0009MMMM_d\u000924. Dezember\u0009day ". " month\u0009month=long,day=numeric
+de\u0009MMM_d\u000924. Dez.\u0009day ". " month\u0009month=short,day=numeric
+de\u0009M_d\u000924.12.\u0009day "." month "."\u0009month=numeric,day=numeric
+de\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=numeric,day=numeric
+de\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+de\u0009MMMM\u0009Dezember\u0009month\u0009month=long
+de\u0009EEEE\u0009Samstag\u0009weekday\u0009weekday=long
+de\u0009d\u000924\u0009day\u0009day=numeric
+de\u0009G_y\u00092022 n. Chr.\u0009year " " era\u0009era=short,year=numeric
+de\u0009GGGG_y_MMMM_d\u000924. Dezember 2022 n. Chr.\u0009day ". " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+de\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+de\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+de\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+de\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+de\u0009E_j_mm\u0009Sa., 15:07\u0009weekday ", " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+de\u0009y_MMMM_d_j_mm\u000924. Dezember 2022 um 15:07\u0009day ". " month " " year " um " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+de\u0009MMM_d_j_mm\u000924. Dez., 15:07\u0009day ". " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+de\u0009y_M_d_j_mm_ss\u000924.12.2022, 15:07:09\u0009day "." month "." year ", " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+el\u0009E_d_MMMM\u0009\u03a3\u03ac\u03b2 24 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+el\u0009EEEE_d_MMMM\u0009\u03a3\u03ac\u03b2\u03b2\u03b1\u03c4\u03bf 24 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+el\u0009E_y_MMM_d\u0009\u03a3\u03ac\u03b2 24 \u0394\u03b5\u03ba 2022\u0009weekday " " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+el\u0009EEEE_y_MMMM_d\u0009\u03a3\u03ac\u03b2\u03b2\u03b1\u03c4\u03bf 24 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5 2022\u0009weekday " " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+el\u0009y_MMMM\u0009\u0394\u03b5\u03ba\u03ad\u03bc\u03b2\u03c1\u03b9\u03bf\u03c2 2022\u0009month " " year\u0009year=numeric,month=long
+el\u0009y_MMM\u0009\u0394\u03b5\u03ba 2022\u0009month " " year\u0009year=numeric,month=short
+el\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+el\u0009MMMM_d\u000924 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5\u0009day " " month\u0009month=long,day=numeric
+el\u0009MMM_d\u000924 \u0394\u03b5\u03ba\u0009day " " month\u0009month=short,day=numeric
+el\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+el\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+el\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+el\u0009MMMM\u0009\u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5\u0009month\u0009month=long
+el\u0009EEEE\u0009\u03a3\u03ac\u03b2\u03b2\u03b1\u03c4\u03bf\u0009weekday\u0009weekday=long
+el\u0009d\u000924\u0009day\u0009day=numeric
+el\u0009G_y\u00092022 \u03bc.\u03a7.\u0009year " " era\u0009era=short,year=numeric
+el\u0009GGGG_y_MMMM_d\u000924 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5 2022 \u03bc\u03b5\u03c4\u03ac \u03a7\u03c1\u03b9\u03c3\u03c4\u03cc\u03bd\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+el\u0009j_mm\u00093:07 \u03bc.\u03bc.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+el\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+el\u0009h_mm_h12\u00093:07 \u03bc.\u03bc.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+el\u0009j_mm_ss\u00093:07:09 \u03bc.\u03bc.\u0009hour ":" minute ":" second "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+el\u0009E_j_mm\u0009\u03a3\u03ac\u03b2 3:07 \u03bc.\u03bc.\u0009weekday " " hour ":" minute "\u202f" dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+el\u0009y_MMMM_d_j_mm\u000924 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5 2022 \u03c3\u03c4\u03b9\u03c2 3:07 \u03bc.\u03bc.\u0009day " " month " " year " \u03c3\u03c4\u03b9\u03c2 " hour ":" minute "\u202f" dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+el\u0009MMM_d_j_mm\u000924 \u0394\u03b5\u03ba, 3:07 \u03bc.\u03bc.\u0009day " " month ", " hour ":" minute "\u202f" dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+el\u0009y_M_d_j_mm_ss\u000924/12/2022, 3:07:09 \u03bc.\u03bc.\u0009day "/" month "/" year ", " hour ":" minute ":" second "\u202f" dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+en\u0009E_d_MMMM\u0009Sat, December 24\u0009weekday ", " month " " day\u0009weekday=short,month=long,day=numeric
+en\u0009EEEE_d_MMMM\u0009Saturday, December 24\u0009weekday ", " month " " day\u0009weekday=long,month=long,day=numeric
+en\u0009E_y_MMM_d\u0009Sat, Dec 24, 2022\u0009weekday ", " month " " day ", " year\u0009weekday=short,year=numeric,month=short,day=numeric
+en\u0009EEEE_y_MMMM_d\u0009Saturday, December 24, 2022\u0009weekday ", " month " " day ", " year\u0009weekday=long,year=numeric,month=long,day=numeric
+en\u0009y_MMMM\u0009December 2022\u0009month " " year\u0009year=numeric,month=long
+en\u0009y_MMM\u0009Dec 2022\u0009month " " year\u0009year=numeric,month=short
+en\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+en\u0009MMMM_d\u0009December 24\u0009month " " day\u0009month=long,day=numeric
+en\u0009MMM_d\u0009Dec 24\u0009month " " day\u0009month=short,day=numeric
+en\u0009M_d\u000912/24\u0009month "/" day\u0009month=numeric,day=numeric
+en\u0009y_M_d\u000912/24/2022\u0009month "/" day "/" year\u0009year=numeric,month=numeric,day=numeric
+en\u0009yy_MM_dd\u000912/24/22\u0009month "/" day "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+en\u0009MMMM\u0009December\u0009month\u0009month=long
+en\u0009EEEE\u0009Saturday\u0009weekday\u0009weekday=long
+en\u0009d\u000924\u0009day\u0009day=numeric
+en\u0009G_y\u00092022 AD\u0009year " " era\u0009era=short,year=numeric
+en\u0009GGGG_y_MMMM_d\u0009December 24, 2022 Anno Domini\u0009month " " day ", " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+en\u0009j_mm\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+en\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+en\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+en\u0009j_mm_ss\u00093:07:09 PM\u0009hour ":" minute ":" second "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+en\u0009E_j_mm\u0009Sat 3:07 PM\u0009weekday " " hour ":" minute "\u202f" dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+en\u0009y_MMMM_d_j_mm\u0009December 24, 2022 at 3:07 PM\u0009month " " day ", " year " at " hour ":" minute "\u202f" dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+en\u0009MMM_d_j_mm\u0009Dec 24, 3:07 PM\u0009month " " day ", " hour ":" minute "\u202f" dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+en\u0009y_M_d_j_mm_ss\u000912/24/2022, 3:07:09 PM\u0009month "/" day "/" year ", " hour ":" minute ":" second "\u202f" dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+en-GB\u0009E_d_MMMM\u0009Sat 24 December\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+en-GB\u0009EEEE_d_MMMM\u0009Saturday 24 December\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+en-GB\u0009E_y_MMM_d\u0009Sat, 24 Dec 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+en-GB\u0009EEEE_y_MMMM_d\u0009Saturday, 24 December 2022\u0009weekday ", " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+en-GB\u0009y_MMMM\u0009December 2022\u0009month " " year\u0009year=numeric,month=long
+en-GB\u0009y_MMM\u0009Dec 2022\u0009month " " year\u0009year=numeric,month=short
+en-GB\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+en-GB\u0009MMMM_d\u000924 December\u0009day " " month\u0009month=long,day=numeric
+en-GB\u0009MMM_d\u000924 Dec\u0009day " " month\u0009month=short,day=numeric
+en-GB\u0009M_d\u000924/12\u0009day "/" month\u0009month=2-digit,day=2-digit
+en-GB\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=2-digit,day=2-digit
+en-GB\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+en-GB\u0009MMMM\u0009December\u0009month\u0009month=long
+en-GB\u0009EEEE\u0009Saturday\u0009weekday\u0009weekday=long
+en-GB\u0009d\u000924\u0009day\u0009day=numeric
+en-GB\u0009G_y\u00092022 AD\u0009year " " era\u0009era=short,year=numeric
+en-GB\u0009GGGG_y_MMMM_d\u000924 December 2022 Anno Domini\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+en-GB\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+en-GB\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+en-GB\u0009h_mm_h12\u00093:07 pm\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+en-GB\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+en-GB\u0009E_j_mm\u0009Sat 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+en-GB\u0009y_MMMM_d_j_mm\u000924 December 2022 at 15:07\u0009day " " month " " year " at " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+en-GB\u0009MMM_d_j_mm\u000924 Dec, 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+en-GB\u0009y_M_d_j_mm_ss\u000924/12/2022, 15:07:09\u0009day "/" month "/" year ", " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+en-AU\u0009E_d_MMMM\u0009Sat 24 December\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+en-AU\u0009EEEE_d_MMMM\u0009Saturday 24 December\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+en-AU\u0009E_y_MMM_d\u0009Sat, 24 Dec 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+en-AU\u0009EEEE_y_MMMM_d\u0009Saturday 24 December 2022\u0009weekday " " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+en-AU\u0009y_MMMM\u0009December 2022\u0009month " " year\u0009year=numeric,month=long
+en-AU\u0009y_MMM\u0009Dec 2022\u0009month " " year\u0009year=numeric,month=short
+en-AU\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+en-AU\u0009MMMM_d\u000924 December\u0009day " " month\u0009month=long,day=numeric
+en-AU\u0009MMM_d\u000924 Dec\u0009day " " month\u0009month=short,day=numeric
+en-AU\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+en-AU\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=2-digit,day=2-digit
+en-AU\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+en-AU\u0009MMMM\u0009December\u0009month\u0009month=long
+en-AU\u0009EEEE\u0009Saturday\u0009weekday\u0009weekday=long
+en-AU\u0009d\u000924\u0009day\u0009day=numeric
+en-AU\u0009G_y\u00092022 AD\u0009year " " era\u0009era=short,year=numeric
+en-AU\u0009GGGG_y_MMMM_d\u000924 December 2022 Anno Domini\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+en-AU\u0009j_mm\u00093:07 pm\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+en-AU\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+en-AU\u0009h_mm_h12\u00093:07 pm\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+en-AU\u0009j_mm_ss\u00093:07:09 pm\u0009hour ":" minute ":" second "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+en-AU\u0009E_j_mm\u0009Sat 3:07 pm\u0009weekday " " hour ":" minute "\u202f" dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+en-AU\u0009y_MMMM_d_j_mm\u000924 December 2022 at 3:07 pm\u0009day " " month " " year " at " hour ":" minute "\u202f" dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+en-AU\u0009MMM_d_j_mm\u000924 Dec, 3:07 pm\u0009day " " month ", " hour ":" minute "\u202f" dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+en-AU\u0009y_M_d_j_mm_ss\u000924/12/2022, 3:07:09 pm\u0009day "/" month "/" year ", " hour ":" minute ":" second "\u202f" dayPeriod\u0009year=numeric,month=2-digit,day=2-digit,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+en-IN\u0009E_d_MMMM\u0009Sat, 24 December\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+en-IN\u0009EEEE_d_MMMM\u0009Saturday, 24 December\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+en-IN\u0009E_y_MMM_d\u0009Sat, 24 Dec, 2022\u0009weekday ", " day " " month ", " year\u0009weekday=short,year=numeric,month=short,day=numeric
+en-IN\u0009EEEE_y_MMMM_d\u0009Saturday, 24 December 2022\u0009weekday ", " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+en-IN\u0009y_MMMM\u0009December 2022\u0009month " " year\u0009year=numeric,month=long
+en-IN\u0009y_MMM\u0009Dec 2022\u0009month " " year\u0009year=numeric,month=short
+en-IN\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+en-IN\u0009MMMM_d\u000924 December\u0009day " " month\u0009month=long,day=numeric
+en-IN\u0009MMM_d\u000924 Dec\u0009day " " month\u0009month=short,day=numeric
+en-IN\u0009M_d\u000924/12\u0009day "/" month\u0009month=2-digit,day=2-digit
+en-IN\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+en-IN\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+en-IN\u0009MMMM\u0009December\u0009month\u0009month=long
+en-IN\u0009EEEE\u0009Saturday\u0009weekday\u0009weekday=long
+en-IN\u0009d\u000924\u0009day\u0009day=numeric
+en-IN\u0009G_y\u00092022 AD\u0009year " " era\u0009era=short,year=numeric
+en-IN\u0009GGGG_y_MMMM_d\u000924 December 2022 Anno Domini\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+en-IN\u0009j_mm\u00093:07 pm\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+en-IN\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+en-IN\u0009h_mm_h12\u00093:07 pm\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+en-IN\u0009j_mm_ss\u00093:07:09 pm\u0009hour ":" minute ":" second "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+en-IN\u0009E_j_mm\u0009Sat, 3:07 pm\u0009weekday ", " hour ":" minute "\u202f" dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+en-IN\u0009y_MMMM_d_j_mm\u000924 December 2022 at 3:07 pm\u0009day " " month " " year " at " hour ":" minute "\u202f" dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+en-IN\u0009MMM_d_j_mm\u000924 Dec, 3:07 pm\u0009day " " month ", " hour ":" minute "\u202f" dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+en-IN\u0009y_M_d_j_mm_ss\u000924/12/2022, 3:07:09 pm\u0009day "/" month "/" year ", " hour ":" minute ":" second "\u202f" dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+es\u0009E_d_MMMM\u0009s\u00e1b, 24 de diciembre\u0009weekday ", " day " de " month\u0009weekday=short,month=long,day=numeric
+es\u0009EEEE_d_MMMM\u0009s\u00e1bado, 24 de diciembre\u0009weekday ", " day " de " month\u0009weekday=long,month=long,day=numeric
+es\u0009E_y_MMM_d\u0009s\u00e1b, 24 dic 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+es\u0009EEEE_y_MMMM_d\u0009s\u00e1bado, 24 de diciembre de 2022\u0009weekday ", " day " de " month " de " year\u0009weekday=long,year=numeric,month=long,day=numeric
+es\u0009y_MMMM\u0009diciembre de 2022\u0009month " de " year\u0009year=numeric,month=long,day=numeric
+es\u0009y_MMM\u0009dic 2022\u0009month " " year\u0009year=numeric,month=short
+es\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=numeric
+es\u0009MMMM_d\u000924 de diciembre\u0009day " de " month\u0009month=long,day=numeric
+es\u0009MMM_d\u000924 dic\u0009day " " month\u0009month=short,day=numeric
+es\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+es\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+es\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+es\u0009MMMM\u0009diciembre\u0009month\u0009month=long
+es\u0009EEEE\u0009s\u00e1bado\u0009weekday\u0009weekday=long
+es\u0009d\u000924\u0009day\u0009day=numeric
+es\u0009G_y\u00092022 d. C.\u0009year " " era\u0009era=short,year=numeric
+es\u0009GGGG_y_MMMM_d\u000924 de diciembre de 2022 despu\u00e9s de Cristo\u0009day " de " month " de " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+es\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+es\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+es\u0009h_mm_h12\u00093:07 p. m.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+es\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+es\u0009E_j_mm\u0009s\u00e1b, 15:07\u0009weekday ", " hour ":" minute\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h23
+es\u0009y_MMMM_d_j_mm\u000924 de diciembre de 2022 a las 15:07\u0009day " de " month " de " year " a las " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,second=numeric,hourCycle=h23
+es\u0009MMM_d_j_mm\u000924 dic, 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+es\u0009y_M_d_j_mm_ss\u000924/12/2022, 15:07:09\u0009day "/" month "/" year ", " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+es-MX\u0009E_d_MMMM\u0009s\u00e1b, 24 de diciembre\u0009weekday ", " day " de " month\u0009weekday=short,month=long,day=numeric
+es-MX\u0009EEEE_d_MMMM\u0009s\u00e1bado, 24 de diciembre\u0009weekday ", " day " de " month\u0009weekday=long,month=long,day=numeric
+es-MX\u0009E_y_MMM_d\u0009s\u00e1b, 24 de dic de 2022\u0009weekday ", " day " de " month " de " year\u0009weekday=short,year=numeric,month=short,day=numeric
+es-MX\u0009EEEE_y_MMMM_d\u0009s\u00e1bado, 24 de diciembre de 2022\u0009weekday ", " day " de " month " de " year\u0009weekday=long,year=numeric,month=long,day=numeric
+es-MX\u0009y_MMMM\u0009diciembre de 2022\u0009month " de " year\u0009year=numeric,month=long,day=numeric
+es-MX\u0009y_MMM\u0009dic 2022\u0009month " " year\u0009year=numeric,month=short
+es-MX\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+es-MX\u0009MMMM_d\u000924 de diciembre\u0009day " de " month\u0009month=long,day=numeric
+es-MX\u0009MMM_d\u000924 dic\u0009day " " month\u0009month=short,day=numeric
+es-MX\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+es-MX\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+es-MX\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+es-MX\u0009MMMM\u0009diciembre\u0009month\u0009month=long
+es-MX\u0009EEEE\u0009s\u00e1bado\u0009weekday\u0009weekday=long
+es-MX\u0009d\u000924\u0009day\u0009day=numeric
+es-MX\u0009G_y\u00092022 d.C.\u0009year " " era\u0009era=short,year=numeric
+es-MX\u0009GGGG_y_MMMM_d\u000924 de diciembre de 2022 despu\u00e9s de Cristo\u0009day " de " month " de " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+es-MX\u0009j_mm\u00093:07 p.m.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+es-MX\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+es-MX\u0009h_mm_h12\u00093:07 p.m.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+es-MX\u0009j_mm_ss\u00093:07:09 p.m.\u0009hour ":" minute ":" second "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+es-MX\u0009E_j_mm\u0009s\u00e1b 3:07 p.m.\u0009weekday " " hour ":" minute "\u202f" dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+es-MX\u0009y_MMMM_d_j_mm\u000924 de diciembre de 2022 a las 3:07 p.m.\u0009day " de " month " de " year " a las " hour ":" minute "\u202f" dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,second=numeric,hourCycle=h12
+es-MX\u0009MMM_d_j_mm\u000924 dic, 3:07 p.m.\u0009day " " month ", " hour ":" minute "\u202f" dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+es-MX\u0009y_M_d_j_mm_ss\u000924/12/2022, 3:07:09 p.m.\u0009day "/" month "/" year ", " hour ":" minute ":" second "\u202f" dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+et\u0009E_d_MMMM\u0009L, 24. detsember\u0009weekday ", " day ". " month\u0009weekday=short,month=long,day=numeric
+et\u0009EEEE_d_MMMM\u0009laup\u00e4ev, 24. detsember\u0009weekday ", " day ". " month\u0009weekday=long,month=long,day=numeric
+et\u0009E_y_MMM_d\u0009L, 24. detsember 2022\u0009weekday ", " day ". " month " " year\u0009weekday=short,year=numeric,month=long,day=numeric
+et\u0009EEEE_y_MMMM_d\u0009laup\u00e4ev, 24. detsember 2022\u0009weekday ", " day ". " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+et\u0009y_MMMM\u0009detsember 2022\u0009month " " year\u0009year=numeric,month=long
+et\u0009y_MMM\u0009dets 2022\u0009month " " year\u0009year=numeric,month=short
+et\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=2-digit
+et\u0009MMMM_d\u000924. detsember\u0009day ". " month\u0009month=long,day=numeric
+et\u0009MMM_d\u000924. dets\u0009day ". " month\u0009month=short,day=numeric
+et\u0009M_d\u000924.12\u0009day "." month\u0009month=numeric,day=numeric
+et\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=numeric,day=numeric
+et\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+et\u0009MMMM\u0009detsember\u0009month\u0009month=long
+et\u0009EEEE\u0009laup\u00e4ev\u0009weekday\u0009weekday=long
+et\u0009d\u000924\u0009day\u0009day=numeric
+et\u0009G_y\u00092022 pKr\u0009year " " era\u0009era=short,year=numeric
+et\u0009GGGG_y_MMMM_d\u000924. detsember 2022 p\u00e4rast Kristust\u0009day ". " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+et\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+et\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+et\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+et\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+et\u0009E_j_mm\u0009L 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+et\u0009y_MMMM_d_j_mm\u000924. detsember 2022, kell 15:07\u0009day ". " month " " year ", kell " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+et\u0009MMM_d_j_mm\u000924. dets, 15:07\u0009day ". " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+et\u0009y_M_d_j_mm_ss\u000924.12.2022, 15:07:09\u0009day "." month "." year ", " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+fa\u0009E_d_MMMM\u0009\u0634\u0646\u0628\u0647 \u06f3 \u062f\u06cc\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+fa\u0009EEEE_d_MMMM\u0009\u0634\u0646\u0628\u0647 \u06f3 \u062f\u06cc\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+fa\u0009E_y_MMM_d\u0009\u06f1\u06f4\u06f0\u06f1 \u062f\u06cc \u06f3, \u0634\u0646\u0628\u0647\u0009year " " month " " day ", " weekday\u0009weekday=short,year=numeric,month=short,day=numeric
+fa\u0009EEEE_y_MMMM_d\u0009\u06f1\u06f4\u06f0\u06f1 \u062f\u06cc \u06f3, \u0634\u0646\u0628\u0647\u0009year " " month " " day ", " weekday\u0009weekday=long,year=numeric,month=long,day=numeric
+fa\u0009y_MMMM\u0009\u06f1\u06f4\u06f0\u06f1 \u062f\u06cc\u0009year " " month\u0009year=numeric,month=long
+fa\u0009y_MMM\u0009\u062f\u06cc \u06f1\u06f4\u06f0\u06f1\u0009month " " year\u0009year=numeric,month=short
+fa\u0009y_MM\u0009\u06f1\u06f4\u06f0\u06f1/\u06f1\u06f0\u0009year "/" month\u0009year=numeric,month=2-digit
+fa\u0009MMMM_d\u0009\u06f3 \u062f\u06cc\u0009day " " month\u0009month=long,day=numeric
+fa\u0009MMM_d\u0009\u06f3 \u062f\u06cc\u0009day " " month\u0009month=short,day=numeric
+fa\u0009M_d\u0009\u06f1\u06f0/\u06f3\u0009month "/" day\u0009month=numeric,day=numeric
+fa\u0009y_M_d\u0009\u06f1\u06f4\u06f0\u06f1/\u06f1\u06f0/\u06f3\u0009year "/" month "/" day\u0009year=numeric,month=numeric,day=numeric
+fa\u0009yy_MM_dd\u0009\u06f0\u06f1/\u06f1\u06f0/\u06f0\u06f3\u0009year "/" month "/" day\u0009year=2-digit,month=2-digit,day=2-digit
+fa\u0009MMMM\u0009\u062f\u06cc\u0009month\u0009month=long
+fa\u0009EEEE\u0009\u0634\u0646\u0628\u0647\u0009weekday\u0009weekday=long
+fa\u0009d\u0009\u06f3\u0009day\u0009day=numeric
+fa\u0009G_y\u0009\u06f1\u06f4\u06f0\u06f1 \u0647\u200d.\u0634.\u0009year " " era\u0009era=short,year=numeric
+fa\u0009GGGG_y_MMMM_d\u0009\u06f3 \u062f\u06cc \u06f1\u06f4\u06f0\u06f1 \u0647\u062c\u0631\u06cc \u0634\u0645\u0633\u06cc\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+fa\u0009j_mm\u0009\u06f1\u06f5:\u06f0\u06f7\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+fa\u0009H_mm_h23\u0009\u06f1\u06f5:\u06f0\u06f7\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+fa\u0009h_mm_h12\u0009\u06f3:\u06f0\u06f7 \u0628.\u0638.\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+fa\u0009j_mm_ss\u0009\u06f1\u06f5:\u06f0\u06f7:\u06f0\u06f9\u0009hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+fa\u0009E_j_mm\u0009\u0634\u0646\u0628\u0647 \u06f1\u06f5:\u06f0\u06f7\u0009weekday " " hour ":" minute\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h23
+fa\u0009y_MMMM_d_j_mm\u0009\u06f3 \u062f\u06cc \u06f1\u06f4\u06f0\u06f1 \u0633\u0627\u0639\u062a \u06f1\u06f5:\u06f0\u06f7\u0009day " " month " " year " \u0633\u0627\u0639\u062a " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+fa\u0009MMM_d_j_mm\u0009\u06f3 \u062f\u06cc\u060c \u06f1\u06f5:\u06f0\u06f7\u0009day " " month "\u060c " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+fa\u0009y_M_d_j_mm_ss\u0009\u06f1\u06f4\u06f0\u06f1/\u06f1\u06f0/\u06f3, \u06f1\u06f5:\u06f0\u06f7:\u06f0\u06f9\u0009year "/" month "/" day ", " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+fi\u0009E_d_MMMM\u0009la 24. joulukuuta\u0009weekday " " day ". " month\u0009weekday=short,month=long,day=numeric
+fi\u0009EEEE_d_MMMM\u0009lauantai 24. joulukuuta\u0009weekday " " day ". " month\u0009weekday=long,month=long,day=numeric
+fi\u0009E_y_MMM_d\u0009la 24.12.2022\u0009weekday " " day "." month "." year\u0009weekday=short,year=numeric,month=numeric,day=numeric
+fi\u0009EEEE_y_MMMM_d\u0009lauantaina 24. joulukuuta 2022\u0009weekday " " day ". " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+fi\u0009y_MMMM\u0009joulukuu 2022\u0009month " " year\u0009year=numeric,month=long
+fi\u0009y_MMM\u0009joulu 2022\u0009month " " year\u0009year=numeric,month=short
+fi\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=numeric
+fi\u0009MMMM_d\u000924. joulukuuta\u0009day ". " month\u0009month=long,day=numeric
+fi\u0009MMM_d\u000924.12.\u0009day "." month "."\u0009month=numeric,day=numeric
+fi\u0009M_d\u000924.12.\u0009day "." month "."\u0009month=numeric,day=numeric
+fi\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=numeric,day=numeric
+fi\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+fi\u0009MMMM\u0009joulukuu\u0009month\u0009month=long
+fi\u0009EEEE\u0009lauantai\u0009weekday\u0009weekday=long
+fi\u0009d\u000924\u0009day\u0009day=numeric
+fi\u0009G_y\u00092022 jKr.\u0009year " " era\u0009era=short,year=numeric
+fi\u0009GGGG_y_MMMM_d\u000924. joulukuuta 2022 j\u00e4lkeen Kristuksen syntym\u00e4n\u0009day ". " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+fi\u0009j_mm\u000915.07\u0009hour "." minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+fi\u0009H_mm_h23\u000915.07\u0009hour "." minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+fi\u0009h_mm_h12\u00093.07 ip.\u0009hour "." minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+fi\u0009j_mm_ss\u000915.07.09\u0009hour "." minute "." second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+fi\u0009E_j_mm\u0009la 15.07\u0009weekday " " hour "." minute\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h23
+fi\u0009y_MMMM_d_j_mm\u000924. joulukuuta 2022 klo 15.07\u0009day ". " month " " year " klo " hour "." minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+fi\u0009MMM_d_j_mm\u000924.12. klo 15.07\u0009day "." month ". klo " hour "." minute\u0009month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+fi\u0009y_M_d_j_mm_ss\u000924.12.2022 klo 15.07.09\u0009day "." month "." year " klo " hour "." minute "." second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+fil\u0009E_d_MMMM\u0009Sab, Disyembre 24\u0009weekday ", " month " " day\u0009weekday=short,month=long,day=numeric
+fil\u0009EEEE_d_MMMM\u0009Sabado, Disyembre 24\u0009weekday ", " month " " day\u0009weekday=long,month=long,day=numeric
+fil\u0009E_y_MMM_d\u0009Sab, Dis 24, 2022\u0009weekday ", " month " " day ", " year\u0009weekday=short,year=numeric,month=short,day=numeric
+fil\u0009EEEE_y_MMMM_d\u0009Sabado, Disyembre 24, 2022\u0009weekday ", " month " " day ", " year\u0009weekday=long,year=numeric,month=long,day=numeric
+fil\u0009y_MMMM\u0009Disyembre 2022\u0009month " " year\u0009year=numeric,month=long
+fil\u0009y_MMM\u0009Dis 2022\u0009month " " year\u0009year=numeric,month=short
+fil\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+fil\u0009MMMM_d\u0009Disyembre 24\u0009month " " day\u0009month=long,day=numeric
+fil\u0009MMM_d\u0009Dis 24\u0009month " " day\u0009month=short,day=numeric
+fil\u0009M_d\u000912/24\u0009month "/" day\u0009month=numeric,day=numeric
+fil\u0009y_M_d\u000912/24/2022\u0009month "/" day "/" year\u0009year=numeric,month=numeric,day=numeric
+fil\u0009yy_MM_dd\u000912/24/22\u0009month "/" day "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+fil\u0009MMMM\u0009Disyembre\u0009month\u0009month=long
+fil\u0009EEEE\u0009Sabado\u0009weekday\u0009weekday=long
+fil\u0009d\u000924\u0009day\u0009day=numeric
+fil\u0009G_y\u00092022 AD\u0009year " " era\u0009era=short,year=numeric
+fil\u0009GGGG_y_MMMM_d\u0009Disyembre 24, 2022 Anno Domini\u0009month " " day ", " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+fil\u0009j_mm\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+fil\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+fil\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+fil\u0009j_mm_ss\u00093:07:09 PM\u0009hour ":" minute ":" second "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+fil\u0009E_j_mm\u0009Sab 3:07 PM\u0009weekday " " hour ":" minute "\u202f" dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+fil\u0009y_MMMM_d_j_mm\u0009Disyembre 24, 2022 nang 3:07 PM\u0009month " " day ", " year " nang " hour ":" minute "\u202f" dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+fil\u0009MMM_d_j_mm\u0009Dis 24, 3:07 PM\u0009month " " day ", " hour ":" minute "\u202f" dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+fil\u0009y_M_d_j_mm_ss\u000912/24/2022, 3:07:09 PM\u0009month "/" day "/" year ", " hour ":" minute ":" second "\u202f" dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+fr\u0009E_d_MMMM\u0009sam. 24 d\u00e9cembre\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+fr\u0009EEEE_d_MMMM\u0009samedi 24 d\u00e9cembre\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+fr\u0009E_y_MMM_d\u0009sam. 24 d\u00e9c. 2022\u0009weekday " " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+fr\u0009EEEE_y_MMMM_d\u0009samedi 24 d\u00e9cembre 2022\u0009weekday " " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+fr\u0009y_MMMM\u0009d\u00e9cembre 2022\u0009month " " year\u0009year=numeric,month=long
+fr\u0009y_MMM\u0009d\u00e9c. 2022\u0009month " " year\u0009year=numeric,month=short
+fr\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+fr\u0009MMMM_d\u000924 d\u00e9cembre\u0009day " " month\u0009month=long,day=numeric
+fr\u0009MMM_d\u000924 d\u00e9c.\u0009day " " month\u0009month=short,day=numeric
+fr\u0009M_d\u000924/12\u0009day "/" month\u0009month=2-digit,day=2-digit
+fr\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=2-digit,day=2-digit
+fr\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+fr\u0009MMMM\u0009d\u00e9cembre\u0009month\u0009month=long
+fr\u0009EEEE\u0009samedi\u0009weekday\u0009weekday=long
+fr\u0009d\u000924\u0009day\u0009day=numeric
+fr\u0009G_y\u00092022 ap. J.-C.\u0009year " " era\u0009era=short,year=numeric
+fr\u0009GGGG_y_MMMM_d\u000924 d\u00e9cembre 2022 apr\u00e8s J\u00e9sus-Christ\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+fr\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+fr\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+fr\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+fr\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+fr\u0009E_j_mm\u0009sam. 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+fr\u0009y_MMMM_d_j_mm\u000924 d\u00e9cembre 2022 \u00e0 15:07\u0009day " " month " " year " \u00e0 " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+fr\u0009MMM_d_j_mm\u000924 d\u00e9c., 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+fr\u0009y_M_d_j_mm_ss\u000924/12/2022 15:07:09\u0009day "/" month "/" year " " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+fr-CA\u0009E_d_MMMM\u0009sam. 24 d\u00e9cembre\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+fr-CA\u0009EEEE_d_MMMM\u0009samedi 24 d\u00e9cembre\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+fr-CA\u0009E_y_MMM_d\u0009sam. 24 d\u00e9c. 2022\u0009weekday " " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+fr-CA\u0009EEEE_y_MMMM_d\u0009samedi 24 d\u00e9cembre 2022\u0009weekday " " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+fr-CA\u0009y_MMMM\u0009d\u00e9cembre 2022\u0009month " " year\u0009year=numeric,month=long
+fr-CA\u0009y_MMM\u0009d\u00e9c. 2022\u0009month " " year\u0009year=numeric,month=short
+fr-CA\u0009y_MM\u00092022-12\u0009year "-" month\u0009year=numeric,month=2-digit
+fr-CA\u0009MMMM_d\u000924 d\u00e9cembre\u0009day " " month\u0009month=long,day=numeric
+fr-CA\u0009MMM_d\u000924 d\u00e9c.\u0009day " " month\u0009month=short,day=numeric
+fr-CA\u0009M_d\u000912-24\u0009month "-" day\u0009month=2-digit,day=2-digit
+fr-CA\u0009y_M_d\u00092022-12-24\u0009year "-" month "-" day\u0009year=numeric,month=2-digit,day=2-digit
+fr-CA\u0009yy_MM_dd\u000922-12-24\u0009year "-" month "-" day\u0009year=2-digit,month=2-digit,day=2-digit
+fr-CA\u0009MMMM\u0009d\u00e9cembre\u0009month\u0009month=long
+fr-CA\u0009EEEE\u0009samedi\u0009weekday\u0009weekday=long
+fr-CA\u0009d\u000924\u0009day\u0009day=numeric
+fr-CA\u0009G_y\u00092022 ap. J.-C.\u0009year " " era\u0009era=short,year=numeric
+fr-CA\u0009GGGG_y_MMMM_d\u000924 d\u00e9cembre 2022 apr\u00e8s J\u00e9sus-Christ\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+fr-CA\u0009j_mm\u000915 h 07\u0009hour " h " minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+fr-CA\u0009H_mm_h23\u000915 h 07\u0009hour " h " minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+fr-CA\u0009h_mm_h12\u00093 h 07 p.m.\u0009hour " h " minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+fr-CA\u0009j_mm_ss\u000915 h 07 min 09 s\u0009hour " h " minute " min " second " s"\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+fr-CA\u0009E_j_mm\u0009sam. 15 h 07\u0009weekday " " hour " h " minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+fr-CA\u0009y_MMMM_d_j_mm\u000924 d\u00e9cembre 2022 \u00e0 15 h 07\u0009day " " month " " year " \u00e0 " hour " h " minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+fr-CA\u0009MMM_d_j_mm\u000924 d\u00e9c., 15 h 07\u0009day " " month ", " hour " h " minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+fr-CA\u0009y_M_d_j_mm_ss\u00092022-12-24 15 h 07 min 09 s\u0009year "-" month "-" day " " hour " h " minute " min " second " s"\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+he\u0009E_d_MMMM\u0009\u05e9\u05d1\u05ea, 24 \u05d1\u05d3\u05e6\u05de\u05d1\u05e8\u0009weekday ", " day " \u05d1" month\u0009weekday=short,month=long,day=numeric
+he\u0009EEEE_d_MMMM\u0009\u05d9\u05d5\u05dd \u05e9\u05d1\u05ea, 24 \u05d1\u05d3\u05e6\u05de\u05d1\u05e8\u0009weekday ", " day " \u05d1" month\u0009weekday=long,month=long,day=numeric
+he\u0009E_y_MMM_d\u0009\u05e9\u05d1\u05ea, 24 \u05d1\u05d3\u05e6\u05de\u05f3 2022\u0009weekday ", " day " \u05d1" month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+he\u0009EEEE_y_MMMM_d\u0009\u05d9\u05d5\u05dd \u05e9\u05d1\u05ea, 24 \u05d1\u05d3\u05e6\u05de\u05d1\u05e8 2022\u0009weekday ", " day " \u05d1" month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+he\u0009y_MMMM\u0009\u05d3\u05e6\u05de\u05d1\u05e8 2022\u0009month " " year\u0009year=numeric,month=long
+he\u0009y_MMM\u0009\u05d3\u05e6\u05de\u05f3 2022\u0009month " " year\u0009year=numeric,month=short
+he\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=numeric
+he\u0009MMMM_d\u000924 \u05d1\u05d3\u05e6\u05de\u05d1\u05e8\u0009day " \u05d1" month\u0009month=long,day=numeric
+he\u0009MMM_d\u000924 \u05d1\u05d3\u05e6\u05de\u05f3\u0009day " \u05d1" month\u0009month=short,day=numeric
+he\u0009M_d\u000924.12\u0009day "." month\u0009month=numeric,day=numeric
+he\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=numeric,day=numeric
+he\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+he\u0009MMMM\u0009\u05d3\u05e6\u05de\u05d1\u05e8\u0009month\u0009month=long
+he\u0009EEEE\u0009\u05d9\u05d5\u05dd \u05e9\u05d1\u05ea\u0009weekday\u0009weekday=long
+he\u0009d\u000924\u0009day\u0009day=numeric
+he\u0009G_y\u00092022 \u05dc\u05e1\u05e4\u05d9\u05e8\u05d4\u0009year " " era\u0009era=short,year=numeric
+he\u0009GGGG_y_MMMM_d\u000924 \u05d1\u05d3\u05e6\u05de\u05d1\u05e8 2022 \u05dc\u05e1\u05e4\u05d9\u05e8\u05d4\u0009day " \u05d1" month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+he\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+he\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+he\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+he\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+he\u0009E_j_mm\u0009\u05e9\u05d1\u05ea 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h23
+he\u0009y_MMMM_d_j_mm\u000924 \u05d1\u05d3\u05e6\u05de\u05d1\u05e8 2022 \u05d1\u05e9\u05e2\u05d4 15:07\u0009day " \u05d1" month " " year " \u05d1\u05e9\u05e2\u05d4 " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+he\u0009MMM_d_j_mm\u000924 \u05d1\u05d3\u05e6\u05de\u05f3, 15:07\u0009day " \u05d1" month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+he\u0009y_M_d_j_mm_ss\u000924.12.2022, 15:07:09\u0009day "." month "." year ", " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+hi\u0009E_d_MMMM\u0009\u0936\u0928\u093f, 24 \u0926\u093f\u0938\u0902\u092c\u0930\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+hi\u0009EEEE_d_MMMM\u0009\u0936\u0928\u093f\u0935\u093e\u0930, 24 \u0926\u093f\u0938\u0902\u092c\u0930\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+hi\u0009E_y_MMM_d\u0009\u0936\u0928\u093f, 24 \u0926\u093f\u0938\u0970 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+hi\u0009EEEE_y_MMMM_d\u0009\u0936\u0928\u093f\u0935\u093e\u0930, 24 \u0926\u093f\u0938\u0902\u092c\u0930 2022\u0009weekday ", " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+hi\u0009y_MMMM\u0009\u0926\u093f\u0938\u0902\u092c\u0930 2022\u0009month " " year\u0009year=numeric,month=long
+hi\u0009y_MMM\u0009\u0926\u093f\u0938\u0970 2022\u0009month " " year\u0009year=numeric,month=short
+hi\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+hi\u0009MMMM_d\u000924 \u0926\u093f\u0938\u0902\u092c\u0930\u0009day " " month\u0009month=long,day=numeric
+hi\u0009MMM_d\u000924 \u0926\u093f\u0938\u0970\u0009day " " month\u0009month=short,day=numeric
+hi\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+hi\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+hi\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+hi\u0009MMMM\u0009\u0926\u093f\u0938\u0902\u092c\u0930\u0009month\u0009month=long
+hi\u0009EEEE\u0009\u0936\u0928\u093f\u0935\u093e\u0930\u0009weekday\u0009weekday=long
+hi\u0009d\u000924\u0009day\u0009day=numeric
+hi\u0009G_y\u00092022 \u0908\u0938\u094d\u0935\u0940\u0009year " " era\u0009era=short,year=numeric
+hi\u0009GGGG_y_MMMM_d\u000924 \u0926\u093f\u0938\u0902\u092c\u0930 2022 \u0908\u0938\u0935\u0940 \u0938\u0928\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+hi\u0009j_mm\u00093:07 pm\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+hi\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+hi\u0009h_mm_h12\u00093:07 pm\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+hi\u0009j_mm_ss\u00093:07:09 pm\u0009hour ":" minute ":" second " " dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+hi\u0009E_j_mm\u0009\u0936\u0928\u093f 3:07 pm\u0009weekday " " hour ":" minute " " dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+hi\u0009y_MMMM_d_j_mm\u000924 \u0926\u093f\u0938\u0902\u092c\u0930 2022 \u0915\u094b 3:07 pm \u092c\u091c\u0947\u0009day " " month " " year " \u0915\u094b " hour ":" minute " " dayPeriod " \u092c\u091c\u0947"\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+hi\u0009MMM_d_j_mm\u000924 \u0926\u093f\u0938\u0970, 3:07 pm\u0009day " " month ", " hour ":" minute " " dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+hi\u0009y_M_d_j_mm_ss\u000924/12/2022, 3:07:09 pm\u0009day "/" month "/" year ", " hour ":" minute ":" second " " dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+hr\u0009E_d_MMMM\u0009sub, 24. prosinca\u0009weekday ", " day ". " month\u0009weekday=short,month=long,day=numeric
+hr\u0009EEEE_d_MMMM\u0009subota, 24. prosinca\u0009weekday ", " day ". " month\u0009weekday=long,month=long,day=numeric
+hr\u0009E_y_MMM_d\u0009sub, 24. pro 2022.\u0009weekday ", " day ". " month " " year "."\u0009weekday=short,year=numeric,month=short,day=numeric
+hr\u0009EEEE_y_MMMM_d\u0009subota, 24. prosinca 2022.\u0009weekday ", " day ". " month " " year "."\u0009weekday=long,year=numeric,month=long,day=numeric
+hr\u0009y_MMMM\u0009prosinac 2022.\u0009month " " year "."\u0009year=numeric,month=long
+hr\u0009y_MMM\u0009pro 2022.\u0009month " " year "."\u0009year=numeric,month=short
+hr\u0009y_MM\u000912. 2022.\u0009month ". " year "."\u0009year=numeric,month=2-digit
+hr\u0009MMMM_d\u000924. prosinca\u0009day ". " month\u0009month=long,day=numeric
+hr\u0009MMM_d\u000924. pro\u0009day ". " month\u0009month=short,day=numeric
+hr\u0009M_d\u000924. 12.\u0009day ". " month "."\u0009month=2-digit,day=2-digit
+hr\u0009y_M_d\u000924. 12. 2022.\u0009day ". " month ". " year "."\u0009year=numeric,month=2-digit,day=2-digit
+hr\u0009yy_MM_dd\u000924. 12. 22.\u0009day ". " month ". " year "."\u0009year=2-digit,month=2-digit,day=2-digit
+hr\u0009MMMM\u0009prosinac\u0009month\u0009month=long
+hr\u0009EEEE\u0009subota\u0009weekday\u0009weekday=long
+hr\u0009d\u000924.\u0009day "."\u0009day=numeric
+hr\u0009G_y\u00092022. po. Kr.\u0009year ". " era\u0009era=short,year=numeric
+hr\u0009GGGG_y_MMMM_d\u000924. prosinca 2022. poslije Krista\u0009day ". " month " " year ". " era\u0009era=long,year=numeric,month=long,day=numeric
+hr\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+hr\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+hr\u0009h_mm_h12\u000903:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=2-digit,minute=2-digit,hourCycle=h12
+hr\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+hr\u0009E_j_mm\u0009sub 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+hr\u0009y_MMMM_d_j_mm\u000924. prosinca 2022. u 15:07\u0009day ". " month " " year ". u " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+hr\u0009MMM_d_j_mm\u000924. pro 15:07\u0009day ". " month " " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+hr\u0009y_M_d_j_mm_ss\u000924. 12. 2022. 15:07:09\u0009day ". " month ". " year ". " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+hu\u0009E_d_MMMM\u0009december 24., Szo\u0009month " " day "., " weekday\u0009weekday=short,month=long,day=numeric
+hu\u0009EEEE_d_MMMM\u0009december 24., szombat\u0009month " " day "., " weekday\u0009weekday=long,month=long,day=numeric
+hu\u0009E_y_MMM_d\u00092022. dec. 24., Szo\u0009year ". " month " " day "., " weekday\u0009weekday=short,year=numeric,month=short,day=numeric
+hu\u0009EEEE_y_MMMM_d\u00092022. december 24., szombat\u0009year ". " month " " day "., " weekday\u0009weekday=long,year=numeric,month=long,day=numeric
+hu\u0009y_MMMM\u00092022. december\u0009year ". " month\u0009year=numeric,month=long
+hu\u0009y_MMM\u00092022. dec.\u0009year ". " month\u0009year=numeric,month=short
+hu\u0009y_MM\u00092022. 12.\u0009year ". " month "."\u0009year=numeric,month=2-digit
+hu\u0009MMMM_d\u0009december 24.\u0009month " " day "."\u0009month=long,day=numeric
+hu\u0009MMM_d\u0009dec. 24.\u0009month " " day "."\u0009month=short,day=numeric
+hu\u0009M_d\u000912. 24.\u0009month ". " day "."\u0009month=numeric,day=numeric
+hu\u0009y_M_d\u00092022. 12. 24.\u0009year ". " month ". " day "."\u0009year=numeric,month=2-digit,day=2-digit
+hu\u0009yy_MM_dd\u000922. 12. 24.\u0009year ". " month ". " day "."\u0009year=2-digit,month=2-digit,day=2-digit
+hu\u0009MMMM\u0009december\u0009month\u0009month=long
+hu\u0009EEEE\u0009szombat\u0009weekday\u0009weekday=long
+hu\u0009d\u000924\u0009day\u0009day=numeric
+hu\u0009G_y\u0009i. sz. 2022.\u0009era " " year "."\u0009era=short,year=numeric
+hu\u0009GGGG_y_MMMM_d\u0009id\u0151sz\u00e1m\u00edt\u00e1sunk szerint 2022. december 24.\u0009era " " year ". " month " " day "."\u0009era=long,year=numeric,month=long,day=numeric
+hu\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+hu\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+hu\u0009h_mm_h12\u0009du. 3:07\u0009dayPeriod "\u202f" hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+hu\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+hu\u0009E_j_mm\u0009Szo 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+hu\u0009y_MMMM_d_j_mm\u00092022. december 24. 15:07\u0009year ". " month " " day ". " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+hu\u0009MMM_d_j_mm\u0009dec. 24. 15:07\u0009month " " day ". " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+hu\u0009y_M_d_j_mm_ss\u00092022. 12. 24. 15:07:09\u0009year ". " month ". " day ". " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+id\u0009E_d_MMMM\u0009Sab, 24 Desember\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+id\u0009EEEE_d_MMMM\u0009Sabtu, 24 Desember\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+id\u0009E_y_MMM_d\u0009Sab, 24 Des 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+id\u0009EEEE_y_MMMM_d\u0009Sabtu, 24 Desember 2022\u0009weekday ", " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+id\u0009y_MMMM\u0009Desember 2022\u0009month " " year\u0009year=numeric,month=long
+id\u0009y_MMM\u0009Des 2022\u0009month " " year\u0009year=numeric,month=short
+id\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+id\u0009MMMM_d\u000924 Desember\u0009day " " month\u0009month=long,day=numeric
+id\u0009MMM_d\u000924 Des\u0009day " " month\u0009month=short,day=numeric
+id\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+id\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+id\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+id\u0009MMMM\u0009Desember\u0009month\u0009month=long
+id\u0009EEEE\u0009Sabtu\u0009weekday\u0009weekday=long
+id\u0009d\u000924\u0009day\u0009day=numeric
+id\u0009G_y\u00092022 M\u0009year " " era\u0009era=short,year=numeric
+id\u0009GGGG_y_MMMM_d\u000924 Desember 2022 Masehi\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+id\u0009j_mm\u000915.07\u0009hour "." minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+id\u0009H_mm_h23\u000915.07\u0009hour "." minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+id\u0009h_mm_h12\u00093.07 PM\u0009hour "." minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+id\u0009j_mm_ss\u000915.07.09\u0009hour "." minute "." second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+id\u0009E_j_mm\u0009Sab 15.07\u0009weekday " " hour "." minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+id\u0009y_MMMM_d_j_mm\u000924 Desember 2022 pukul 15.07\u0009day " " month " " year " pukul " hour "." minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+id\u0009MMM_d_j_mm\u000924 Des, 15.07\u0009day " " month ", " hour "." minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+id\u0009y_M_d_j_mm_ss\u000924/12/2022, 15.07.09\u0009day "/" month "/" year ", " hour "." minute "." second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+it\u0009E_d_MMMM\u0009sab 24 dicembre\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+it\u0009EEEE_d_MMMM\u0009sabato 24 dicembre\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+it\u0009E_y_MMM_d\u0009sab 24 dic 2022\u0009weekday " " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+it\u0009EEEE_y_MMMM_d\u0009sabato 24 dicembre 2022\u0009weekday " " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+it\u0009y_MMMM\u0009dicembre 2022\u0009month " " year\u0009year=numeric,month=long
+it\u0009y_MMM\u0009dic 2022\u0009month " " year\u0009year=numeric,month=short
+it\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+it\u0009MMMM_d\u000924 dicembre\u0009day " " month\u0009month=long,day=numeric
+it\u0009MMM_d\u000924 dic\u0009day " " month\u0009month=short,day=numeric
+it\u0009M_d\u000924/12\u0009day "/" month\u0009month=2-digit,day=2-digit
+it\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=2-digit,day=2-digit
+it\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+it\u0009MMMM\u0009dicembre\u0009month\u0009month=long
+it\u0009EEEE\u0009sabato\u0009weekday\u0009weekday=long
+it\u0009d\u000924\u0009day\u0009day=numeric
+it\u0009G_y\u00092022 d.C.\u0009year " " era\u0009era=short,year=numeric
+it\u0009GGGG_y_MMMM_d\u000924 dicembre 2022 dopo Cristo\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+it\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+it\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+it\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+it\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+it\u0009E_j_mm\u0009sab 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+it\u0009y_MMMM_d_j_mm\u000924 dicembre 2022 alle ore 15:07\u0009day " " month " " year " alle ore " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+it\u0009MMM_d_j_mm\u000924 dic, 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+it\u0009y_M_d_j_mm_ss\u000924/12/2022, 15:07:09\u0009day "/" month "/" year ", " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+ja\u0009E_d_MMMM\u000912\u670824\u65e5(\u571f)\u0009month "\u6708" day "\u65e5(" weekday ")"\u0009weekday=short,month=numeric,day=numeric
+ja\u0009EEEE_d_MMMM\u000912\u670824\u65e5\u571f\u66dc\u65e5\u0009month "\u6708" day "\u65e5" weekday\u0009weekday=long,month=numeric,day=numeric
+ja\u0009E_y_MMM_d\u00092022\u5e7412\u670824\u65e5(\u571f)\u0009year "\u5e74" month "\u6708" day "\u65e5(" weekday ")"\u0009weekday=short,year=numeric,month=numeric,day=numeric
+ja\u0009EEEE_y_MMMM_d\u00092022\u5e7412\u670824\u65e5\u571f\u66dc\u65e5\u0009year "\u5e74" month "\u6708" day "\u65e5" weekday\u0009weekday=long,year=numeric,month=numeric,day=numeric
+ja\u0009y_MMMM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009year=numeric,month=numeric
+ja\u0009y_MMM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009year=numeric,month=numeric
+ja\u0009y_MM\u00092022/12\u0009year "/" month\u0009year=numeric,month=2-digit
+ja\u0009MMMM_d\u000912\u670824\u65e5\u0009month "\u6708" day "\u65e5"\u0009month=numeric,day=numeric
+ja\u0009MMM_d\u000912\u670824\u65e5\u0009month "\u6708" day "\u65e5"\u0009month=numeric,day=numeric
+ja\u0009M_d\u000912/24\u0009month "/" day\u0009month=numeric,day=numeric
+ja\u0009y_M_d\u00092022/12/24\u0009year "/" month "/" day\u0009year=numeric,month=numeric,day=numeric
+ja\u0009yy_MM_dd\u000922/12/24\u0009year "/" month "/" day\u0009year=2-digit,month=2-digit,day=2-digit
+ja\u0009MMMM\u000912\u6708\u0009month "\u6708"\u0009month=numeric
+ja\u0009EEEE\u0009\u571f\u66dc\u65e5\u0009weekday\u0009weekday=long
+ja\u0009d\u000924\u65e5\u0009day "\u65e5"\u0009day=numeric
+ja\u0009G_y\u0009\u897f\u66a62022\u5e74\u0009era year "\u5e74"\u0009era=short,year=numeric
+ja\u0009GGGG_y_MMMM_d\u0009\u897f\u66a62022\u5e7412\u670824\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009era=long,year=numeric,month=numeric,day=numeric
+ja\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+ja\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+ja\u0009h_mm_h12\u0009\u5348\u5f8c3:07\u0009dayPeriod hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ja\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+ja\u0009E_j_mm\u000915:07 (\u571f)\u0009hour ":" minute " (" weekday ")"\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h23
+ja\u0009y_MMMM_d_j_mm\u00092022\u5e7412\u670824\u65e5 15:07\u0009year "\u5e74" month "\u6708" day "\u65e5 " hour ":" minute\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+ja\u0009MMM_d_j_mm\u000912\u670824\u65e5 15:07\u0009month "\u6708" day "\u65e5 " hour ":" minute\u0009month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+ja\u0009y_M_d_j_mm_ss\u00092022/12/24 15:07:09\u0009year "/" month "/" day " " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+ko\u0009E_d_MMMM\u000912\uc6d4 24\uc77c (\ud1a0)\u0009month " " day "\uc77c (" weekday ")"\u0009weekday=short,month=long,day=numeric
+ko\u0009EEEE_d_MMMM\u000912\uc6d4 24\uc77c \ud1a0\uc694\uc77c\u0009month " " day "\uc77c " weekday\u0009weekday=long,month=long,day=numeric
+ko\u0009E_y_MMM_d\u00092022\ub144 12\uc6d4 24\uc77c (\ud1a0)\u0009year "\ub144 " month " " day "\uc77c (" weekday ")"\u0009weekday=short,year=numeric,month=short,day=numeric
+ko\u0009EEEE_y_MMMM_d\u00092022\ub144 12\uc6d4 24\uc77c \ud1a0\uc694\uc77c\u0009year "\ub144 " month " " day "\uc77c " weekday\u0009weekday=long,year=numeric,month=long,day=numeric
+ko\u0009y_MMMM\u00092022\ub144 12\uc6d4\u0009year "\ub144 " month\u0009year=numeric,month=long
+ko\u0009y_MMM\u00092022\ub144 12\uc6d4\u0009year "\ub144 " month\u0009year=numeric,month=short
+ko\u0009y_MM\u00092022. 12.\u0009year ". " month "."\u0009year=numeric,month=numeric
+ko\u0009MMMM_d\u000912\uc6d4 24\uc77c\u0009month " " day "\uc77c"\u0009month=long,day=numeric
+ko\u0009MMM_d\u000912\uc6d4 24\uc77c\u0009month " " day "\uc77c"\u0009month=short,day=numeric
+ko\u0009M_d\u000912. 24.\u0009month ". " day "."\u0009month=numeric,day=numeric
+ko\u0009y_M_d\u00092022. 12. 24.\u0009year ". " month ". " day "."\u0009year=numeric,month=numeric,day=numeric
+ko\u0009yy_MM_dd\u000922. 12. 24.\u0009year ". " month ". " day "."\u0009year=2-digit,month=2-digit,day=2-digit
+ko\u0009MMMM\u000912\uc6d4\u0009month\u0009month=long
+ko\u0009EEEE\u0009\ud1a0\uc694\uc77c\u0009weekday\u0009weekday=long
+ko\u0009d\u000924\uc77c\u0009day "\uc77c"\u0009day=numeric
+ko\u0009G_y\u0009AD 2022\ub144\u0009era " " year "\ub144"\u0009era=short,year=numeric
+ko\u0009GGGG_y_MMMM_d\u0009\uc11c\uae30 2022\ub144 12\uc6d4 24\uc77c\u0009era " " year "\ub144 " month " " day "\uc77c"\u0009era=long,year=numeric,month=long,day=numeric
+ko\u0009j_mm\u0009\uc624\ud6c4 3:07\u0009dayPeriod " " hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ko\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+ko\u0009h_mm_h12\u0009\uc624\ud6c4 3:07\u0009dayPeriod " " hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ko\u0009j_mm_ss\u0009\uc624\ud6c4 3:07:09\u0009dayPeriod " " hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+ko\u0009E_j_mm\u0009(\ud1a0) \uc624\ud6c4 3:07\u0009"(" weekday ") " dayPeriod " " hour ":" minute\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+ko\u0009y_MMMM_d_j_mm\u00092022\ub144 12\uc6d4 24\uc77c \uc624\ud6c4 3:07\u0009year "\ub144 " month " " day "\uc77c " dayPeriod " " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ko\u0009MMM_d_j_mm\u000912\uc6d4 24\uc77c \uc624\ud6c4 3:07\u0009month " " day "\uc77c " dayPeriod " " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ko\u0009y_M_d_j_mm_ss\u00092022. 12. 24. \uc624\ud6c4 3:07:09\u0009year ". " month ". " day ". " dayPeriod " " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+lt\u0009E_d_MMMM\u0009gruod\u017eio 24 d., \u0161t\u0009month " " day " d., " weekday\u0009weekday=short,month=long,day=numeric
+lt\u0009EEEE_d_MMMM\u0009gruod\u017eio 24 d., \u0161e\u0161tadienis\u0009month " " day " d., " weekday\u0009weekday=long,month=long,day=numeric
+lt\u0009E_y_MMM_d\u00092022-12-24, \u0161t\u0009year "-" month "-" day ", " weekday\u0009weekday=short,year=numeric,month=2-digit,day=2-digit
+lt\u0009EEEE_y_MMMM_d\u00092022 m. gruod\u017eio 24 d., \u0161e\u0161tadienis\u0009year " m. " month " " day " d., " weekday\u0009weekday=long,year=numeric,month=long,day=numeric,minute=numeric
+lt\u0009y_MMMM\u00092022 m. gruodis\u0009year " m. " month\u0009year=numeric,month=long,minute=numeric
+lt\u0009y_MMM\u00092022-12\u0009year "-" month\u0009year=numeric,month=2-digit
+lt\u0009y_MM\u00092022-12\u0009year "-" month\u0009year=numeric,month=2-digit
+lt\u0009MMMM_d\u0009gruod\u017eio 24 d.\u0009month " " day " d."\u0009month=long,day=numeric
+lt\u0009MMM_d\u000912-24\u0009month "-" day\u0009month=2-digit,day=2-digit
+lt\u0009M_d\u000912-24\u0009month "-" day\u0009month=2-digit,day=numeric
+lt\u0009y_M_d\u00092022-12-24\u0009year "-" month "-" day\u0009year=numeric,month=2-digit,day=2-digit
+lt\u0009yy_MM_dd\u000922-12-24\u0009year "-" month "-" day\u0009year=2-digit,month=2-digit,day=2-digit
+lt\u0009MMMM\u0009gruodis\u0009month\u0009month=long
+lt\u0009EEEE\u0009\u0161e\u0161tadienis\u0009weekday\u0009weekday=long
+lt\u0009d\u000924\u0009day\u0009day=2-digit
+lt\u0009G_y\u00092022 m. po Kr.\u0009year " m. " era\u0009era=short,year=numeric,minute=numeric
+lt\u0009GGGG_y_MMMM_d\u00092022 m. po Kristaus gruod\u017eio 24 d.\u0009year " m. " era " " month " " day " d."\u0009era=long,year=numeric,month=long,day=numeric,minute=numeric
+lt\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+lt\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+lt\u0009h_mm_h12\u000903:07 popiet\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=2-digit,minute=2-digit,hourCycle=h12
+lt\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+lt\u0009E_j_mm\u000915:07, \u0161t\u0009hour ":" minute ", " weekday\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+lt\u0009y_MMMM_d_j_mm\u00092022 m. gruod\u017eio 24 d. 15:07\u0009year " m. " month " " day " d. " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+lt\u0009MMM_d_j_mm\u000912-24 15:07\u0009month "-" day " " hour ":" minute\u0009month=2-digit,day=2-digit,hour=numeric,minute=2-digit,hourCycle=h23
+lt\u0009y_M_d_j_mm_ss\u00092022-12-24 15:07:09\u0009year "-" month "-" day " " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+lv\u0009E_d_MMMM\u0009sestd., 24. decembris\u0009weekday ", " day ". " month\u0009weekday=short,month=long,day=numeric
+lv\u0009EEEE_d_MMMM\u0009sestdiena, 24. decembris\u0009weekday ", " day ". " month\u0009weekday=long,month=long,day=numeric
+lv\u0009E_y_MMM_d\u0009sestd., 2022. g. 24. dec.\u0009weekday ", " year ". g. " day ". " month\u0009weekday=short,year=numeric,month=short,day=numeric
+lv\u0009EEEE_y_MMMM_d\u0009sestdiena, 2022. gada 24. decembris\u0009weekday ", " year ". gada " day ". " month\u0009weekday=long,year=numeric,month=long,day=numeric
+lv\u0009y_MMMM\u00092022. g. decembris\u0009year ". g. " month\u0009year=numeric,month=long
+lv\u0009y_MMM\u00092022. g. dec.\u0009year ". g. " month\u0009year=numeric,month=short
+lv\u0009y_MM\u000912.2022.\u0009month "." year "."\u0009year=numeric,month=2-digit
+lv\u0009MMMM_d\u000924. decembris\u0009day ". " month\u0009month=long,day=numeric
+lv\u0009MMM_d\u000924. dec.\u0009day ". " month\u0009month=short,day=numeric
+lv\u0009M_d\u000924.12.\u0009day "." month "."\u0009month=2-digit,day=2-digit
+lv\u0009y_M_d\u000924.12.2022.\u0009day "." month "." year "."\u0009year=numeric,month=2-digit,day=numeric
+lv\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+lv\u0009MMMM\u0009decembris\u0009month\u0009month=long
+lv\u0009EEEE\u0009Sestdiena\u0009weekday\u0009weekday=long
+lv\u0009d\u000924\u0009day\u0009day=numeric
+lv\u0009G_y\u0009m.\u0113. 2022. g.\u0009era " " year ". g."\u0009era=short,year=numeric
+lv\u0009GGGG_y_MMMM_d\u0009m\u016bsu \u0113r\u0101 2022. g. 24. decembris\u0009era " " year ". g. " day ". " month\u0009era=long,year=numeric,month=long,day=numeric
+lv\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+lv\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+lv\u0009h_mm_h12\u00093:07 p\u0113cp.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+lv\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+lv\u0009E_j_mm\u0009sestd., 15:07\u0009weekday ", " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+lv\u0009y_MMMM_d_j_mm\u00092022. gada 24. decembris 15:07\u0009year ". gada " day ". " month " " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+lv\u0009MMM_d_j_mm\u000924. dec. 15:07\u0009day ". " month " " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+lv\u0009y_M_d_j_mm_ss\u000924.12.2022. 15:07:09\u0009day "." month "." year ". " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+ms\u0009E_d_MMMM\u0009Sab, 24 Disember\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+ms\u0009EEEE_d_MMMM\u0009Sabtu, 24 Disember\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+ms\u0009E_y_MMM_d\u0009Sab, 24 Dis 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+ms\u0009EEEE_y_MMMM_d\u0009Sabtu, 24 Disember 2022\u0009weekday ", " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+ms\u0009y_MMMM\u0009Disember 2022\u0009month " " year\u0009year=numeric,month=long
+ms\u0009y_MMM\u0009Dis 2022\u0009month " " year\u0009year=numeric,month=short
+ms\u0009y_MM\u000912-2022\u0009month "-" year\u0009year=numeric,month=2-digit
+ms\u0009MMMM_d\u000924 Disember\u0009day " " month\u0009month=long,day=numeric
+ms\u0009MMM_d\u000924 Dis\u0009day " " month\u0009month=short,day=numeric
+ms\u0009M_d\u000924-12\u0009day "-" month\u0009month=numeric,day=numeric
+ms\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+ms\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+ms\u0009MMMM\u0009Disember\u0009month\u0009month=long
+ms\u0009EEEE\u0009Sabtu\u0009weekday\u0009weekday=long
+ms\u0009d\u000924\u0009day\u0009day=numeric
+ms\u0009G_y\u00092022 TM\u0009year " " era\u0009era=short,year=numeric
+ms\u0009GGGG_y_MMMM_d\u000924 Disember 2022 TM\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+ms\u0009j_mm\u00093:07 PTG\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ms\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+ms\u0009h_mm_h12\u00093:07 PTG\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ms\u0009j_mm_ss\u00093:07:09 PTG\u0009hour ":" minute ":" second "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+ms\u0009E_j_mm\u0009Sab 3:07 PTG\u0009weekday " " hour ":" minute "\u202f" dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+ms\u0009y_MMMM_d_j_mm\u000924 Disember 2022 pada 3:07 PTG\u0009day " " month " " year " pada " hour ":" minute "\u202f" dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ms\u0009MMM_d_j_mm\u000924 Dis, 3:07 PTG\u0009day " " month ", " hour ":" minute "\u202f" dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ms\u0009y_M_d_j_mm_ss\u000924/12/2022, 3:07:09 PTG\u0009day "/" month "/" year ", " hour ":" minute ":" second "\u202f" dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+nb\u0009E_d_MMMM\u0009l\u00f8r. 24. desember\u0009weekday " " day ". " month\u0009weekday=short,month=long,day=numeric
+nb\u0009EEEE_d_MMMM\u0009l\u00f8rdag 24. desember\u0009weekday " " day ". " month\u0009weekday=long,month=long,day=numeric
+nb\u0009E_y_MMM_d\u0009l\u00f8r. 24. des. 2022\u0009weekday " " day ". " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+nb\u0009EEEE_y_MMMM_d\u0009l\u00f8rdag 24. desember 2022\u0009weekday " " day ". " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+nb\u0009y_MMMM\u0009desember 2022\u0009month " " year\u0009year=numeric,month=long
+nb\u0009y_MMM\u0009des. 2022\u0009month " " year\u0009year=numeric,month=short
+nb\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=2-digit
+nb\u0009MMMM_d\u000924. desember\u0009day ". " month\u0009month=long,day=numeric
+nb\u0009MMM_d\u000924. des.\u0009day ". " month\u0009month=short,day=numeric
+nb\u0009M_d\u000924.12.\u0009day "." month "."\u0009month=numeric,day=numeric
+nb\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=numeric,day=numeric
+nb\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+nb\u0009MMMM\u0009desember\u0009month\u0009month=long
+nb\u0009EEEE\u0009l\u00f8rdag\u0009weekday\u0009weekday=long
+nb\u0009d\u000924.\u0009day "."\u0009day=numeric
+nb\u0009G_y\u00092022 e.Kr.\u0009year " " era\u0009era=short,year=numeric
+nb\u0009GGGG_y_MMMM_d\u000924. desember 2022 etter Kristus\u0009day ". " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+nb\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+nb\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+nb\u0009h_mm_h12\u00093:07 p.m.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+nb\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+nb\u0009E_j_mm\u0009l\u00f8r. kl. 15:07\u0009weekday " kl. " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+nb\u0009y_MMMM_d_j_mm\u000924. desember 2022 kl. 15:07\u0009day ". " month " " year " kl. " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+nb\u0009MMM_d_j_mm\u000924. des., 15:07\u0009day ". " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+nb\u0009y_M_d_j_mm_ss\u000924.12.2022, 15:07:09\u0009day "." month "." year ", " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+nl\u0009E_d_MMMM\u0009za 24 december\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+nl\u0009EEEE_d_MMMM\u0009zaterdag 24 december\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+nl\u0009E_y_MMM_d\u0009za 24 dec 2022\u0009weekday " " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+nl\u0009EEEE_y_MMMM_d\u0009zaterdag 24 december 2022\u0009weekday " " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+nl\u0009y_MMMM\u0009december 2022\u0009month " " year\u0009year=numeric,month=long
+nl\u0009y_MMM\u0009dec 2022\u0009month " " year\u0009year=numeric,month=short
+nl\u0009y_MM\u000912-2022\u0009month "-" year\u0009year=numeric,month=2-digit
+nl\u0009MMMM_d\u000924 december\u0009day " " month\u0009month=long,day=numeric
+nl\u0009MMM_d\u000924 dec\u0009day " " month\u0009month=short,day=numeric
+nl\u0009M_d\u000924-12\u0009day "-" month\u0009month=numeric,day=numeric
+nl\u0009y_M_d\u000924-12-2022\u0009day "-" month "-" year\u0009year=numeric,month=numeric,day=numeric
+nl\u0009yy_MM_dd\u000924-12-22\u0009day "-" month "-" year\u0009year=2-digit,month=2-digit,day=2-digit
+nl\u0009MMMM\u0009december\u0009month\u0009month=long
+nl\u0009EEEE\u0009zaterdag\u0009weekday\u0009weekday=long
+nl\u0009d\u000924\u0009day\u0009day=numeric
+nl\u0009G_y\u00092022 n.Chr.\u0009year " " era\u0009era=short,year=numeric
+nl\u0009GGGG_y_MMMM_d\u000924 december 2022 na Christus\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+nl\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+nl\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+nl\u0009h_mm_h12\u00093:07 p.m.\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+nl\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+nl\u0009E_j_mm\u0009za 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+nl\u0009y_MMMM_d_j_mm\u000924 december 2022 om 15:07\u0009day " " month " " year " om " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+nl\u0009MMM_d_j_mm\u000924 dec, 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+nl\u0009y_M_d_j_mm_ss\u000924-12-2022, 15:07:09\u0009day "-" month "-" year ", " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+pl\u0009E_d_MMMM\u0009sob., 24 grudnia\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+pl\u0009EEEE_d_MMMM\u0009sobota, 24 grudnia\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+pl\u0009E_y_MMM_d\u0009sob., 24 gru 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+pl\u0009EEEE_y_MMMM_d\u0009sobota, 24 grudnia 2022\u0009weekday ", " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+pl\u0009y_MMMM\u0009grudzie\u0144 2022\u0009month " " year\u0009year=numeric,month=long
+pl\u0009y_MMM\u0009gru 2022\u0009month " " year\u0009year=numeric,month=short
+pl\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=2-digit
+pl\u0009MMMM_d\u000924 grudnia\u0009day " " month\u0009month=long,day=numeric
+pl\u0009MMM_d\u000924 gru\u0009day " " month\u0009month=short,day=numeric
+pl\u0009M_d\u000924.12\u0009day "." month\u0009month=2-digit,day=numeric
+pl\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=2-digit,day=numeric
+pl\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+pl\u0009MMMM\u0009grudzie\u0144\u0009month\u0009month=long
+pl\u0009EEEE\u0009sobota\u0009weekday\u0009weekday=long
+pl\u0009d\u000924\u0009day\u0009day=numeric
+pl\u0009G_y\u00092022 n.e.\u0009year " " era\u0009era=short,year=numeric
+pl\u0009GGGG_y_MMMM_d\u000924 grudnia 2022 naszej ery\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+pl\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+pl\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+pl\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+pl\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+pl\u0009E_j_mm\u0009sob., 15:07\u0009weekday ", " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+pl\u0009y_MMMM_d_j_mm\u000924 grudnia 2022 15:07\u0009day " " month " " year " " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+pl\u0009MMM_d_j_mm\u000924 gru, 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+pl\u0009y_M_d_j_mm_ss\u000924.12.2022, 15:07:09\u0009day "." month "." year ", " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+pt\u0009E_d_MMMM\u0009s\u00e1b., 24 de dezembro\u0009weekday ", " day " de " month\u0009weekday=short,month=long,day=numeric
+pt\u0009EEEE_d_MMMM\u0009s\u00e1bado, 24 de dezembro\u0009weekday ", " day " de " month\u0009weekday=long,month=long,day=numeric
+pt\u0009E_y_MMM_d\u0009s\u00e1b., 24 de dez. de 2022\u0009weekday ", " day " de " month " de " year\u0009weekday=short,year=numeric,month=short,day=numeric
+pt\u0009EEEE_y_MMMM_d\u0009s\u00e1bado, 24 de dezembro de 2022\u0009weekday ", " day " de " month " de " year\u0009weekday=long,year=numeric,month=long,day=numeric
+pt\u0009y_MMMM\u0009dezembro de 2022\u0009month " de " year\u0009year=numeric,month=long,day=numeric
+pt\u0009y_MMM\u0009dez. de 2022\u0009month " de " year\u0009year=numeric,month=short,day=numeric
+pt\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+pt\u0009MMMM_d\u000924 de dezembro\u0009day " de " month\u0009month=long,day=numeric
+pt\u0009MMM_d\u000924 de dez.\u0009day " de " month\u0009month=short,day=numeric
+pt\u0009M_d\u000924/12\u0009day "/" month\u0009month=2-digit,day=2-digit
+pt\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=2-digit,day=2-digit
+pt\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+pt\u0009MMMM\u0009dezembro\u0009month\u0009month=long
+pt\u0009EEEE\u0009s\u00e1bado\u0009weekday\u0009weekday=long
+pt\u0009d\u000924\u0009day\u0009day=numeric
+pt\u0009G_y\u00092022 d.C.\u0009year " " era\u0009era=short,year=numeric
+pt\u0009GGGG_y_MMMM_d\u000924 de dezembro de 2022 depois de Cristo\u0009day " de " month " de " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+pt\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+pt\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+pt\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+pt\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+pt\u0009E_j_mm\u0009s\u00e1b., 15:07\u0009weekday ", " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+pt\u0009y_MMMM_d_j_mm\u000924 de dezembro de 2022 \u00e0s 15:07\u0009day " de " month " de " year " \u00e0s " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,second=numeric,hourCycle=h23
+pt\u0009MMM_d_j_mm\u000924 de dez., 15:07\u0009day " de " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+pt\u0009y_M_d_j_mm_ss\u000924/12/2022, 15:07:09\u0009day "/" month "/" year ", " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+pt-PT\u0009E_d_MMMM\u0009s\u00e1bado, 24 de dezembro\u0009weekday ", " day " de " month\u0009weekday=short,month=long,day=numeric
+pt-PT\u0009EEEE_d_MMMM\u0009s\u00e1bado, 24 de dezembro\u0009weekday ", " day " de " month\u0009weekday=long,month=long,day=numeric
+pt-PT\u0009E_y_MMM_d\u0009s\u00e1bado, 24/12/2022\u0009weekday ", " day "/" month "/" year\u0009weekday=short,year=numeric,month=2-digit,day=numeric
+pt-PT\u0009EEEE_y_MMMM_d\u0009s\u00e1bado, 24 de dezembro de 2022\u0009weekday ", " day " de " month " de " year\u0009weekday=long,year=numeric,month=long,day=numeric
+pt-PT\u0009y_MMMM\u0009dezembro de 2022\u0009month " de " year\u0009year=numeric,month=long,day=numeric
+pt-PT\u0009y_MMM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+pt-PT\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+pt-PT\u0009MMMM_d\u000924 de dezembro\u0009day " de " month\u0009month=long,day=numeric
+pt-PT\u0009MMM_d\u000924/12\u0009day "/" month\u0009month=2-digit,day=numeric
+pt-PT\u0009M_d\u000924/12\u0009day "/" month\u0009month=2-digit,day=2-digit
+pt-PT\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=2-digit,day=2-digit
+pt-PT\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+pt-PT\u0009MMMM\u0009dezembro\u0009month\u0009month=long
+pt-PT\u0009EEEE\u0009s\u00e1bado\u0009weekday\u0009weekday=long
+pt-PT\u0009d\u000924\u0009day\u0009day=numeric
+pt-PT\u0009G_y\u00092022 d.C.\u0009year " " era\u0009era=short,year=numeric
+pt-PT\u0009GGGG_y_MMMM_d\u000924 de dezembro de 2022 depois de Cristo\u0009day " de " month " de " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+pt-PT\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+pt-PT\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+pt-PT\u0009h_mm_h12\u00093:07 p.m.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+pt-PT\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+pt-PT\u0009E_j_mm\u0009s\u00e1bado, 15:07\u0009weekday ", " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+pt-PT\u0009y_MMMM_d_j_mm\u000924 de dezembro de 2022 \u00e0s 15:07\u0009day " de " month " de " year " \u00e0s " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,second=numeric,hourCycle=h23
+pt-PT\u0009MMM_d_j_mm\u000924/12, 15:07\u0009day "/" month ", " hour ":" minute\u0009month=2-digit,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+pt-PT\u0009y_M_d_j_mm_ss\u000924/12/2022, 15:07:09\u0009day "/" month "/" year ", " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+ro\u0009E_d_MMMM\u0009s\u00e2m., 24 decembrie\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+ro\u0009EEEE_d_MMMM\u0009s\u00e2mb\u0103t\u0103, 24 decembrie\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+ro\u0009E_y_MMM_d\u0009s\u00e2m., 24 dec. 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+ro\u0009EEEE_y_MMMM_d\u0009s\u00e2mb\u0103t\u0103, 24 decembrie 2022\u0009weekday ", " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+ro\u0009y_MMMM\u0009decembrie 2022\u0009month " " year\u0009year=numeric,month=long
+ro\u0009y_MMM\u0009dec. 2022\u0009month " " year\u0009year=numeric,month=short
+ro\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=2-digit
+ro\u0009MMMM_d\u000924 decembrie\u0009day " " month\u0009month=long,day=numeric
+ro\u0009MMM_d\u000924 dec.\u0009day " " month\u0009month=short,day=numeric
+ro\u0009M_d\u000924.12\u0009day "." month\u0009month=2-digit,day=2-digit
+ro\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=2-digit,day=2-digit
+ro\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+ro\u0009MMMM\u0009decembrie\u0009month\u0009month=long
+ro\u0009EEEE\u0009s\u00e2mb\u0103t\u0103\u0009weekday\u0009weekday=long
+ro\u0009d\u000924\u0009day\u0009day=numeric
+ro\u0009G_y\u00092022 d.Hr.\u0009year " " era\u0009era=short,year=numeric
+ro\u0009GGGG_y_MMMM_d\u000924 decembrie 2022 dup\u0103 Hristos\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+ro\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+ro\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+ro\u0009h_mm_h12\u00093:07 p.m.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ro\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+ro\u0009E_j_mm\u0009s\u00e2m. 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+ro\u0009y_MMMM_d_j_mm\u000924 decembrie 2022 la 15:07\u0009day " " month " " year " la " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+ro\u0009MMM_d_j_mm\u000924 dec., 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+ro\u0009y_M_d_j_mm_ss\u000924.12.2022, 15:07:09\u0009day "." month "." year ", " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+ru\u0009E_d_MMMM\u0009\u0441\u0431, 24 \u0434\u0435\u043a\u0430\u0431\u0440\u044f\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+ru\u0009EEEE_d_MMMM\u0009\u0441\u0443\u0431\u0431\u043e\u0442\u0430, 24 \u0434\u0435\u043a\u0430\u0431\u0440\u044f\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+ru\u0009E_y_MMM_d\u0009\u0441\u0431, 24 \u0434\u0435\u043a. 2022 \u0433.\u0009weekday ", " day " " month " " year "\u202f\u0433."\u0009weekday=short,year=numeric,month=short,day=numeric
+ru\u0009EEEE_y_MMMM_d\u0009\u0441\u0443\u0431\u0431\u043e\u0442\u0430, 24 \u0434\u0435\u043a\u0430\u0431\u0440\u044f 2022 \u0433.\u0009weekday ", " day " " month " " year "\u202f\u0433."\u0009weekday=long,year=numeric,month=long,day=numeric
+ru\u0009y_MMMM\u0009\u0434\u0435\u043a\u0430\u0431\u0440\u044c 2022 \u0433.\u0009month " " year "\u202f\u0433."\u0009year=numeric,month=long
+ru\u0009y_MMM\u0009\u0434\u0435\u043a. 2022 \u0433.\u0009month " " year "\u202f\u0433."\u0009year=numeric,month=short
+ru\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=2-digit
+ru\u0009MMMM_d\u000924 \u0434\u0435\u043a\u0430\u0431\u0440\u044f\u0009day " " month\u0009month=long,day=numeric
+ru\u0009MMM_d\u000924 \u0434\u0435\u043a.\u0009day " " month\u0009month=short,day=numeric
+ru\u0009M_d\u000924.12\u0009day "." month\u0009month=2-digit,day=2-digit
+ru\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=2-digit,day=2-digit
+ru\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+ru\u0009MMMM\u0009\u0434\u0435\u043a\u0430\u0431\u0440\u044c\u0009month\u0009month=long
+ru\u0009EEEE\u0009\u0441\u0443\u0431\u0431\u043e\u0442\u0430\u0009weekday\u0009weekday=long
+ru\u0009d\u000924\u0009day\u0009day=numeric
+ru\u0009G_y\u00092022 \u0433. \u043d. \u044d.\u0009year "\u202f\u0433. " era\u0009era=short,year=numeric
+ru\u0009GGGG_y_MMMM_d\u000924 \u0434\u0435\u043a\u0430\u0431\u0440\u044f 2022 \u0433. \u043e\u0442 \u0420\u043e\u0436\u0434\u0435\u0441\u0442\u0432\u0430 \u0425\u0440\u0438\u0441\u0442\u043e\u0432\u0430\u0009day " " month " " year "\u202f\u0433. " era\u0009era=long,year=numeric,month=long,day=numeric
+ru\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+ru\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+ru\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ru\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+ru\u0009E_j_mm\u0009\u0441\u0431 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+ru\u0009y_MMMM_d_j_mm\u000924 \u0434\u0435\u043a\u0430\u0431\u0440\u044f 2022 \u0433. \u0432 15:07\u0009day " " month " " year "\u202f\u0433. \u0432 " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+ru\u0009MMM_d_j_mm\u000924 \u0434\u0435\u043a., 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+ru\u0009y_M_d_j_mm_ss\u000924.12.2022, 15:07:09\u0009day "." month "." year ", " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+sk\u0009E_d_MMMM\u0009so 24. decembra\u0009weekday " " day ". " month\u0009weekday=short,month=long,day=numeric
+sk\u0009EEEE_d_MMMM\u0009sobota 24. decembra\u0009weekday " " day ". " month\u0009weekday=long,month=long,day=numeric
+sk\u0009E_y_MMM_d\u0009so 24. 12. 2022\u0009weekday " " day ". " month ". " year\u0009weekday=short,year=numeric,month=numeric,day=numeric
+sk\u0009EEEE_y_MMMM_d\u0009sobota 24. decembra 2022\u0009weekday " " day ". " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+sk\u0009y_MMMM\u0009december 2022\u0009month " " year\u0009year=numeric,month=long
+sk\u0009y_MMM\u000912/2022\u0009month "/" year\u0009year=numeric,month=numeric
+sk\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+sk\u0009MMMM_d\u000924. decembra\u0009day ". " month\u0009month=long,day=numeric
+sk\u0009MMM_d\u000924. 12.\u0009day ". " month "."\u0009month=numeric,day=numeric
+sk\u0009M_d\u000924. 12.\u0009day ". " month "."\u0009month=numeric,day=numeric
+sk\u0009y_M_d\u000924. 12. 2022\u0009day ". " month ". " year\u0009year=numeric,month=numeric,day=numeric
+sk\u0009yy_MM_dd\u000924. 12. 22\u0009day ". " month ". " year\u0009year=2-digit,month=2-digit,day=2-digit
+sk\u0009MMMM\u0009december\u0009month\u0009month=long
+sk\u0009EEEE\u0009sobota\u0009weekday\u0009weekday=long
+sk\u0009d\u000924.\u0009day "."\u0009day=numeric
+sk\u0009G_y\u00092022 po Kr.\u0009year " " era\u0009era=short,year=numeric
+sk\u0009GGGG_y_MMMM_d\u000924. 12. 2022 po Kristovi\u0009day ". " month ". " year " " era\u0009era=long,year=numeric,month=numeric,day=numeric
+sk\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sk\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sk\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+sk\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+sk\u0009E_j_mm\u0009so 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+sk\u0009y_MMMM_d_j_mm\u000924. decembra 2022 o 15:07\u0009day ". " month " " year " o " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sk\u0009MMM_d_j_mm\u000924. 12., 15:07\u0009day ". " month "., " hour ":" minute\u0009month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sk\u0009y_M_d_j_mm_ss\u000924. 12. 2022 15:07:09\u0009day ". " month ". " year " " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h23
+sl\u0009E_d_MMMM\u0009sob., 24. december\u0009weekday ", " day ". " month\u0009weekday=short,month=long,day=numeric
+sl\u0009EEEE_d_MMMM\u0009sobota, 24. december\u0009weekday ", " day ". " month\u0009weekday=long,month=long,day=numeric
+sl\u0009E_y_MMM_d\u0009sob., 24. dec. 2022\u0009weekday ", " day ". " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+sl\u0009EEEE_y_MMMM_d\u0009sobota, 24. december 2022\u0009weekday ", " day ". " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+sl\u0009y_MMMM\u0009december 2022\u0009month " " year\u0009year=numeric,month=long
+sl\u0009y_MMM\u0009dec. 2022\u0009month " " year\u0009year=numeric,month=short
+sl\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+sl\u0009MMMM_d\u000924. december\u0009day ". " month\u0009month=long,day=numeric
+sl\u0009MMM_d\u000924. dec.\u0009day ". " month\u0009month=short,day=numeric
+sl\u0009M_d\u000924. 12.\u0009day ". " month "."\u0009month=numeric,day=numeric
+sl\u0009y_M_d\u000924. 12. 2022\u0009day ". " month ". " year\u0009year=numeric,month=numeric,day=numeric
+sl\u0009yy_MM_dd\u000924. 12. 22\u0009day ". " month ". " year\u0009year=2-digit,month=2-digit,day=2-digit
+sl\u0009MMMM\u0009december\u0009month\u0009month=long
+sl\u0009EEEE\u0009sobota\u0009weekday\u0009weekday=long
+sl\u0009d\u000924.\u0009day "."\u0009day=numeric
+sl\u0009G_y\u00092022 po Kr.\u0009year " " era\u0009era=short,year=numeric
+sl\u0009GGGG_y_MMMM_d\u000924. december 2022 po Kristusu\u0009day ". " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+sl\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sl\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sl\u0009h_mm_h12\u00093:07 pop.\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+sl\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+sl\u0009E_j_mm\u0009sob., 15:07\u0009weekday ", " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+sl\u0009y_MMMM_d_j_mm\u000924. december 2022 ob 15:07\u0009day ". " month " " year " ob " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sl\u0009MMM_d_j_mm\u000924. dec., 15:07\u0009day ". " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sl\u0009y_M_d_j_mm_ss\u000924. 12. 2022, 15:07:09\u0009day ". " month ". " year ", " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+sr\u0009E_d_MMMM\u0009\u0441\u0443\u0431, 24. \u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440\u0009weekday ", " day ". " month\u0009weekday=short,month=long,day=numeric
+sr\u0009EEEE_d_MMMM\u0009\u0441\u0443\u0431\u043e\u0442\u0430, 24. \u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440\u0009weekday ", " day ". " month\u0009weekday=long,month=long,day=numeric
+sr\u0009E_y_MMM_d\u0009\u0441\u0443\u0431, 24. \u0434\u0435\u0446 2022.\u0009weekday ", " day ". " month " " year "."\u0009weekday=short,year=numeric,month=short,day=numeric
+sr\u0009EEEE_y_MMMM_d\u0009\u0441\u0443\u0431\u043e\u0442\u0430, 24. \u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440 2022.\u0009weekday ", " day ". " month " " year "."\u0009weekday=long,year=numeric,month=long,day=numeric
+sr\u0009y_MMMM\u0009\u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440 2022.\u0009month " " year "."\u0009year=numeric,month=long
+sr\u0009y_MMM\u0009\u0434\u0435\u0446 2022.\u0009month " " year "."\u0009year=numeric,month=short
+sr\u0009y_MM\u000912.2022.\u0009month "." year "."\u0009year=numeric,month=2-digit
+sr\u0009MMMM_d\u000924. \u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440\u0009day ". " month\u0009month=long,day=numeric
+sr\u0009MMM_d\u000924. \u0434\u0435\u0446\u0009day ". " month\u0009month=short,day=numeric
+sr\u0009M_d\u000924. 12.\u0009day ". " month "."\u0009month=numeric,day=numeric
+sr\u0009y_M_d\u000924. 12. 2022.\u0009day ". " month ". " year "."\u0009year=numeric,month=numeric,day=numeric
+sr\u0009yy_MM_dd\u000924.12.22.\u0009day "." month "." year "."\u0009year=2-digit,month=2-digit,day=2-digit
+sr\u0009MMMM\u0009\u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440\u0009month\u0009month=long
+sr\u0009EEEE\u0009\u0441\u0443\u0431\u043e\u0442\u0430\u0009weekday\u0009weekday=long
+sr\u0009d\u000924\u0009day\u0009day=numeric
+sr\u0009G_y\u00092022. \u043d. \u0435.\u0009year ". " era\u0009era=short,year=numeric
+sr\u0009GGGG_y_MMMM_d\u000924. \u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440 2022. \u043d\u043e\u0432\u0435 \u0435\u0440\u0435\u0009day ". " month " " year ". " era\u0009era=long,year=numeric,month=long,day=numeric
+sr\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sr\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sr\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+sr\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+sr\u0009E_j_mm\u0009\u0441\u0443\u0431 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+sr\u0009y_MMMM_d_j_mm\u000924. \u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440 2022. 15:07\u0009day ". " month " " year ". " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sr\u0009MMM_d_j_mm\u000924. \u0434\u0435\u0446 15:07\u0009day ". " month " " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sr\u0009y_M_d_j_mm_ss\u000924. 12. 2022. 15:07:09\u0009day ". " month ". " year ". " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+sv\u0009E_d_MMMM\u0009l\u00f6r 24 december\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+sv\u0009EEEE_d_MMMM\u0009l\u00f6rdag 24 december\u0009weekday " " day " " month\u0009weekday=long,month=long,day=numeric
+sv\u0009E_y_MMM_d\u0009l\u00f6r 24 dec. 2022\u0009weekday " " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+sv\u0009EEEE_y_MMMM_d\u0009l\u00f6rdag 24 december 2022\u0009weekday " " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+sv\u0009y_MMMM\u0009december 2022\u0009month " " year\u0009year=numeric,month=long
+sv\u0009y_MMM\u0009dec. 2022\u0009month " " year\u0009year=numeric,month=short
+sv\u0009y_MM\u00092022-12\u0009year "-" month\u0009year=numeric,month=2-digit
+sv\u0009MMMM_d\u000924 december\u0009day " " month\u0009month=long,day=numeric
+sv\u0009MMM_d\u000924 dec.\u0009day " " month\u0009month=short,day=numeric
+sv\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+sv\u0009y_M_d\u00092022-12-24\u0009year "-" month "-" day\u0009year=numeric,month=2-digit,day=2-digit
+sv\u0009yy_MM_dd\u000922-12-24\u0009year "-" month "-" day\u0009year=2-digit,month=2-digit,day=2-digit
+sv\u0009MMMM\u0009december\u0009month\u0009month=long
+sv\u0009EEEE\u0009l\u00f6rdag\u0009weekday\u0009weekday=long
+sv\u0009d\u000924\u0009day\u0009day=numeric
+sv\u0009G_y\u00092022 e.Kr.\u0009year " " era\u0009era=short,year=numeric
+sv\u0009GGGG_y_MMMM_d\u000924 december 2022 efter Kristus\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+sv\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sv\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sv\u0009h_mm_h12\u00093:07 em\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+sv\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+sv\u0009E_j_mm\u0009l\u00f6r 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+sv\u0009y_MMMM_d_j_mm\u000924 december 2022 kl. 15:07\u0009day " " month " " year " kl. " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sv\u0009MMM_d_j_mm\u000924 dec. 15:07\u0009day " " month " " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sv\u0009y_M_d_j_mm_ss\u00092022-12-24 15:07:09\u0009year "-" month "-" day " " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+th\u0009E_d_MMMM\u0009\u0e40\u0e2a\u0e32\u0e23\u0e4c 24 \u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21\u0009weekday " " day " " month\u0009weekday=short,month=long,day=numeric
+th\u0009EEEE_d_MMMM\u0009\u0e27\u0e31\u0e19\u0e40\u0e2a\u0e32\u0e23\u0e4c\u0e17\u0e35\u0e48 24 \u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21\u0009weekday "\u0e17\u0e35\u0e48 " day " " month\u0009weekday=long,month=long,day=numeric
+th\u0009E_y_MMM_d\u0009\u0e40\u0e2a\u0e32\u0e23\u0e4c 24 \u0e18.\u0e04. 2565\u0009weekday " " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+th\u0009EEEE_y_MMMM_d\u0009\u0e27\u0e31\u0e19\u0e40\u0e2a\u0e32\u0e23\u0e4c\u0e17\u0e35\u0e48 24 \u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21 2565\u0009weekday "\u0e17\u0e35\u0e48 " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+th\u0009y_MMMM\u0009\u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21 2565\u0009month " " year\u0009year=numeric,month=long
+th\u0009y_MMM\u0009\u0e18.\u0e04. 2565\u0009month " " year\u0009year=numeric,month=short
+th\u0009y_MM\u000912/2565\u0009month "/" year\u0009year=numeric,month=2-digit
+th\u0009MMMM_d\u000924 \u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21\u0009day " " month\u0009month=long,day=numeric
+th\u0009MMM_d\u000924 \u0e18.\u0e04.\u0009day " " month\u0009month=short,day=numeric
+th\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+th\u0009y_M_d\u000924/12/2565\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+th\u0009yy_MM_dd\u000924/12/65\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+th\u0009MMMM\u0009\u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21\u0009month\u0009month=long
+th\u0009EEEE\u0009\u0e27\u0e31\u0e19\u0e40\u0e2a\u0e32\u0e23\u0e4c\u0009weekday\u0009weekday=long
+th\u0009d\u000924\u0009day\u0009day=numeric
+th\u0009G_y\u0009\u0e1e.\u0e28. 2565\u0009era " " year\u0009era=short,year=numeric
+th\u0009GGGG_y_MMMM_d\u000924 \u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21 \u0e1e\u0e38\u0e17\u0e18\u0e28\u0e31\u0e01\u0e23\u0e32\u0e0a 2565\u0009day " " month " " era " " year\u0009era=long,year=numeric,month=long,day=numeric
+th\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+th\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+th\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+th\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+th\u0009E_j_mm\u0009\u0e40\u0e2a\u0e32\u0e23\u0e4c 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+th\u0009y_MMMM_d_j_mm\u000924 \u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21 2565 \u0e40\u0e27\u0e25\u0e32 15:07\u0009day " " month " " year " \u0e40\u0e27\u0e25\u0e32 " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+th\u0009MMM_d_j_mm\u000924 \u0e18.\u0e04. 15:07\u0009day " " month " " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+th\u0009y_M_d_j_mm_ss\u000924/12/2565 15:07:09\u0009day "/" month "/" year " " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+tr\u0009E_d_MMMM\u000924 Aral\u0131k Cmt\u0009day " " month " " weekday\u0009weekday=short,month=long,day=numeric
+tr\u0009EEEE_d_MMMM\u000924 Aral\u0131k Cumartesi\u0009day " " month " " weekday\u0009weekday=long,month=long,day=numeric
+tr\u0009E_y_MMM_d\u000924 Ara 2022 Cmt\u0009day " " month " " year " " weekday\u0009weekday=short,year=numeric,month=short,day=numeric
+tr\u0009EEEE_y_MMMM_d\u000924 Aral\u0131k 2022 Cumartesi\u0009day " " month " " year " " weekday\u0009weekday=long,year=numeric,month=long,day=numeric
+tr\u0009y_MMMM\u0009Aral\u0131k 2022\u0009month " " year\u0009year=numeric,month=long
+tr\u0009y_MMM\u0009Ara 2022\u0009month " " year\u0009year=numeric,month=short
+tr\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=2-digit
+tr\u0009MMMM_d\u000924 Aral\u0131k\u0009day " " month\u0009month=long,day=numeric
+tr\u0009MMM_d\u000924 Ara\u0009day " " month\u0009month=short,day=numeric
+tr\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+tr\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=2-digit,day=2-digit
+tr\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+tr\u0009MMMM\u0009Aral\u0131k\u0009month\u0009month=long
+tr\u0009EEEE\u0009Cumartesi\u0009weekday\u0009weekday=long
+tr\u0009d\u000924\u0009day\u0009day=numeric
+tr\u0009G_y\u0009MS 2022\u0009era " " year\u0009era=short,year=numeric
+tr\u0009GGGG_y_MMMM_d\u0009Milattan Sonra 24 Aral\u0131k 2022\u0009era " " day " " month " " year\u0009era=long,year=numeric,month=long,day=numeric
+tr\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+tr\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+tr\u0009h_mm_h12\u0009\u00d6S 3:07\u0009dayPeriod "\u202f" hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+tr\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+tr\u0009E_j_mm\u0009Cmt 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+tr\u0009y_MMMM_d_j_mm\u000924 Aral\u0131k 2022 15:07\u0009day " " month " " year " " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+tr\u0009MMM_d_j_mm\u000924 Ara 15:07\u0009day " " month " " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+tr\u0009y_M_d_j_mm_ss\u000924.12.2022 15:07:09\u0009day "." month "." year " " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+uk\u0009E_d_MMMM\u0009\u0441\u0431, 24 \u0433\u0440\u0443\u0434\u043d\u044f\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+uk\u0009EEEE_d_MMMM\u0009\u0441\u0443\u0431\u043e\u0442\u0430, 24 \u0433\u0440\u0443\u0434\u043d\u044f\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+uk\u0009E_y_MMM_d\u0009\u0441\u0431, 24 \u0433\u0440\u0443\u0434. 2022 \u0440.\u0009weekday ", " day " " month " " year "\u202f\u0440."\u0009weekday=short,year=numeric,month=short,day=numeric
+uk\u0009EEEE_y_MMMM_d\u0009\u0441\u0443\u0431\u043e\u0442\u0430, 24 \u0433\u0440\u0443\u0434\u043d\u044f 2022 \u0440.\u0009weekday ", " day " " month " " year "\u202f\u0440."\u0009weekday=long,year=numeric,month=long,day=numeric
+uk\u0009y_MMMM\u0009\u0433\u0440\u0443\u0434\u0435\u043d\u044c 2022 \u0440.\u0009month " " year "\u202f\u0440."\u0009year=numeric,month=long
+uk\u0009y_MMM\u0009\u0433\u0440\u0443\u0434. 2022 \u0440.\u0009month " " year "\u202f\u0440."\u0009year=numeric,month=short
+uk\u0009y_MM\u000912.2022\u0009month "." year\u0009year=numeric,month=2-digit
+uk\u0009MMMM_d\u000924 \u0433\u0440\u0443\u0434\u043d\u044f\u0009day " " month\u0009month=long,day=numeric
+uk\u0009MMM_d\u000924 \u0433\u0440\u0443\u0434.\u0009day " " month\u0009month=short,day=numeric
+uk\u0009M_d\u000924.12\u0009day "." month\u0009month=2-digit,day=2-digit
+uk\u0009y_M_d\u000924.12.2022\u0009day "." month "." year\u0009year=numeric,month=2-digit,day=2-digit
+uk\u0009yy_MM_dd\u000924.12.22\u0009day "." month "." year\u0009year=2-digit,month=2-digit,day=2-digit
+uk\u0009MMMM\u0009\u0433\u0440\u0443\u0434\u0435\u043d\u044c\u0009month\u0009month=long
+uk\u0009EEEE\u0009\u0441\u0443\u0431\u043e\u0442\u0430\u0009weekday\u0009weekday=long
+uk\u0009d\u000924\u0009day\u0009day=numeric
+uk\u0009G_y\u00092022 \u043d. \u0435.\u0009year " " era\u0009era=short,year=numeric
+uk\u0009GGGG_y_MMMM_d\u000924 \u0433\u0440\u0443\u0434\u043d\u044f 2022 \u0440. \u043d\u0430\u0448\u043e\u0457 \u0435\u0440\u0438\u0009day " " month " " year "\u202f\u0440. " era\u0009era=long,year=numeric,month=long,day=numeric
+uk\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+uk\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+uk\u0009h_mm_h12\u00093:07 \u043f\u043f\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+uk\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+uk\u0009E_j_mm\u0009\u0441\u0431 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+uk\u0009y_MMMM_d_j_mm\u000924 \u0433\u0440\u0443\u0434\u043d\u044f 2022 \u0440. \u043e 15:07\u0009day " " month " " year "\u202f\u0440. \u043e " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+uk\u0009MMM_d_j_mm\u000924 \u0433\u0440\u0443\u0434., 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+uk\u0009y_M_d_j_mm_ss\u000924.12.2022, 15:07:09\u0009day "." month "." year ", " hour ":" minute ":" second\u0009year=numeric,month=2-digit,day=2-digit,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+vi\u0009E_d_MMMM\u0009Th\u1ee9 7, 24 th\u00e1ng 12\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+vi\u0009EEEE_d_MMMM\u0009Th\u1ee9 B\u1ea3y, 24 th\u00e1ng 12\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+vi\u0009E_y_MMM_d\u0009Th\u1ee9 7, 24 thg 12, 2022\u0009weekday ", " day " " month ", " year\u0009weekday=short,year=numeric,month=short,day=numeric
+vi\u0009EEEE_y_MMMM_d\u0009Th\u1ee9 B\u1ea3y, 24 th\u00e1ng 12, 2022\u0009weekday ", " day " " month ", " year\u0009weekday=long,year=numeric,month=long,day=numeric
+vi\u0009y_MMMM\u0009th\u00e1ng 12 n\u0103m 2022\u0009month " n\u0103m " year\u0009year=numeric,month=long,minute=numeric
+vi\u0009y_MMM\u0009thg 12 2022\u0009month " " year\u0009year=numeric,month=short
+vi\u0009y_MM\u0009th\u00e1ng 12, 2022\u0009"th\u00e1ng " month ", " year\u0009year=numeric,month=2-digit,hour=numeric
+vi\u0009MMMM_d\u000924 th\u00e1ng 12\u0009day " " month\u0009month=long,day=numeric
+vi\u0009MMM_d\u000924 thg 12\u0009day " " month\u0009month=short,day=numeric
+vi\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+vi\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+vi\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+vi\u0009MMMM\u0009Th\u00e1ng 12\u0009month\u0009month=long
+vi\u0009EEEE\u0009Th\u1ee9 B\u1ea3y\u0009weekday\u0009weekday=long
+vi\u0009d\u000924\u0009day\u0009day=numeric
+vi\u0009G_y\u00092022 SCN\u0009year " " era\u0009era=short,year=numeric
+vi\u0009GGGG_y_MMMM_d\u000924 th\u00e1ng 12, 2022 Sau C\u00f4ng Nguy\u00ean\u0009day " " month ", " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+vi\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+vi\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+vi\u0009h_mm_h12\u00093:07 CH\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+vi\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+vi\u0009E_j_mm\u000915:07 Th\u1ee9 7\u0009hour ":" minute " " weekday\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+vi\u0009y_MMMM_d_j_mm\u0009l\u00fac 15:07 24 th\u00e1ng 12, 2022\u0009"l\u00fac " hour ":" minute " " day " " month ", " year\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+vi\u0009MMM_d_j_mm\u000915:07 24 thg 12\u0009hour ":" minute " " day " " month\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+vi\u0009y_M_d_j_mm_ss\u000915:07:09 24/12/2022\u0009hour ":" minute ":" second " " day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+zh\u0009E_d_MMMM\u000912\u670824\u65e5\u5468\u516d\u0009month "\u6708" day "\u65e5" weekday\u0009weekday=short,month=numeric,day=numeric
+zh\u0009EEEE_d_MMMM\u000912\u670824\u65e5\u661f\u671f\u516d\u0009month "\u6708" day "\u65e5" weekday\u0009weekday=long,month=numeric,day=numeric
+zh\u0009E_y_MMM_d\u00092022\u5e7412\u670824\u65e5\u5468\u516d\u0009year "\u5e74" month "\u6708" day "\u65e5" weekday\u0009weekday=short,year=numeric,month=numeric,day=numeric
+zh\u0009EEEE_y_MMMM_d\u00092022\u5e7412\u670824\u65e5\u661f\u671f\u516d\u0009year "\u5e74" month "\u6708" day "\u65e5" weekday\u0009weekday=long,year=numeric,month=numeric,day=numeric
+zh\u0009y_MMMM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009year=numeric,month=numeric
+zh\u0009y_MMM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009year=numeric,month=numeric
+zh\u0009y_MM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009year=numeric,month=numeric
+zh\u0009MMMM_d\u000912\u670824\u65e5\u0009month "\u6708" day "\u65e5"\u0009month=numeric,day=numeric
+zh\u0009MMM_d\u000912\u670824\u65e5\u0009month "\u6708" day "\u65e5"\u0009month=numeric,day=numeric
+zh\u0009M_d\u000912/24\u0009month "/" day\u0009month=numeric,day=numeric
+zh\u0009y_M_d\u00092022/12/24\u0009year "/" month "/" day\u0009year=numeric,month=numeric,day=numeric
+zh\u0009yy_MM_dd\u000922/12/24\u0009year "/" month "/" day\u0009year=2-digit,month=2-digit,day=2-digit
+zh\u0009MMMM\u0009\u5341\u4e8c\u6708\u0009month\u0009month=long
+zh\u0009EEEE\u0009\u661f\u671f\u516d\u0009weekday\u0009weekday=long
+zh\u0009d\u000924\u65e5\u0009day "\u65e5"\u0009day=numeric
+zh\u0009G_y\u0009\u516c\u51432022\u5e74\u0009era year "\u5e74"\u0009era=short,year=numeric
+zh\u0009GGGG_y_MMMM_d\u0009\u516c\u51432022\u5e7412\u670824\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009era=long,year=numeric,month=numeric,day=numeric
+zh\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+zh\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+zh\u0009h_mm_h12\u0009\u4e0b\u53483:07\u0009dayPeriod hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+zh\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+zh\u0009E_j_mm\u0009\u5468\u516d15:07\u0009weekday hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+zh\u0009y_MMMM_d_j_mm\u00092022\u5e7412\u670824\u65e5 15:07\u0009year "\u5e74" month "\u6708" day "\u65e5 " hour ":" minute\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+zh\u0009MMM_d_j_mm\u000912\u670824\u65e5 15:07\u0009month "\u6708" day "\u65e5 " hour ":" minute\u0009month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+zh\u0009y_M_d_j_mm_ss\u00092022/12/24 15:07:09\u0009year "/" month "/" day " " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+zh-Hant\u0009E_d_MMMM\u000912\u670824\u65e5\u9031\u516d\u0009month "\u6708" day "\u65e5" weekday\u0009weekday=short,month=numeric,day=numeric
+zh-Hant\u0009EEEE_d_MMMM\u000912\u670824\u65e5\u661f\u671f\u516d\u0009month "\u6708" day "\u65e5" weekday\u0009weekday=long,month=numeric,day=numeric
+zh-Hant\u0009E_y_MMM_d\u00092022\u5e7412\u670824\u65e5\u9031\u516d\u0009year "\u5e74" month "\u6708" day "\u65e5" weekday\u0009weekday=short,year=numeric,month=numeric,day=numeric
+zh-Hant\u0009EEEE_y_MMMM_d\u00092022\u5e7412\u670824\u65e5\u661f\u671f\u516d\u0009year "\u5e74" month "\u6708" day "\u65e5" weekday\u0009weekday=long,year=numeric,month=numeric,day=numeric
+zh-Hant\u0009y_MMMM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009year=numeric,month=numeric
+zh-Hant\u0009y_MMM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009year=numeric,month=numeric
+zh-Hant\u0009y_MM\u00092022/12\u0009year "/" month\u0009year=numeric,month=2-digit
+zh-Hant\u0009MMMM_d\u000912\u670824\u65e5\u0009month "\u6708" day "\u65e5"\u0009month=numeric,day=numeric
+zh-Hant\u0009MMM_d\u000912\u670824\u65e5\u0009month "\u6708" day "\u65e5"\u0009month=numeric,day=numeric
+zh-Hant\u0009M_d\u000912/24\u0009month "/" day\u0009month=numeric,day=numeric
+zh-Hant\u0009y_M_d\u00092022/12/24\u0009year "/" month "/" day\u0009year=numeric,month=numeric,day=numeric
+zh-Hant\u0009yy_MM_dd\u000922/12/24\u0009year "/" month "/" day\u0009year=2-digit,month=2-digit,day=2-digit
+zh-Hant\u0009MMMM\u000912\u6708\u0009month\u0009month=long
+zh-Hant\u0009EEEE\u0009\u661f\u671f\u516d\u0009weekday\u0009weekday=long
+zh-Hant\u0009d\u000924\u65e5\u0009day "\u65e5"\u0009day=numeric
+zh-Hant\u0009G_y\u0009\u897f\u51432022\u5e74\u0009era year "\u5e74"\u0009era=short,year=numeric
+zh-Hant\u0009GGGG_y_MMMM_d\u0009\u897f\u51432022\u5e7412\u670824\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009era=long,year=numeric,month=numeric,day=numeric
+zh-Hant\u0009j_mm\u0009\u4e0b\u53483:07\u0009dayPeriod hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+zh-Hant\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+zh-Hant\u0009h_mm_h12\u0009\u4e0b\u53483:07\u0009dayPeriod hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+zh-Hant\u0009j_mm_ss\u0009\u4e0b\u53483:07:09\u0009dayPeriod hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+zh-Hant\u0009E_j_mm\u0009\u9031\u516d\u4e0b\u53483:07\u0009weekday dayPeriod hour ":" minute\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+zh-Hant\u0009y_MMMM_d_j_mm\u00092022\u5e7412\u670824\u65e5 \u4e0b\u53483:07\u0009year "\u5e74" month "\u6708" day "\u65e5 " dayPeriod hour ":" minute\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+zh-Hant\u0009MMM_d_j_mm\u000912\u670824\u65e5 \u4e0b\u53483:07\u0009month "\u6708" day "\u65e5 " dayPeriod hour ":" minute\u0009month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+zh-Hant\u0009y_M_d_j_mm_ss\u00092022/12/24\u2009\u4e0b\u53483:07:09\u0009year "/" month "/" day "\u2009" dayPeriod hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+zh-HK\u0009E_d_MMMM\u000912\u670824\u65e5\u9031\u516d\u0009month "\u6708" day "\u65e5" weekday\u0009weekday=short,month=numeric,day=numeric
+zh-HK\u0009EEEE_d_MMMM\u000912\u670824\u65e5\u661f\u671f\u516d\u0009month "\u6708" day "\u65e5" weekday\u0009weekday=long,month=numeric,day=numeric
+zh-HK\u0009E_y_MMM_d\u00092022\u5e7412\u670824\u65e5\u9031\u516d\u0009year "\u5e74" month "\u6708" day "\u65e5" weekday\u0009weekday=short,year=numeric,month=numeric,day=numeric
+zh-HK\u0009EEEE_y_MMMM_d\u00092022\u5e7412\u670824\u65e5\u661f\u671f\u516d\u0009year "\u5e74" month "\u6708" day "\u65e5" weekday\u0009weekday=long,year=numeric,month=numeric,day=numeric
+zh-HK\u0009y_MMMM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009year=numeric,month=numeric
+zh-HK\u0009y_MMM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009year=numeric,month=numeric
+zh-HK\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+zh-HK\u0009MMMM_d\u000912\u670824\u65e5\u0009month "\u6708" day "\u65e5"\u0009month=numeric,day=numeric
+zh-HK\u0009MMM_d\u000912\u670824\u65e5\u0009month "\u6708" day "\u65e5"\u0009month=numeric,day=numeric
+zh-HK\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+zh-HK\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+zh-HK\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+zh-HK\u0009MMMM\u000912\u6708\u0009month\u0009month=long
+zh-HK\u0009EEEE\u0009\u661f\u671f\u516d\u0009weekday\u0009weekday=long
+zh-HK\u0009d\u000924\u65e5\u0009day "\u65e5"\u0009day=numeric
+zh-HK\u0009G_y\u0009\u516c\u51432022\u5e74\u0009era year "\u5e74"\u0009era=short,year=numeric
+zh-HK\u0009GGGG_y_MMMM_d\u0009\u516c\u51432022\u5e7412\u670824\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009era=long,year=numeric,month=numeric,day=numeric
+zh-HK\u0009j_mm\u0009\u4e0b\u53483:07\u0009dayPeriod hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+zh-HK\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+zh-HK\u0009h_mm_h12\u0009\u4e0b\u53483:07\u0009dayPeriod hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h12
+zh-HK\u0009j_mm_ss\u0009\u4e0b\u53483:07:09\u0009dayPeriod hour ":" minute ":" second\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+zh-HK\u0009E_j_mm\u0009\u9031\u516d \u4e0b\u53483:07\u0009weekday " " dayPeriod hour ":" minute\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+zh-HK\u0009y_MMMM_d_j_mm\u00092022\u5e7412\u670824\u65e5 \u4e0b\u53483:07\u0009year "\u5e74" month "\u6708" day "\u65e5 " dayPeriod hour ":" minute\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+zh-HK\u0009MMM_d_j_mm\u000912\u670824\u65e5 \u4e0b\u53483:07\u0009month "\u6708" day "\u65e5 " dayPeriod hour ":" minute\u0009month=numeric,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+zh-HK\u0009y_M_d_j_mm_ss\u000924/12/2022\u2009\u4e0b\u53483:07:09\u0009day "/" month "/" year "\u2009" dayPeriod hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+sw\u0009E_d_MMMM\u0009Jumamosi, 24 Desemba\u0009weekday ", " day " " month\u0009weekday=short,month=long,day=numeric
+sw\u0009EEEE_d_MMMM\u0009Jumamosi, 24 Desemba\u0009weekday ", " day " " month\u0009weekday=long,month=long,day=numeric
+sw\u0009E_y_MMM_d\u0009Jumamosi, 24 Des 2022\u0009weekday ", " day " " month " " year\u0009weekday=short,year=numeric,month=short,day=numeric
+sw\u0009EEEE_y_MMMM_d\u0009Jumamosi, 24 Desemba 2022\u0009weekday ", " day " " month " " year\u0009weekday=long,year=numeric,month=long,day=numeric
+sw\u0009y_MMMM\u0009Desemba 2022\u0009month " " year\u0009year=numeric,month=long
+sw\u0009y_MMM\u0009Des 2022\u0009month " " year\u0009year=numeric,month=short
+sw\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+sw\u0009MMMM_d\u000924 Desemba\u0009day " " month\u0009month=long,day=numeric
+sw\u0009MMM_d\u000924 Des\u0009day " " month\u0009month=short,day=numeric
+sw\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+sw\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+sw\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+sw\u0009MMMM\u0009Desemba\u0009month\u0009month=long
+sw\u0009EEEE\u0009Jumamosi\u0009weekday\u0009weekday=long
+sw\u0009d\u000924\u0009day\u0009day=numeric
+sw\u0009G_y\u00092022 BK\u0009year " " era\u0009era=short,year=numeric
+sw\u0009GGGG_y_MMMM_d\u000924 Desemba 2022 Baada ya Kristo\u0009day " " month " " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+sw\u0009j_mm\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sw\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=numeric,minute=2-digit,hourCycle=h23
+sw\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute "\u202f" dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+sw\u0009j_mm_ss\u000915:07:09\u0009hour ":" minute ":" second\u0009hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+sw\u0009E_j_mm\u0009Jumamosi 15:07\u0009weekday " " hour ":" minute\u0009weekday=short,hour=2-digit,minute=2-digit,hourCycle=h23
+sw\u0009y_MMMM_d_j_mm\u000924 Desemba 2022, 15:07\u0009day " " month " " year ", " hour ":" minute\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sw\u0009MMM_d_j_mm\u000924 Des, 15:07\u0009day " " month ", " hour ":" minute\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h23
+sw\u0009y_M_d_j_mm_ss\u000924/12/2022, 15:07:09\u0009day "/" month "/" year ", " hour ":" minute ":" second\u0009year=numeric,month=numeric,day=numeric,hour=2-digit,minute=2-digit,second=2-digit,hourCycle=h23
+ta\u0009E_d_MMMM\u0009\u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd 24, \u0b9a\u0ba9\u0bbf\u0009month " " day ", " weekday\u0009weekday=short,month=long,day=numeric
+ta\u0009EEEE_d_MMMM\u0009\u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd 24, \u0b9a\u0ba9\u0bbf\u0009month " " day ", " weekday\u0009weekday=long,month=long,day=numeric
+ta\u0009E_y_MMM_d\u0009\u0b9a\u0ba9\u0bbf, 24 \u0b9f\u0bbf\u0b9a., 2022\u0009weekday ", " day " " month ", " year\u0009weekday=short,year=numeric,month=short,day=numeric
+ta\u0009EEEE_y_MMMM_d\u0009\u0b9a\u0ba9\u0bbf, 24 \u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd, 2022\u0009weekday ", " day " " month ", " year\u0009weekday=long,year=numeric,month=long,day=numeric
+ta\u0009y_MMMM\u0009\u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd 2022\u0009month " " year\u0009year=numeric,month=long
+ta\u0009y_MMM\u0009\u0b9f\u0bbf\u0b9a. 2022\u0009month " " year\u0009year=numeric,month=short
+ta\u0009y_MM\u000912-2022\u0009month "-" year\u0009year=numeric,month=2-digit
+ta\u0009MMMM_d\u000924 \u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd\u0009day " " month\u0009month=long,day=numeric
+ta\u0009MMM_d\u0009\u0b9f\u0bbf\u0b9a. 24\u0009month " " day\u0009month=short,day=numeric
+ta\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+ta\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+ta\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+ta\u0009MMMM\u0009\u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd\u0009month\u0009month=long
+ta\u0009EEEE\u0009\u0b9a\u0ba9\u0bbf\u0009weekday\u0009weekday=long
+ta\u0009d\u000924\u0009day\u0009day=numeric
+ta\u0009G_y\u0009\u0b95\u0bbf.\u0baa\u0bbf. 2022\u0009era " " year\u0009era=short,year=numeric
+ta\u0009GGGG_y_MMMM_d\u0009\u0b85\u0ba9\u0bcd\u0ba9\u0bcb \u0b9f\u0bcb\u0bae\u0bbf\u0ba9\u0bbf 2022 \u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd 24\u0009era " " year " " month " " day\u0009era=long,year=numeric,month=long,day=numeric
+ta\u0009j_mm\u00093:07 PM\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ta\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+ta\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ta\u0009j_mm_ss\u00093:07:09 PM\u0009hour ":" minute ":" second " " dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+ta\u0009E_j_mm\u0009\u0b9a\u0ba9\u0bbf 3:07 PM\u0009weekday " " hour ":" minute " " dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+ta\u0009y_MMMM_d_j_mm\u000924 \u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd, 2022 \u0b85\u0ba9\u0bcd\u0bb1\u0bc1 3:07 PM\u0009day " " month ", " year " \u0b85\u0ba9\u0bcd\u0bb1\u0bc1 " hour ":" minute " " dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ta\u0009MMM_d_j_mm\u0009\u0b9f\u0bbf\u0b9a. 24, 3:07 PM\u0009month " " day ", " hour ":" minute " " dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ta\u0009y_M_d_j_mm_ss\u000924/12/2022, 3:07:09 PM\u0009day "/" month "/" year ", " hour ":" minute ":" second " " dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+ur\u0009E_d_MMMM\u0009\u06c1\u0641\u062a\u06c1\u060c 24 \u062f\u0633\u0645\u0628\u0631\u0009weekday "\u060c " day " " month\u0009weekday=short,month=long,day=numeric
+ur\u0009EEEE_d_MMMM\u0009\u06c1\u0641\u062a\u06c1\u060c 24 \u062f\u0633\u0645\u0628\u0631\u0009weekday "\u060c " day " " month\u0009weekday=long,month=long,day=numeric
+ur\u0009E_y_MMM_d\u0009\u06c1\u0641\u062a\u06c1\u060c 24 \u062f\u0633\u0645\u0628\u0631\u060c 2022\u0009weekday "\u060c " day " " month "\u060c " year\u0009weekday=short,year=numeric,month=short,day=numeric
+ur\u0009EEEE_y_MMMM_d\u0009\u06c1\u0641\u062a\u06c1\u060c 24 \u062f\u0633\u0645\u0628\u0631\u060c 2022\u0009weekday "\u060c " day " " month "\u060c " year\u0009weekday=long,year=numeric,month=long,day=numeric
+ur\u0009y_MMMM\u0009\u062f\u0633\u0645\u0628\u0631 2022\u0009month " " year\u0009year=numeric,month=long
+ur\u0009y_MMM\u0009\u062f\u0633\u0645\u0628\u0631 2022\u0009month " " year\u0009year=numeric,month=short
+ur\u0009y_MM\u000912/2022\u0009month "/" year\u0009year=numeric,month=2-digit
+ur\u0009MMMM_d\u000924 \u062f\u0633\u0645\u0628\u0631\u0009day " " month\u0009month=long,day=numeric
+ur\u0009MMM_d\u000924 \u062f\u0633\u0645\u0628\u0631\u0009day " " month\u0009month=short,day=numeric
+ur\u0009M_d\u000924/12\u0009day "/" month\u0009month=numeric,day=numeric
+ur\u0009y_M_d\u000924/12/2022\u0009day "/" month "/" year\u0009year=numeric,month=numeric,day=numeric
+ur\u0009yy_MM_dd\u000924/12/22\u0009day "/" month "/" year\u0009year=2-digit,month=2-digit,day=2-digit
+ur\u0009MMMM\u0009\u062f\u0633\u0645\u0628\u0631\u0009month\u0009month=long
+ur\u0009EEEE\u0009\u06c1\u0641\u062a\u06c1\u0009weekday\u0009weekday=long
+ur\u0009d\u000924\u0009day\u0009day=numeric
+ur\u0009G_y\u00092022 \u0639\u06cc\u0633\u0648\u06cc\u0009year " " era\u0009era=short,year=numeric
+ur\u0009GGGG_y_MMMM_d\u000924 \u062f\u0633\u0645\u0628\u0631\u060c 2022 \u0639\u06cc\u0633\u0648\u06cc\u0009day " " month "\u060c " year " " era\u0009era=long,year=numeric,month=long,day=numeric
+ur\u0009j_mm\u00093:07 PM\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ur\u0009H_mm_h23\u000915:07\u0009hour ":" minute\u0009hour=2-digit,minute=2-digit,hourCycle=h23
+ur\u0009h_mm_h12\u00093:07 PM\u0009hour ":" minute " " dayPeriod\u0009hour=numeric,minute=2-digit,hourCycle=h12
+ur\u0009j_mm_ss\u00093:07:09 PM\u0009hour ":" minute ":" second " " dayPeriod\u0009hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+ur\u0009E_j_mm\u0009\u06c1\u0641\u062a\u06c1 3:07 PM\u0009weekday " " hour ":" minute " " dayPeriod\u0009weekday=short,hour=numeric,minute=2-digit,hourCycle=h12
+ur\u0009y_MMMM_d_j_mm\u000924 \u062f\u0633\u0645\u0628\u0631\u060c 2022 \u06a9\u0648 3:07 PM\u0009day " " month "\u060c " year " \u06a9\u0648 " hour ":" minute " " dayPeriod\u0009year=numeric,month=long,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ur\u0009MMM_d_j_mm\u000924 \u062f\u0633\u0645\u0628\u0631\u060c 3:07 PM\u0009day " " month "\u060c " hour ":" minute " " dayPeriod\u0009month=short,day=numeric,hour=numeric,minute=2-digit,hourCycle=h12
+ur\u0009y_M_d_j_mm_ss\u000924/12/2022\u060c 3:07:09 PM\u0009day "/" month "/" year "\u060c " hour ":" minute ":" second " " dayPeriod\u0009year=numeric,month=numeric,day=numeric,hour=numeric,minute=2-digit,second=2-digit,hourCycle=h12
+ar\u0009range_MMM_d_sameMonth\u000924\u201327 \u062f\u064a\u0633\u0645\u0628\u0631\u0009\u0009
+ar\u0009range_y_MMM_d_diffMonth\u000924 \u0646\u0648\u0641\u0645\u0628\u0631 \u2013 3 \u062f\u064a\u0633\u0645\u0628\u0631 2022\u0009\u0009
+ar\u0009range_j_mm_sameDay\u00099:00 \u0635\u2009\u2013\u20093:30 \u0645\u0009\u0009
+ar\u0009range_E_d_MMMM\u0009\u0627\u0644\u0633\u0628\u062a\u060c 24 \u2013 \u0627\u0644\u062b\u0644\u0627\u062b\u0627\u0621\u060c 27 \u062f\u064a\u0633\u0645\u0628\u0631\u0009\u0009
+bg\u0009range_MMM_d_sameMonth\u000924.12 \u2013 27.12\u0009\u0009
+bg\u0009range_y_MMM_d_diffMonth\u000924.11 \u2013 3.12.2022\u202f\u0433.\u0009\u0009
+bg\u0009range_j_mm_sameDay\u00099:00 \u0447. \u2013 15:30 \u0447.\u0009\u0009
+bg\u0009range_E_d_MMMM\u0009\u0441\u0431, 24 \u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438 \u2013 \u0432\u0442, 27 \u0434\u0435\u043a\u0435\u043c\u0432\u0440\u0438\u0009\u0009
+bn\u0009range_MMM_d_sameMonth\u0009\u09e8\u09ea\u2013\u09e8\u09ed \u09a1\u09bf\u09b8\u09c7\u0009\u0009
+bn\u0009range_y_MMM_d_diffMonth\u0009\u09e8\u09ea \u09a8\u09ad\u09c7 \u2013 \u09e9 \u09a1\u09bf\u09b8\u09c7, \u09e8\u09e6\u09e8\u09e8\u0009\u0009
+bn\u0009range_j_mm_sameDay\u0009\u09ef:\u09e6\u09e6 AM\u2009\u2013\u2009\u09e9:\u09e9\u09e6 PM\u0009\u0009
+bn\u0009range_E_d_MMMM\u0009\u09b6\u09a8\u09bf, \u09e8\u09ea \u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0 \u2013 \u09ae\u0999\u09cd\u0997\u09b2, \u09e8\u09ed \u09a1\u09bf\u09b8\u09c7\u09ae\u09cd\u09ac\u09b0\u0009\u0009
+ca\u0009range_MMM_d_sameMonth\u000924\u201327 de des.\u0009\u0009
+ca\u0009range_y_MMM_d_diffMonth\u000924 de nov.\u2009\u2013\u20093 de des. 2022\u0009\u0009
+ca\u0009range_j_mm_sameDay\u00099:00\u201315:30\u0009\u0009
+ca\u0009range_E_d_MMMM\u0009ds., 24\u2009\u2013\u2009dt., 27 de desembre\u0009\u0009
+cs\u0009range_MMM_d_sameMonth\u000924. 12.\u2009\u2013\u200927. 12.\u0009\u0009
+cs\u0009range_y_MMM_d_diffMonth\u000924.11.2022\u2009\u2013\u200903.12.2022\u0009\u0009
+cs\u0009range_j_mm_sameDay\u00099:00\u201315:30\u0009\u0009
+cs\u0009range_E_d_MMMM\u0009so 24. 12.\u2009\u2013\u2009\u00fat 27. 12.\u0009\u0009
+da\u0009range_MMM_d_sameMonth\u000924.\u201327. dec.\u0009\u0009
+da\u0009range_y_MMM_d_diffMonth\u000924. nov.\u20133. dec. 2022\u0009\u0009
+da\u0009range_j_mm_sameDay\u000909.00\u201315.30\u0009\u0009
+da\u0009range_E_d_MMMM\u0009l\u00f8r. 24.\u2013tirs. 27. december\u0009\u0009
+de\u0009range_MMM_d_sameMonth\u000924.\u201327. Dez.\u0009\u0009
+de\u0009range_y_MMM_d_diffMonth\u000924. Nov.\u2009\u2013\u20093. Dez. 2022\u0009\u0009
+de\u0009range_j_mm_sameDay\u000909:00\u201315:30 Uhr\u0009\u0009
+de\u0009range_E_d_MMMM\u0009Sa., 24.\u2009\u2013\u2009Di., 27. Dezember\u0009\u0009
+el\u0009range_MMM_d_sameMonth\u000924\u201327 \u0394\u03b5\u03ba\u0009\u0009
+el\u0009range_y_MMM_d_diffMonth\u000924 \u039d\u03bf\u03b5 \u2013 3 \u0394\u03b5\u03ba 2022\u0009\u0009
+el\u0009range_j_mm_sameDay\u00099:00\u202f\u03c0.\u03bc. \u2013 3:30\u202f\u03bc.\u03bc.\u0009\u0009
+el\u0009range_E_d_MMMM\u0009\u03a3\u03ac\u03b2 24 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5 \u2013 \u03a4\u03c1\u03af 27 \u0394\u03b5\u03ba\u03b5\u03bc\u03b2\u03c1\u03af\u03bf\u03c5\u0009\u0009
+en\u0009range_MMM_d_sameMonth\u0009Dec 24\u2009\u2013\u200927\u0009\u0009
+en\u0009range_y_MMM_d_diffMonth\u0009Nov 24\u2009\u2013\u2009Dec 3, 2022\u0009\u0009
+en\u0009range_j_mm_sameDay\u00099:00\u202fAM\u2009\u2013\u20093:30\u202fPM\u0009\u0009
+en\u0009range_E_d_MMMM\u0009Sat, December 24\u2009\u2013\u2009Tue, December 27\u0009\u0009
+en-GB\u0009range_MMM_d_sameMonth\u000924\u2009\u2013\u200927 Dec\u0009\u0009
+en-GB\u0009range_y_MMM_d_diffMonth\u000924 Nov\u2009\u2013\u20093 Dec 2022\u0009\u0009
+en-GB\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+en-GB\u0009range_E_d_MMMM\u0009Sat 24 December\u2009\u2013\u2009Tue 27 December\u0009\u0009
+en-AU\u0009range_MMM_d_sameMonth\u000924\u201327 Dec\u0009\u0009
+en-AU\u0009range_y_MMM_d_diffMonth\u000924 Nov\u2009\u2013\u20093 Dec 2022\u0009\u0009
+en-AU\u0009range_j_mm_sameDay\u00099:00\u202fam\u2009\u2013\u20093:30\u202fpm\u0009\u0009
+en-AU\u0009range_E_d_MMMM\u0009Sat 24\u2009\u2013\u2009Tue 27 December\u0009\u0009
+en-IN\u0009range_MMM_d_sameMonth\u000924\u201327 Dec\u0009\u0009
+en-IN\u0009range_y_MMM_d_diffMonth\u000924 Nov\u2009\u2013\u20093 Dec 2022\u0009\u0009
+en-IN\u0009range_j_mm_sameDay\u00099:00\u202fam\u2009\u2013\u20093:30\u202fpm\u0009\u0009
+en-IN\u0009range_E_d_MMMM\u0009Sat, 24\u2009\u2013\u2009Tue, 27 December\u0009\u0009
+es\u0009range_MMM_d_sameMonth\u000924\u201327 dic\u0009\u0009
+es\u0009range_y_MMM_d_diffMonth\u000924 nov\u2009\u2013\u20093 dic 2022\u0009\u0009
+es\u0009range_j_mm_sameDay\u00099:00\u201315:30\u0009\u0009
+es\u0009range_E_d_MMMM\u0009s\u00e1b, 24 de diciembre\u2009\u2013\u2009mar, 27 de diciembre\u0009\u0009
+es-MX\u0009range_MMM_d_sameMonth\u000924\u201327 de dic\u0009\u0009
+es-MX\u0009range_y_MMM_d_diffMonth\u000924 de nov\u2009\u2013\u20093 de dic 2022\u0009\u0009
+es-MX\u0009range_j_mm_sameDay\u00099:00\u202fa.m.\u2009\u2013\u20093:30\u202fp.m.\u0009\u0009
+es-MX\u0009range_E_d_MMMM\u0009s\u00e1b, 24 de diciembre\u2009\u2013\u2009mar, 27 de diciembre\u0009\u0009
+et\u0009range_MMM_d_sameMonth\u000924.\u201327. dets\u0009\u0009
+et\u0009range_y_MMM_d_diffMonth\u000924. nov\u2009\u2013\u20093. dets 2022\u0009\u0009
+et\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+et\u0009range_E_d_MMMM\u0009L, 24. detsember\u2009\u2013\u2009T, 27. detsember\u0009\u0009
+fa\u0009range_MMM_d_sameMonth\u0009\u06f3 \u062f\u06cc \u062a\u0627 \u06f6 \u062f\u06cc\u0009\u0009
+fa\u0009range_y_MMM_d_diffMonth\u0009\u06f3 \u062a\u0627 \u06f1\u06f2 \u0622\u0630\u0631 \u06f1\u06f4\u06f0\u06f1\u0009\u0009
+fa\u0009range_j_mm_sameDay\u0009\u06f9:\u06f0\u06f0 \u062a\u0627 \u06f1\u06f5:\u06f3\u06f0\u0009\u0009
+fa\u0009range_E_d_MMMM\u0009\u0634\u0646\u0628\u0647 \u06f3 \u062f\u06cc \u062a\u0627 \u0633\u0647\u200c\u0634\u0646\u0628\u0647 \u06f6 \u062f\u06cc\u0009\u0009
+fi\u0009range_MMM_d_sameMonth\u000924.\u201327.12.\u0009\u0009
+fi\u0009range_y_MMM_d_diffMonth\u000924.11.\u20133.12.2022\u0009\u0009
+fi\u0009range_j_mm_sameDay\u00099.00\u201315.30\u0009\u0009
+fi\u0009range_E_d_MMMM\u0009la 24. joulukuuta\u2013ti 27. joulukuuta\u0009\u0009
+fil\u0009range_MMM_d_sameMonth\u0009Dis 24\u201327\u0009\u0009
+fil\u0009range_y_MMM_d_diffMonth\u0009Nob 24\u2009\u2013\u2009Dis 3, 2022\u0009\u0009
+fil\u0009range_j_mm_sameDay\u00099:00\u202fAM\u2009\u2013\u20093:30\u202fPM\u0009\u0009
+fil\u0009range_E_d_MMMM\u0009Sab, Disyembre 24\u2009\u2013\u2009Mar, Disyembre 27\u0009\u0009
+fr\u0009range_MMM_d_sameMonth\u000924\u201327 d\u00e9c.\u0009\u0009
+fr\u0009range_y_MMM_d_diffMonth\u000924 nov.\u2009\u2013\u20093 d\u00e9c. 2022\u0009\u0009
+fr\u0009range_j_mm_sameDay\u000909:00\u2009\u2013\u200915:30\u0009\u0009
+fr\u0009range_E_d_MMMM\u0009sam. 24\u2009\u2013\u2009mar. 27 d\u00e9cembre\u0009\u0009
+fr-CA\u0009range_MMM_d_sameMonth\u000924\u2009\u2013\u200927 d\u00e9c.\u0009\u0009
+fr-CA\u0009range_y_MMM_d_diffMonth\u000924 nov.\u2009\u2013\u20093 d\u00e9c. 2022\u0009\u0009
+fr-CA\u0009range_j_mm_sameDay\u00099 h 00\u2009\u2013\u200915 h 30\u0009\u0009
+fr-CA\u0009range_E_d_MMMM\u0009sam. 24 d\u00e9cembre\u2009\u2013\u2009mar. 27 d\u00e9cembre\u0009\u0009
+he\u0009range_MMM_d_sameMonth\u000924\u201327 \u05d1\u05d3\u05e6\u05de\u05f3\u0009\u0009
+he\u0009range_y_MMM_d_diffMonth\u000924 \u05e0\u05d5\u05d1\u05f3 \u2013 3 \u05d3\u05e6\u05de\u05f3 2022\u0009\u0009
+he\u0009range_j_mm_sameDay\u00099:00\u201315:30\u0009\u0009
+he\u0009range_E_d_MMMM\u0009\u05d9\u05d5\u05dd \u05e9\u05d1\u05ea, 24 \u05d1\u05d3\u05e6\u05de\u05d1\u05e8 \u2013 \u05d9\u05d5\u05dd \u05e9\u05dc\u05d9\u05e9\u05d9, 27 \u05d1\u05d3\u05e6\u05de\u05d1\u05e8\u0009\u0009
+hi\u0009range_MMM_d_sameMonth\u000924\u2009\u2013\u200927 \u0926\u093f\u0938\u0970\u0009\u0009
+hi\u0009range_y_MMM_d_diffMonth\u000924 \u0928\u0935\u0970 \u2013 3 \u0926\u093f\u0938\u0970 2022\u0009\u0009
+hi\u0009range_j_mm_sameDay\u00099:00 am\u2009\u2013\u20093:30 pm\u0009\u0009
+hi\u0009range_E_d_MMMM\u0009\u0936\u0928\u093f, 24 \u0926\u093f\u0938\u0902\u092c\u0930 \u2013 \u092e\u0902\u0917\u0932, 27 \u0926\u093f\u0938\u0902\u092c\u0930\u0009\u0009
+hr\u0009range_MMM_d_sameMonth\u000924.\u2009\u2013\u200927. pro\u0009\u0009
+hr\u0009range_y_MMM_d_diffMonth\u000924. stu\u2009\u2013\u200903. pro 2022.\u0009\u0009
+hr\u0009range_j_mm_sameDay\u000909:00\u2009\u2013\u200915:30\u0009\u0009
+hr\u0009range_E_d_MMMM\u0009sub, 24.\u2009\u2013\u2009uto, 27. prosinca\u0009\u0009
+hu\u0009range_MMM_d_sameMonth\u0009dec. 24\u201327.\u0009\u0009
+hu\u0009range_y_MMM_d_diffMonth\u00092022. nov. 24.\u2009\u2013\u2009dec. 3.\u0009\u0009
+hu\u0009range_j_mm_sameDay\u00099:00\u201315:30\u0009\u0009
+hu\u0009range_E_d_MMMM\u0009december 24., Szo\u2009\u2013\u200927., K\u0009\u0009
+id\u0009range_MMM_d_sameMonth\u000924\u201327 Des\u0009\u0009
+id\u0009range_y_MMM_d_diffMonth\u000924 Nov\u2009\u2013\u20093 Des 2022\u0009\u0009
+id\u0009range_j_mm_sameDay\u000909.00\u201315.30\u0009\u0009
+id\u0009range_E_d_MMMM\u0009Sab, 24 Desember\u2009\u2013\u2009Sel, 27 Desember\u0009\u0009
+it\u0009range_MMM_d_sameMonth\u000924\u201327 dic\u0009\u0009
+it\u0009range_y_MMM_d_diffMonth\u000924 nov\u2009\u2013\u200903 dic 2022\u0009\u0009
+it\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+it\u0009range_E_d_MMMM\u0009sab 24\u2009\u2013\u2009mar 27 dicembre\u0009\u0009
+ja\u0009range_MMM_d_sameMonth\u000912/24\uff5e12/27\u0009\u0009
+ja\u0009range_y_MMM_d_diffMonth\u00092022/11/24\uff5e2022/12/03\u0009\u0009
+ja\u0009range_j_mm_sameDay\u00099\u664200\u5206\uff5e15\u664230\u5206\u0009\u0009
+ja\u0009range_E_d_MMMM\u000912/24(\u571f)\uff5e12/27(\u706b)\u0009\u0009
+ko\u0009range_MMM_d_sameMonth\u000912\uc6d4 24\uc77c~27\uc77c\u0009\u0009
+ko\u0009range_y_MMM_d_diffMonth\u00092022\ub144 11\uc6d4 24\uc77c~12\uc6d4 3\uc77c\u0009\u0009
+ko\u0009range_j_mm_sameDay\u0009\uc624\uc804 9:00 ~ \uc624\ud6c4 3:30\u0009\u0009
+ko\u0009range_E_d_MMMM\u000912\uc6d4 24\uc77c (\ud1a0)~27\uc77c (\ud654)\u0009\u0009
+lt\u0009range_MMM_d_sameMonth\u000912-24\u2009\u2013\u200912-27\u0009\u0009
+lt\u0009range_y_MMM_d_diffMonth\u00092022-11-24\u2009\u2013\u20092022-12-03\u0009\u0009
+lt\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+lt\u0009range_E_d_MMMM\u0009gruod\u017eio 24, \u0161t\u2009\u2013\u2009gruod\u017eio 27, an\u0009\u0009
+lv\u0009range_MMM_d_sameMonth\u000924.\u201327. dec.\u0009\u0009
+lv\u0009range_y_MMM_d_diffMonth\u00092022. gada 24. nov.\u2009\u2013\u20093. dec.\u0009\u0009
+lv\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+lv\u0009range_E_d_MMMM\u0009sestd., 24. decembris\u2009\u2013\u2009otrd., 27. decembris\u0009\u0009
+ms\u0009range_MMM_d_sameMonth\u000924\u201327 Dis\u0009\u0009
+ms\u0009range_y_MMM_d_diffMonth\u000924 Nov\u2009\u2013\u20093 Dis, 2022\u0009\u0009
+ms\u0009range_j_mm_sameDay\u00099:00\u202fPG\u2009\u2013\u20093:30\u202fPTG\u0009\u0009
+ms\u0009range_E_d_MMMM\u0009Sab, 24 Disember\u2009\u2013\u2009Sel, 27 Disember\u0009\u0009
+nb\u0009range_MMM_d_sameMonth\u000924.\u201327. des.\u0009\u0009
+nb\u0009range_y_MMM_d_diffMonth\u000924. nov.\u20133. des. 2022\u0009\u0009
+nb\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+nb\u0009range_E_d_MMMM\u0009l\u00f8r. 24.\u2013tir. 27. desember\u0009\u0009
+nl\u0009range_MMM_d_sameMonth\u000924\u201327 dec\u0009\u0009
+nl\u0009range_y_MMM_d_diffMonth\u000924 nov\u2009\u2013\u20093 dec 2022\u0009\u0009
+nl\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+nl\u0009range_E_d_MMMM\u0009za 24\u2009\u2013\u2009di 27 december\u0009\u0009
+pl\u0009range_MMM_d_sameMonth\u000924\u201327 gru\u0009\u0009
+pl\u0009range_y_MMM_d_diffMonth\u000924 lis\u20133 gru 2022\u0009\u0009
+pl\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+pl\u0009range_E_d_MMMM\u0009sob., 24 grudnia\u2009\u2013\u2009wt., 27 grudnia\u0009\u0009
+pt\u0009range_MMM_d_sameMonth\u000924\u2009\u2013\u200927 de dez.\u0009\u0009
+pt\u0009range_y_MMM_d_diffMonth\u000924 de nov.\u2009\u2013\u20093 de dez. de 2022\u0009\u0009
+pt\u0009range_j_mm_sameDay\u000909:00\u2009\u2013\u200915:30\u0009\u0009
+pt\u0009range_E_d_MMMM\u0009s\u00e1b., 24 de dezembro\u2009\u2013\u2009ter., 27 de dezembro\u0009\u0009
+pt-PT\u0009range_MMM_d_sameMonth\u000924/12\u2009\u2013\u200927/12\u0009\u0009
+pt-PT\u0009range_y_MMM_d_diffMonth\u000924/11/2022\u2009\u2013\u200903/12/2022\u0009\u0009
+pt-PT\u0009range_j_mm_sameDay\u000909:00\u2009\u2013\u200915:30\u0009\u0009
+pt-PT\u0009range_E_d_MMMM\u0009s\u00e1bado, 24 de dezembro\u2009\u2013\u2009ter\u00e7a, 27 de dezembro\u0009\u0009
+ro\u0009range_MMM_d_sameMonth\u000924\u201327 dec.\u0009\u0009
+ro\u0009range_y_MMM_d_diffMonth\u000924 nov.\u2009\u2013\u20093 dec. 2022\u0009\u0009
+ro\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+ro\u0009range_E_d_MMMM\u0009s\u00e2m., 24 decembrie\u2009\u2013\u2009mar., 27 decembrie\u0009\u0009
+ru\u0009range_MMM_d_sameMonth\u000924\u201327 \u0434\u0435\u043a.\u0009\u0009
+ru\u0009range_y_MMM_d_diffMonth\u000924 \u043d\u043e\u044f\u0431. \u2013 3 \u0434\u0435\u043a. 2022\u202f\u0433.\u0009\u0009
+ru\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+ru\u0009range_E_d_MMMM\u0009\u0441\u0431, 24 \u0434\u0435\u043a\u0430\u0431\u0440\u044f \u2013 \u0432\u0442, 27 \u0434\u0435\u043a\u0430\u0431\u0440\u044f\u0009\u0009
+sk\u0009range_MMM_d_sameMonth\u000924.\u00a012.\u2009\u2013\u200927. 12.\u0009\u0009
+sk\u0009range_y_MMM_d_diffMonth\u000924. 11. 2022\u2009\u2013\u20093. 12. 2022\u0009\u0009
+sk\u0009range_j_mm_sameDay\u00099:00\u2009\u2013\u200915:30\u0009\u0009
+sk\u0009range_E_d_MMMM\u0009so 24.\u2009\u2013\u2009ut 27. 12.\u0009\u0009
+sl\u0009range_MMM_d_sameMonth\u000924.\u201327. dec.\u0009\u0009
+sl\u0009range_y_MMM_d_diffMonth\u000924. nov.\u20133. dec. 2022\u0009\u0009
+sl\u0009range_j_mm_sameDay\u00099:00\u201315:30\u0009\u0009
+sl\u0009range_E_d_MMMM\u0009sob., 24.\u2013tor., 27. december\u0009\u0009
+sr\u0009range_MMM_d_sameMonth\u000924.\u201327. \u0434\u0435\u0446\u0009\u0009
+sr\u0009range_y_MMM_d_diffMonth\u000924. \u043d\u043e\u0432 \u2013 03. \u0434\u0435\u0446 2022.\u0009\u0009
+sr\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+sr\u0009range_E_d_MMMM\u0009\u0441\u0443\u0431, 24. \u2013 \u0443\u0442\u043e, 27. \u0434\u0435\u0446\u0435\u043c\u0431\u0430\u0440\u0009\u0009
+sv\u0009range_MMM_d_sameMonth\u000924\u201327 dec.\u0009\u0009
+sv\u0009range_y_MMM_d_diffMonth\u000924 nov.\u20133 dec. 2022\u0009\u0009
+sv\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+sv\u0009range_E_d_MMMM\u0009l\u00f6r 24\u2013tis 27 december\u0009\u0009
+th\u0009range_MMM_d_sameMonth\u000924 \u2013 27 \u0e18.\u0e04.\u0009\u0009
+th\u0009range_y_MMM_d_diffMonth\u000924 \u0e1e.\u0e22. \u2013 3 \u0e18.\u0e04. 2565\u0009\u0009
+th\u0009range_j_mm_sameDay\u00099:00\u201315:30\u0009\u0009
+th\u0009range_E_d_MMMM\u0009\u0e40\u0e2a\u0e32\u0e23\u0e4c 24 \u2013 \u0e2d\u0e31\u0e07\u0e04\u0e32\u0e23 27 \u0e18\u0e31\u0e19\u0e27\u0e32\u0e04\u0e21\u0009\u0009
+tr\u0009range_MMM_d_sameMonth\u000924\u2009\u2013\u200927 Ara\u0009\u0009
+tr\u0009range_y_MMM_d_diffMonth\u000924 Kas\u2009\u2013\u20093 Ara 2022\u0009\u0009
+tr\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+tr\u0009range_E_d_MMMM\u000924 Aral\u0131k Cmt\u2009\u2013\u200927 Aral\u0131k Sal\u0009\u0009
+uk\u0009range_MMM_d_sameMonth\u000924\u201327 \u0433\u0440\u0443\u0434.\u0009\u0009
+uk\u0009range_y_MMM_d_diffMonth\u000924 \u043b\u0438\u0441\u0442. \u2013 3 \u0433\u0440\u0443\u0434. 2022\u202f\u0440.\u0009\u0009
+uk\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+uk\u0009range_E_d_MMMM\u0009\u0441\u0431, 24 \u2013 \u0432\u0442, 27 \u0433\u0440\u0443\u0434\u043d\u044f\u0009\u0009
+vi\u0009range_MMM_d_sameMonth\u000924\u2009\u2013\u200927 thg 12\u0009\u0009
+vi\u0009range_y_MMM_d_diffMonth\u000924 thg 11\u2009\u2013\u20093 thg 12, 2022\u0009\u0009
+vi\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+vi\u0009range_E_d_MMMM\u0009Th\u1ee9 7, 24 th\u00e1ng 12\u2009\u2013\u2009Th\u1ee9 3, 27 th\u00e1ng 12\u0009\u0009
+zh\u0009range_MMM_d_sameMonth\u000912/24 \u2013 12/27\u0009\u0009
+zh\u0009range_y_MMM_d_diffMonth\u00092022/11/24 \u2013 2022/12/3\u0009\u0009
+zh\u0009range_j_mm_sameDay\u000909:00\u201315:30\u0009\u0009
+zh\u0009range_E_d_MMMM\u000912/24\u5468\u516d\u81f312/27\u5468\u4e8c\u0009\u0009
+zh-Hant\u0009range_MMM_d_sameMonth\u000912/24\u81f312/27\u0009\u0009
+zh-Hant\u0009range_y_MMM_d_diffMonth\u00092022/11/24\u81f32022/12/3\u0009\u0009
+zh-Hant\u0009range_j_mm_sameDay\u0009\u4e0a\u53489:00\u81f3\u4e0b\u53483:30\u0009\u0009
+zh-Hant\u0009range_E_d_MMMM\u000912/24\u9031\u516d\u81f312/27\u9031\u4e8c\u0009\u0009
+zh-HK\u0009range_MMM_d_sameMonth\u000924/12 \u81f3 27/12\u0009\u0009
+zh-HK\u0009range_y_MMM_d_diffMonth\u000924/11/2022 \u81f3 3/12/2022\u0009\u0009
+zh-HK\u0009range_j_mm_sameDay\u0009\u4e0a\u53489:00\u81f3\u4e0b\u53483:30\u0009\u0009
+zh-HK\u0009range_E_d_MMMM\u000924/12\uff08\u9031\u516d\uff09 \u81f3 27/12\uff08\u9031\u4e8c\uff09\u0009\u0009
+sw\u0009range_MMM_d_sameMonth\u000924\u2009\u2013\u200927 Des\u0009\u0009
+sw\u0009range_y_MMM_d_diffMonth\u000924\u2009\u2013\u20093 Des 2022\u0009\u0009
+sw\u0009range_j_mm_sameDay\u000909:00\u2009\u2013\u200915:30\u0009\u0009
+sw\u0009range_E_d_MMMM\u0009Jumamosi, 24 Desemba\u2009\u2013\u2009Jumanne, 27 Desemba\u0009\u0009
+ta\u0009range_MMM_d_sameMonth\u000924 \u2013 27 \u0b9f\u0bbf\u0b9a.\u0009\u0009
+ta\u0009range_y_MMM_d_diffMonth\u000924 \u0ba8\u0bb5. \u2013 3 \u0b9f\u0bbf\u0b9a., 2022\u0009\u0009
+ta\u0009range_j_mm_sameDay\u00099:00 AM\u2009\u2013\u20093:30 PM\u0009\u0009
+ta\u0009range_E_d_MMMM\u0009\u0b9a\u0ba9\u0bbf, 24 \u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd \u2013 \u0b9a\u0bc6\u0bb5\u0bcd., 27 \u0b9f\u0bbf\u0b9a\u0bae\u0bcd\u0baa\u0bb0\u0bcd\u0009\u0009
+ur\u0009range_MMM_d_sameMonth\u000924\u201327 \u062f\u0633\u0645\u0628\u0631\u0009\u0009
+ur\u0009range_y_MMM_d_diffMonth\u000924 \u0646\u0648\u0645\u0628\u0631 \u2013 3 \u062f\u0633\u0645\u0628\u0631\u060c 2022\u0009\u0009
+ur\u0009range_j_mm_sameDay\u00099:00 AM\u2009\u2013\u20093:30 PM\u0009\u0009
+ur\u0009range_E_d_MMMM\u0009\u06c1\u0641\u062a\u06c1\u060c 24 \u062f\u0633\u0645\u0628\u0631 \u2013 \u0645\u0646\u06af\u0644\u060c 27 \u062f\u0633\u0645\u0628\u0631\u0009\u0009

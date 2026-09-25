@@ -1,0 +1,108 @@
+en\u0009gregory:default\u000912/24/2022\u0009month "/" day "/" year\u0009
+en\u0009gregory:y_MMMM_d\u0009December 24, 2022\u0009month " " day ", " year\u0009
+en\u0009gregory:E_y_MMM_d\u0009Sat, Dec 24, 2022\u0009weekday ", " month " " day ", " year\u0009
+en\u0009gregory:y_MMM\u0009Dec 2022\u0009month " " year\u0009
+en\u0009buddhist:default\u000912/24/2565 BE\u0009month "/" day "/" year " " era\u0009
+en\u0009buddhist:y_MMMM_d\u0009December 24, 2565 BE\u0009month " " day ", " year " " era\u0009
+en\u0009buddhist:E_y_MMM_d\u0009Sat, Dec 24, 2565 BE\u0009weekday ", " month " " day ", " year " " era\u0009
+en\u0009buddhist:y_MMM\u0009Dec 2565 BE\u0009month " " year " " era\u0009
+en\u0009japanese:default\u000912/24/4 R\u0009month "/" day "/" year " " era\u0009
+en\u0009japanese:y_MMMM_d\u0009December 24, 4 Reiwa\u0009month " " day ", " year " " era\u0009
+en\u0009japanese:E_y_MMM_d\u0009Sat, Dec 24, 4 Reiwa\u0009weekday ", " month " " day ", " year " " era\u0009
+en\u0009japanese:y_MMM\u0009Dec 4 Reiwa\u0009month " " year " " era\u0009
+en\u0009roc:default\u000912/24/111 Minguo\u0009month "/" day "/" year " " era\u0009
+en\u0009roc:y_MMMM_d\u0009December 24, 111 Minguo\u0009month " " day ", " year " " era\u0009
+en\u0009roc:E_y_MMM_d\u0009Sat, Dec 24, 111 Minguo\u0009weekday ", " month " " day ", " year " " era\u0009
+en\u0009roc:y_MMM\u0009Dec 111 Minguo\u0009month " " year " " era\u0009
+en\u0009hebrew:default\u000930 Kislev 5783\u0009day " " month " " year\u0009
+en\u0009hebrew:y_MMMM_d\u000930 Kislev 5783\u0009day " " month " " year\u0009
+en\u0009hebrew:E_y_MMM_d\u0009Sat, 30 Kislev 5783\u0009weekday ", " day " " month " " year\u0009
+en\u0009hebrew:y_MMM\u0009Kislev 5783\u0009month " " year\u0009
+en\u0009islamic-civil:default\u00095/30/1444 AH\u0009month "/" day "/" year " " era\u0009
+en\u0009islamic-civil:y_MMMM_d\u0009Jumada I 30, 1444 AH\u0009month " " day ", " year " " era\u0009
+en\u0009islamic-civil:E_y_MMM_d\u0009Sat, Jum. I 30, 1444 AH\u0009weekday ", " month " " day ", " year " " era\u0009
+en\u0009islamic-civil:y_MMM\u0009Jum. I 1444 AH\u0009month " " year " " era\u0009
+en\u0009persian:default\u000910/3/1401 AP\u0009month "/" day "/" year " " era\u0009
+en\u0009persian:y_MMMM_d\u0009Dey 3, 1401 AP\u0009month " " day ", " year " " era\u0009
+en\u0009persian:E_y_MMM_d\u0009Sat, Dey 3, 1401 AP\u0009weekday ", " month " " day ", " year " " era\u0009
+en\u0009persian:y_MMM\u0009Dey 1401 AP\u0009month " " year " " era\u0009
+en\u0009chinese:default\u000912/2/2022\u0009month "/" day "/" relatedYear\u0009
+en\u0009chinese:y_MMMM_d\u0009Twelfth Month 2, 2022(ren-yin)\u0009month " " day ", " relatedYear "(" yearName ")"\u0009
+en\u0009chinese:E_y_MMM_d\u0009Sat, Mo12 2, 2022\u0009weekday ", " month " " day ", " relatedYear\u0009
+en\u0009chinese:y_MMM\u0009Mo12 2022\u0009month " " relatedYear\u0009
+en\u0009coptic:default\u00094/15/1739 AM\u0009month "/" day "/" year " " era\u0009
+en\u0009coptic:y_MMMM_d\u0009Kiahk 15, 1739 AM\u0009month " " day ", " year " " era\u0009
+en\u0009coptic:E_y_MMM_d\u0009Sat, Kiahk 15, 1739 AM\u0009weekday ", " month " " day ", " year " " era\u0009
+en\u0009coptic:y_MMM\u0009Kiahk 1739 AM\u0009month " " year " " era\u0009
+de\u0009gregory:default\u000924.12.2022\u0009day "." month "." year\u0009
+de\u0009gregory:y_MMMM_d\u000924. Dezember 2022\u0009day ". " month " " year\u0009
+de\u0009gregory:E_y_MMM_d\u0009Sa., 24. Dez. 2022\u0009weekday ", " day ". " month " " year\u0009
+de\u0009gregory:y_MMM\u0009Dez. 2022\u0009month " " year\u0009
+de\u0009buddhist:default\u000924.12.2565 BE\u0009day "." month "." year " " era\u0009
+de\u0009buddhist:y_MMMM_d\u000924. Dezember 2565 BE\u0009day ". " month " " year " " era\u0009
+de\u0009buddhist:E_y_MMM_d\u0009Sa., 24. Dez. 2565 BE\u0009weekday ", " day ". " month " " year " " era\u0009
+de\u0009buddhist:y_MMM\u0009Dez. 2565 BE\u0009month " " year " " era\u0009
+de\u0009japanese:default\u000924.12.4 R\u0009day "." month "." year " " era\u0009
+de\u0009japanese:y_MMMM_d\u000924. Dezember 4 Reiwa\u0009day ". " month " " year " " era\u0009
+de\u0009japanese:E_y_MMM_d\u0009Sa., 24. Dez. 4 Reiwa\u0009weekday ", " day ". " month " " year " " era\u0009
+de\u0009japanese:y_MMM\u0009Dez. 4 Reiwa\u0009month " " year " " era\u0009
+de\u0009roc:default\u000924.12.111 Minguo\u0009day "." month "." year " " era\u0009
+de\u0009roc:y_MMMM_d\u000924. Dezember 111 Minguo\u0009day ". " month " " year " " era\u0009
+de\u0009roc:E_y_MMM_d\u0009Sa., 24. Dez. 111 Minguo\u0009weekday ", " day ". " month " " year " " era\u0009
+de\u0009roc:y_MMM\u0009Dez. 111 Minguo\u0009month " " year " " era\u0009
+de\u0009hebrew:default\u000930.3.5783 AM\u0009day "." month "." year " " era\u0009
+de\u0009hebrew:y_MMMM_d\u000930. Kislew 5783 AM\u0009day ". " month " " year " " era\u0009
+de\u0009hebrew:E_y_MMM_d\u0009Sa., 30. Kislew 5783 AM\u0009weekday ", " day ". " month " " year " " era\u0009
+de\u0009hebrew:y_MMM\u0009Kislew 5783 AM\u0009month " " year " " era\u0009
+de\u0009islamic-civil:default\u000930.5.1444 AH\u0009day "." month "." year " " era\u0009
+de\u0009islamic-civil:y_MMMM_d\u000930. Dschumada I 1444 AH\u0009day ". " month " " year " " era\u0009
+de\u0009islamic-civil:E_y_MMM_d\u0009Sa., 30. Jum. I 1444 AH\u0009weekday ", " day ". " month " " year " " era\u0009
+de\u0009islamic-civil:y_MMM\u0009Jum. I 1444 AH\u0009month " " year " " era\u0009
+de\u0009persian:default\u00093.10.1401 AP\u0009day "." month "." year " " era\u0009
+de\u0009persian:y_MMMM_d\u00093. D\u00e9i 1401 AP\u0009day ". " month " " year " " era\u0009
+de\u0009persian:E_y_MMM_d\u0009Sa., 3. D\u00e9i 1401 AP\u0009weekday ", " day ". " month " " year " " era\u0009
+de\u0009persian:y_MMM\u0009D\u00e9i 1401 AP\u0009month " " year " " era\u0009
+de\u0009chinese:default\u00092.12.39\u0009day "." month "." year\u0009
+de\u0009chinese:y_MMMM_d\u00092. M12 ren-yin\u0009day ". " month " " yearName\u0009
+de\u0009chinese:E_y_MMM_d\u0009Sa., 2. M12 ren-yin\u0009weekday ", " day ". " month " " yearName\u0009
+de\u0009chinese:y_MMM\u0009M12 ren-yin\u0009month " " yearName\u0009
+de\u0009coptic:default\u000915.4.1739 AM\u0009day "." month "." year " " era\u0009
+de\u0009coptic:y_MMMM_d\u000915. Koiak 1739 AM\u0009day ". " month " " year " " era\u0009
+de\u0009coptic:E_y_MMM_d\u0009Sa., 15. Koiak 1739 AM\u0009weekday ", " day ". " month " " year " " era\u0009
+de\u0009coptic:y_MMM\u0009Koiak 1739 AM\u0009month " " year " " era\u0009
+ja\u0009gregory:default\u00092022/12/24\u0009year "/" month "/" day\u0009
+ja\u0009gregory:y_MMMM_d\u00092022\u5e7412\u670824\u65e5\u0009year "\u5e74" month "\u6708" day "\u65e5"\u0009
+ja\u0009gregory:E_y_MMM_d\u00092022\u5e7412\u670824\u65e5(\u571f)\u0009year "\u5e74" month "\u6708" day "\u65e5(" weekday ")"\u0009
+ja\u0009gregory:y_MMM\u00092022\u5e7412\u6708\u0009year "\u5e74" month "\u6708"\u0009
+ja\u0009buddhist:default\u0009BE2565/12/24\u0009era year "/" month "/" day\u0009
+ja\u0009buddhist:y_MMMM_d\u0009\u4ecf\u66a62565\u5e7412\u670824\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009
+ja\u0009buddhist:E_y_MMM_d\u0009\u4ecf\u66a62565\u5e7412\u670824\u65e5(\u571f)\u0009era year "\u5e74" month "\u6708" day "\u65e5(" weekday ")"\u0009
+ja\u0009buddhist:y_MMM\u0009\u4ecf\u66a62565\u5e7412\u6708\u0009era year "\u5e74" month "\u6708"\u0009
+ja\u0009japanese:default\u0009R4/12/24\u0009era year "/" month "/" day\u0009
+ja\u0009japanese:y_MMMM_d\u0009\u4ee4\u548c4\u5e7412\u670824\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009
+ja\u0009japanese:E_y_MMM_d\u0009\u4ee4\u548c4\u5e7412\u670824\u65e5(\u571f)\u0009era year "\u5e74" month "\u6708" day "\u65e5(" weekday ")"\u0009
+ja\u0009japanese:y_MMM\u0009\u4ee4\u548c4\u5e7412\u6708\u0009era year "\u5e74" month "\u6708"\u0009
+ja\u0009roc:default\u0009\u6c11\u56fd111/12/24\u0009era year "/" month "/" day\u0009
+ja\u0009roc:y_MMMM_d\u0009\u6c11\u56fd111\u5e7412\u670824\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009
+ja\u0009roc:E_y_MMM_d\u0009\u6c11\u56fd111\u5e7412\u670824\u65e5(\u571f)\u0009era year "\u5e74" month "\u6708" day "\u65e5(" weekday ")"\u0009
+ja\u0009roc:y_MMM\u0009\u6c11\u56fd111\u5e7412\u6708\u0009era year "\u5e74" month "\u6708"\u0009
+ja\u0009hebrew:default\u0009AM5783/3/30\u0009era year "/" month "/" day\u0009
+ja\u0009hebrew:y_MMMM_d\u0009AM5783\u5e743\u670830\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009
+ja\u0009hebrew:E_y_MMM_d\u0009AM5783\u5e743\u670830\u65e5(\u571f)\u0009era year "\u5e74" month "\u6708" day "\u65e5(" weekday ")"\u0009
+ja\u0009hebrew:y_MMM\u0009AM5783\u5e743\u6708\u0009era year "\u5e74" month "\u6708"\u0009
+ja\u0009islamic-civil:default\u0009AH1444/5/30\u0009era year "/" month "/" day\u0009
+ja\u0009islamic-civil:y_MMMM_d\u0009AH1444\u5e745\u670830\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009
+ja\u0009islamic-civil:E_y_MMM_d\u0009AH1444\u5e745\u670830\u65e5(\u571f)\u0009era year "\u5e74" month "\u6708" day "\u65e5(" weekday ")"\u0009
+ja\u0009islamic-civil:y_MMM\u0009AH1444\u5e745\u6708\u0009era year "\u5e74" month "\u6708"\u0009
+ja\u0009persian:default\u0009AP1401/10/3\u0009era year "/" month "/" day\u0009
+ja\u0009persian:y_MMMM_d\u0009AP1401\u5e7410\u67083\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009
+ja\u0009persian:E_y_MMM_d\u0009AP1401\u5e7410\u67083\u65e5(\u571f)\u0009era year "\u5e74" month "\u6708" day "\u65e5(" weekday ")"\u0009
+ja\u0009persian:y_MMM\u0009AP1401\u5e7410\u6708\u0009era year "\u5e74" month "\u6708"\u0009
+ja\u0009chinese:default\u0009\u58ec\u5bc5-12-2\u0009yearName "-" month "-" day\u0009
+ja\u0009chinese:y_MMMM_d\u00092022(\u58ec\u5bc5)\u5e74\u5341\u4e8c\u67082\u65e5\u0009relatedYear "(" yearName ")\u5e74" month day "\u65e5"\u0009
+ja\u0009chinese:E_y_MMM_d\u0009\u58ec\u5bc5\u5e74\u5341\u4e8c\u67082\u65e5(\u571f)\u0009yearName "\u5e74" month day "\u65e5(" weekday ")"\u0009
+ja\u0009chinese:y_MMM\u0009\u58ec\u5bc5\u5e74\u5341\u4e8c\u6708\u0009yearName "\u5e74" month\u0009
+ja\u0009coptic:default\u0009AM1739/4/15\u0009era year "/" month "/" day\u0009
+ja\u0009coptic:y_MMMM_d\u0009AM1739\u5e744\u670815\u65e5\u0009era year "\u5e74" month "\u6708" day "\u65e5"\u0009
+ja\u0009coptic:E_y_MMM_d\u0009AM1739\u5e744\u670815\u65e5(\u571f)\u0009era year "\u5e74" month "\u6708" day "\u65e5(" weekday ")"\u0009
+ja\u0009coptic:y_MMM\u0009AM1739\u5e744\u6708\u0009era year "\u5e74" month "\u6708"\u0009
